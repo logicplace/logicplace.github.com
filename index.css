@@ -1,0 +1,61 @@
+html {
+	width: 100%;
+	text-align: center;
+}
+
+body {
+	width: 80%;
+	display: inline-block;
+	text-align: left;
+	background: url(bg.png);
+}
+
+.section {
+	border-radius: 10px;
+	background-color: #608de1;
+	border: 2px dotted #26458c;
+	padding: 0 5% 2% 5%;
+	margin-bottom: 3%;
+}
+
+h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+h2 {
+	margin: 0px;
+	padding: 1% 1% 0 1%;
+	border: 1px dotted #26458c;
+	border-bottom: 0px none #000;
+	border-radius: 10px 10px 0px 0px;
+	width: auto;
+	display: inline-block;
+}
+
+ul {
+	border: 1px dotted #26458c;
+	border-radius: 5px;
+	border-top-left-radius: 0px;
+	padding: 1%;
+}
+
+h2 + ul {
+	margin-top: 0px;
+}
+
+li {
+	display: inline-block;
+	padding-right: 2%;
+	width: 18%;
+	text-align: center;
+	white-space:nowrap;
+}
+
+li:last-child {
+	padding-right: 0%;
+}
+
+p {
+	font-style: italic;
+}
