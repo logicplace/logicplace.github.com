@@ -78,7 +78,7 @@ table, tbody, tr, td {
 .menu a:link { color: #A68E00; }
 
 .menu a:hover {
-	color: transparent;
+	color: #FFDA00;
 	background-color: #A68E00;
 }
 
