@@ -1,3 +1,5 @@
+/* http://colorschemedesigner.com/#3M31Xw0w0w0w0 */
+
 body {
 	width: 100%;
 	margin: 0px;
@@ -124,7 +126,7 @@ table, tbody, tr, td {
 	text-decoration: underline;
 }
 
-.section h2 {
+h2.collapsedList {
 	color: #FF6C00;
 
 	border: 1px dotted #FF9140;
@@ -138,19 +140,16 @@ table, tbody, tr, td {
 	display: inline-block;
 }
 
-.section ul {
+h2.collapsedList + ul {
 	border: 1px dotted #FF9140;
 	border-radius: 5px;
 	border-top-left-radius: 0px;
 
 	padding: 1%;
-}
-
-.section h2 + ul {
 	margin-top: 0px;
 }
 
-.section li {
+h2.collapsedList + ul li {
 	width: 18%;
 	padding-right: 2%;
 
@@ -160,13 +159,20 @@ table, tbody, tr, td {
 	white-space: nowrap;
 }
 
-.section li:last-child {
+h2.collapsedList + ul li:last-child {
 	padding-right: 0%;
 }
 
 .section p {
 	font-style: italic;
 }
+
+.section ul { color: #FFAE73; }
+.section li span { color: #000000; }
+
+.section a:link { color: #A64600; }
+.section a:hover { color: #FF9140; }
+.section a:active, .section a:visited { color: #BF6D30 }
 
 /* FOOTER */
 .foot {
