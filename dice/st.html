@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<title>Dice Help - Statements</title>
+<script type="text/javascript" language="javascript" charset="utf-8" src="js.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+</head><body>
+<a name="top"></a>
+<h1>Grouping <a here="groups"></a></h1>
+<ul>
+	<li>( ) - Returns value of the expression inside, generically used for 
+overriding Order of Operations.</li>
+	<li>[ ] - See <a href="ops.html#idx">Indexing</a></li>
+	<li>{ } - See <a href="st.html#each">Each sets</a></li>
+</ul>
+
+<h1>Dice roll <a here="dice"></a></h1>
+<p>The most important facet of this language! The dice roll statement takes a Number [of rolls] 
+on the left and a value to base the roll on on the right.</p>
+<p>Count may be between 1 and 20. Sides may be between 1 and 1000. It will move the value to 
+the closest of those boundaries before rolling.</p>
+<p>Using a number on the right makes it roll a die of that many sides. ie. a random number 
+between 1 and the given number, inclusive.</p>
+<p>Using a string on the right makes it select a random character in that string for each roll</p>
+<p>Examples:</p>
+<code>dice 5d10
+Set 1: [ 9, 3, 7, 9. ] = 37</code>
+<code>dice 5d<g s>abcdefg</g>
+Set 1: [ <g s>f</g>, <g s>g</g>, <g s>e</g>, <g s>g</g>, <g s>f</g> ] = <g s>fgegf</g></code>
+<p>Using a Sides value of 1 (with no each statement) compresses the output and clock cycles by not 
+actually performing any rolls and just multiplying the two together (after bounding) and saving it.
+This can be used as a simple way to set a variable inline (though using another expression entirely 
+is ideal).</p>
+<p>Examples:</p>
+<code>dice 8d1
+Set 1: 8</code>
+<code>dice 8d<g s>a</g>
+Set 1: aaaaaaaa</code>
+
+<h1>Each <a here="each"></a></h1>
+<p>An each statement may only follow a dice statement. It takes the form of: <code>2d2e{+1}</code> for 
+example. Inside of the curly braces is a literal expression, directly append to the right of the 
+rolled value and evaluated together.</p>
+<p>The resulting value of the expression is what is saved as the value of the roll.</p>
+<p>If you use this to alter the data types of rolls individually, the resulting sum&apos;s data type is the 
+first roll&apos;s resulting data type.</p>
+<p>Examples:</p>
+<code>dice 2d2e{+1}
+Set 1: [ 2 + 1, 1 + 1 ] = 5</code>
+<code>dice 2d2e{!s?<g s>a</g>:1}
+Set 1: [ ~s ? <g s>a</g>, ~s ?: 1 ] = <g s>a1</g></code>
+<code>dice 2d2e{!s?1:<g s>a</g>}
+Set 1: [ ~s ? 1, ~s ?: <g s>a</g> ] = 2</code>
+
+<h1>Conditional <a here="if"></a></h1>
+<p>A conditional allows you to progrmatically decide when to do something. It takes the form of: 
+<icode>value ? true code : false code</icode></p>
+<p>It first evaluates the value as a boolean and sets the original value to the <icode>s</icode> 
+<a href="var.html">variable</a>. If it's nonzero it executes the true code, otherwise 
+it executes the false code. When output, it will only output which code of the two was actually 
+executed, denoted by either a <icode>?</icode> for the true code or a <icode>?:</icode> for the 
+false code.</p>
+<p>The false code is optional.</p>
+<p>Remember this has a very low order in operations, I suggest encasing your entire statement in 
+paranthesis for clarity.</p>
+<p>Examples:</p>
+<code>1?<g s>abc</g>:<g s>def</g> = <g s>abc</g>
+0?<g s>abc</g>:<g s>def</g> = <g s>def</g></code>
+<p></p>
+
+<div><a href="#top">Top</a> - <a href="ref.html">Reference</a></body></div></html>

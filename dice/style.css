@@ -1,0 +1,91 @@
+body {
+	padding-bottom: 50%;
+}
+
+code {
+	display: inline-block;
+	border: 2px dotted black;
+	padding: 0.2em 1em;
+	margin-left: 1.3em;
+	font-family: monospace;
+	white-space: pre;
+	page-break-after: always;
+	page-break-before: always;
+}
+
+p > code {
+	page-break-after: auto;
+	page-break-before: auto;
+	margin-left: 0px;
+}
+
+icode {
+	display: inline;
+	border: 0px none transparent;
+	padding: 0px;
+	margin: 0px 0.6em;
+	font-family: monospace;
+	white-space: normal;
+}
+
+h1, h2 {
+	margin-top: 1em;
+	margin-bottom: 0.67em;
+	text-align: center;
+}
+
+h3 {
+	text-decoration: underline;
+}
+
+em {
+	font-weight: bold;
+	text-decoration: underline;
+	font-style: normal;
+}
+
+a[name]:link, a[name]:visited, a[name]:hover, a[name]:active, a[href^="#"] {
+	color: blue;
+	text-decoration: none;
+}
+
+ol > ol {
+	list-style-type: lower-alpha;
+}
+
+cl {
+	display: block;
+	padding: 16px 0px 16px 40px;
+	list-style-type: none;
+}
+
+cl>cl {
+	padding: 0px 0px 0px 40px;
+}
+
+cl>li[i]:before {
+	font-family: monospace;
+	content: attr(i) ")";
+	margin-right: 0.7em;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid #000;
+	margin: 0px;
+}
+
+table.tl-em tr:first-child > td, table.tl-em th {
+	font-weight: bold;
+}
+table.tl-em > tbody + thead > tr:first-child > td {
+	font-weight: normal;
+}
+
+table.tl-em td:first-child {
+	font-weight: bold;
+}

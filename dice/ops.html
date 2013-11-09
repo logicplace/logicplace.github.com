@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<title>Dice Help - Operators</title>
+<script type="text/javascript" language="javascript" charset="utf-8" src="js.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+</head><body>
+<a name="top"></a>
+<p>In the following, # will represent where numbers go and '' will represent where strings 
+go. When a string is regarded as a number in the description, it will mean the length of 
+that string (as if <icode>+''</icode> had been run).</p>
+<h1>Unary <a here="unary"></a></h1>
+<p>Ensure a number is positive: <code>+ #</code></p>
+<p>Convert a string to an integer of its length: <code>+ ''</code></p>
+<p>Toggle negativity of a number: <code>- #</code></p>
+<p>Convert a string to a negative integer of its length: <code>- ''</code></p>
+<p>Return 0 if the value is nonzero, 1 if zero with: <icode>!</icode>,<icode>~</icode>, or <icode>not</icode></p>
+<p>Ensure the type is string: <code>@ #</code> or <code>@ ''</code></p>
+<p>Ensure the type is number: <code><b>#</b> #</code></p>
+<p>Convert a string to a number: <code><b>#</b> ''</code></p>
+<p>Examples:</p>
+<code>+1 = 1
++<g>-1</g> = 1
++<g s>abc</g> = 3
+-1 = -1
+-<g>-1</g> = 1
+-<g s>abc</g> = -3
+!<g s></g> = 1
+!0 = 1
+!3 = 0
+!!3 = 1
+@1 = '1'
+@'a' = 'a'
+#1 = 1
+#'10' = 10
+#'1,234' = 1234
+#'4asdasd3' = 43</code>
+
+<h1>Binary <a here="bin"></a></h1>
+<h3>Addition <a here="add"></a></h3>
+<p>Add two numbers together: <code># + #</code> or <code># + ''</code></p>
+<p>Concatenate two strings: <code>'' + ''</code></p>
+<p>Concatenate a string and a number: <code>'' + #</code></p>
+<p>Examples:</p>
+<code>1 + 1 = 2
+1 + <g s>ab</g> = 3
+<g s>ab</g> + <g s>c</g> = <g s>abc</g>
+<g s>ab</g> + 1 = <g s>ab1</g></code>
+<h3>Subtraction <a here="sub"></a></h3>
+<p>Subtract two numbers: <code># - #</code> or <code># - ''</code></p>
+<p>Cut off the right of a string: <code>'' - #</code></p>
+<p>Cut off the left of a string: <code>'' - -#</code></p>
+<p>Remove all occurances of a substring from a string: <code>'' - ''</code></p>
+<p>Examples:</p>
+<code>2 - 1 = 1
+2 - <g s>a</g> = 1
+<g s>abcd</g> - 1 = <g s>abc</g>
+<g s>abcd</g> - -1 = <g s>bcd</g>
+<g s>banana</g> - <g s>a</g> = <g s>bnn</g></code>
+<h3>Multiplication <a here="mul"></a></h3>
+<p>Muliply two numbers: <code># * #</code> or <code># * ''</code></p>
+<p>Concatenate a string to itself a number of times (note: up to 20): <code>'' * #</code></p>
+<p>Count number of occurances of substring in a string: <code>'' * ''</code></p>
+<p>Examples:</p>
+<code>3 * 4 = 12
+3 * <g s>ab</g> = 6
+<g s>a</g> * 3 = <g s>aaa</g>
+<g s>banana</g> * <g s>a</g> = 3</code>
+<h3>Division <a here="div"></a></h3>
+<p>Divide two numbers: <code># / #</code> or <code># / ''</code></p>
+<p>Cut off the left of a string: <code>'' / #</code></p>
+<p>Cut off the right of a string: <code>'' / -#</code></p>
+<p>Return a string containing all occuraces of substring: <code>'' / ''</code></p>
+<code>5 / 2 = 2
+<g s>abcd</g> / 1 = <g s>bcd</g>
+<g s>abcd</g> / -1 = <g s>abc</g>
+<g s>banana</g> / <g s>a</g> = <g s>aaa</g></code>
+<h3>Modulo <a here="mod"></a></h3>
+<p>Divide two numbers and return the remainder: <code># % #</code> or <code># % ''</code></p>
+<p>Return a formatted string: <code>'' % ''</code> or <code>'' % #</code></p>
+<p>The above is slightly complex in function. In summary, it will replace both singular instances of % and 
+intances of %- (with no % touching the left of it) with the substring, and then replace all sequences of % 
+with a sequence of one less %</p>
+<p>Examples:</p>
+<code>5 % 2 = 1
+<g s>a</g> % 5 = 1
+<g s>bcd</g> % 4 = 3
+<g s>a%c%%-%%%--%%%%%</g> % <g s>b</g> % <g s>d</g> % <g s>e</g> % <g s>f</g> % <g s>g</g> = <g s>abcde-g</g></code>
+<p>Just as a quick explanation of the formatting example, here is what it looks like at each step:</p>
+<code><g s>a%c%%-%%%--%%%%%</g> % <g s>b</g> = <g s>abc%-%%--%%%%</g>
+<g s>abc%-%%--%%%%</g> % <g s>d</g> = <g s>abcd%--%%%</g>
+<g s>abcd%--%%%</g> % <g s>e</g> = <g s>abcde-%%</g>
+<g s>abcde-%%</g> % <g s>f</g> = <g s>abcde-%</g>
+<g s>abcde-%</g> % <g s>g</g> = <g s>abcde-g</g></code>
+<!--<h3>Power <a here="pow"></a></h3>
+<p><em>The right value is limited to -5 through 5 (inclusive).</em></p>
+<p>One number to the power of another: <code># % #</code> or <code># % ''</code> or <code>'' % #</code> or <code>'' % ''</code></p>
+<p>Examples:</p>
+<code>3 ^ 4 = 81
+3 ^ <g s>ab</g> = 9
+<g s>ab</g> ^ 3 = 9
+<g s>ab</g> ^ <g s>cd</g> = 4</code>-->
+<h3>Bitwise And <a here="and"></a></h3>
+<p>Bitwise operations involving integers are based on their binary forms.</p>
+<p>For: <code># & #</code> or <code># & ''</code></p>
+<table class="tl-em">
+	<tr><td>&</td><td>0</td><td>1</td></tr>
+	<tr><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>1</td><td>0</td><td>1</td></tr>
+</table>
+<p>Return a string with only the &quot;on&quot; chars: <code>'' & #</code></p>
+<p>Return a string with only the characters that are in both strings: <code>'' & ''</code></p>
+<p>Examples:</p>
+<code>3 & 2 = 2
+<g s>abc</g> & 1 = <g s>a</g>
+<g s>abc</g> & 5 = <g s>ac</g>
+<g s>abc</g> & <g s>acd</g> = <g s>ac</g></code>
+<h3>Bitwise Xor <a here="xor"></a></h3>
+<p>For: <code># ^ #</code> or <code># ^ ''</code></p>
+<table class="tl-em">
+	<tr><td>^</td><td>0</td><td>1</td></tr>
+	<tr><td>0</td><td>0</td><td>1</td></tr>
+	<tr><td>1</td><td>1</td><td>0</td></tr>
+</table>
+<p>Return a string with only the &quot;off&quot; chars: <code>'' ^ #</code></p>
+<p>Return the first string with all characters in the second string removed: <code>'' ^ ''</code></p>
+<p>Examples:</p>
+<code>3 ^ 2 = 1
+<g s>abc</g> ^ 1 = <g s>bc</g>
+<g s>abc</g> ^ 5 = <g s>b</g>
+<g s>abc</g> ^ <g s>acd</g> = <g s>b</g></code>
+<h3>Bitwise Or <a here="or"></a></h3>
+<p>For: <code># | #</code> or <code># | ''</code> or <code>'' | #</code></p>
+<table class="tl-em">
+	<tr><td>|</td><td>0</td><td>1</td></tr>
+	<tr><td>0</td><td>0</td><td>1</td></tr>
+	<tr><td>1</td><td>1</td><td>1</td></tr>
+</table>
+<p>Return the two strings concatenated, with all characters in the first string removed 
+from the second: <code>'' | ''</code></p>
+<p>Examples:</p>
+<code>3 | 2 = 3
+<g s>abc</g> | <g s>acd</g> = <g s>abcd</g></code>
+
+<h1>Comparison <a here="cmp"></a></h1>
+Compare two values in some way, and <em>usually</em> return a boolean value (0 or 1)
+<h3>Equivalency <a here="equ"></a></h3>
+<p>These are the only comparators that test strings based on their actual content, instead of 
+their length.</p>
+<p>Test if two numbers are equivalent: <code># equ #</code> or <code># equ ''</code> or <code>'' equ #</code></p>
+<p>Test if two strings are equivalent: <code>'' equ ''</code></p>
+<p>equ can be: <icode>=</icode>,<icode>==</icode>,<icode>eq</icode>, or <icode>equ</icode></p>
+<p>Test if two numbers are not equivalent: <code># neq #</code> or <code># neq ''</code> or <code>'' neq #</code></p>
+<p>Test if two strings are not equivalent: <code>'' neq ''</code></p>
+<p>neq can be: <icode>!=</icode>,<icode>~=</icode>,<icode>ne</icode>, or <icode>neq</icode></p>
+<p>Examples:</p>
+<code>1 == 2 = 0
+2 == 2 = 1
+<g s>abc</g> == <g s>abc</g> = 1
+<g s>abc</g> == <g s>cbd</g> = 0
+1 != <g s>a</g> = 0</code>
+<h3>Magnitudal <a here="mag"></a></h3>
+<p>These check the direction of inequivalence and etc. Strings are lost in this process.</p>
+<p>Test if a number is greater than another number with: <icode>&gt;</icode>,<icode>gt</icode>, or <icode>gtr</icode></p>
+<p>The above, or if they're equivalent: <icode>&gt;=</icode>,<icode>ge</icode>, or <icode>geq</icode></p>
+<p>Test if a number is smaller than another number with: <icode>&lt;</icode>,<icode>lt</icode>, or <icode>lss</icode></p>
+<p>The above, or if they're equivalent: <icode>&lt;=</icode>,<icode>le</icode>, or <icode>leq</icode></p>
+<code>2 &gt; 1 = 1
+1 &gt; <g s>abc</g> = 0
+2 &lt; 1 = 0
+1 &lt; <g s>abc</g> = 1</code>
+<h3>Selective <a here="sel"></a></h3>
+<p>Compare each value and return one of them. These compare numbers only, but will return the actual 
+string should it be the winning value.</p>
+<p><em>Warning:</em> Testing most of these comparisons as true or false values is not advised.</p>
+<p>Return the smaller of the two or 0 if equivalent: <icode>&lt;&gt;</icode>,<icode>mn</icode>, or <icode>min</icode></p>
+<p>Return the smaller of the two: <icode>&lt;=&gt;</icode>,<icode>me</icode>, or <icode>meq</icode></p>
+<p>Return the larger of the two or 0 if equivalent: <icode>&gt;&lt;</icode>,<icode>mx</icode>, or <icode>max</icode></p>
+<p>Return the larger of the two: <icode>&gt;=&lt;</icode>,<icode>xe</icode>, or <icode>xeq</icode></p>
+<p>Return the left value if it is larger than the right, otherwise 0: <icode>&gt;&gt;</icode></p>
+<p>Return the left value if it is larger than or equal the right, otherwise 0: <icode>&gt;=&gt;</icode></p>
+<p>Return the left value if it is less than the right, otherwise 0: <icode>&lt;&lt;</icode></p>
+<p>Return the left value if it is less than or equal the right, otherwise 0: <icode>&lt;=&lt;</icode></p>
+<p>Examples:</p>
+<code>1 &lt;&gt; 2 = 1
+1 &gt;&lt; <g s>abc</g> = <g s>abc</g>
+2 &gt;&gt; 1 = 2
+2 &lt;&lt; 1 = 0</code>
+
+<h1>Boolean <a here="bool"></a></h1>
+<p>These are called boolean And, Or, and Xor (eXclusive OR), respectively.</p>
+<p>If both values are nonzero, return the latter: <icode>&&</icode> or <icode>and</icode></p>
+<p>If the first value is nonzero, return that, otherwise return the latter: <icode>||</icode> or <icode>or</icode></p>
+<p>Shorthand for <icode>!!# != !!#</icode>: <icode>^^</icode> or <icode>xor</icode></p>
+<p>Examples:</p>
+<code>1 && 2 = 2
+0 && 1 = 0
+1 && 0 = 0
+1 || <g s>ab</g> = 1
+0 || <g s>ab</g> = <g s>ab</g>
+2 ^^ 0 = 1
+2 ^^ 5 = 0
+0 ^^ 3 = 1</code>
+
+<h1>Indexing <a here="idx"></a></h1>
+<p>Indexing is only used for strings and certain <a href="var.html">variables</a>. Attempting 
+anything else will be ignored. Indexing always starts at 1.</p>
+<p>Variable indexing is like arrays. More information in the <a href="var.html">variables</a> 
+section.</p>
+<p>String indexing can be done in three ways:</p>
+<p>Number index - Returns the character at this position in the string, starting from the left.</p>
+<p>Negative number index - Returns the character at this position in the string, starting from the right.</p>
+<p>String index - Returns the position of the first match in the string, otherwise 0.</p>
+<p>Examples:</p>
+<code><g s>abc</g><g b>1</g> = <g s>a</g>
+<g s>abc</g><g b>-1</g> = <g s>c</g>
+<g s>abc</g><g b>8</g> = <g s></g>
+<g s>abcbda</g><g b><g s>b</g></g> = 2
+<g s>abcbda</g><g b><g s>e</g></g> = 0</code>
+<p></p>
+<div><a href="#top">Top</a> - <a href="ref.html">Reference</a></body></div></html>

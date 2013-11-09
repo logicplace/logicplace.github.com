@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<title>Dice Help - Examples</title>
+<script type="text/javascript" language="javascript" charset="utf-8" src="js.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+</head><body>
+<a name="top"></a>
+<h1>Snippits <a here="s"></a></h1>
+<h3>For loop:</h3>
+<code>dice --v 5d1e<g c>+s?s</g>
+Set 1: [ 1 + 0 ? 1, 1 + 1 ? 2, 1 + 2 ? 3, 1 + 3 ? 4, 1 + 4 ? 5 ] = 15</code>
+<p>This abuses conditionals to set <icode>s</icode> to an incrimenting number.</p>
+
+<h3>Ignore this set:</h3>
+<code><g>1d2+123 > 125</g> 0</code>
+<p>Essentially, with the way processing works, stating a number with no operators 
+silently overwrites the current set value and expression output, making it not output 
+on the grounds that <icode>0</icode> looks like <icode>0</icode>.
+
+<h1>Full Examples <a here="f"></a></h1>
+<h3>8Ball (idea/original code by Pie~)</h3>
+<code><g s>Yes!</g>,<g s>Reading fuzzy..</g>,<g s>No!</g>,<g s>Maybe</g>,<g s>In the near future..</g>,z<g b>1dy</g></code>
+<p>Uses random indexing to return an outcome string.</p>
+<h3>Dice game: Snake eyes</h3>
+<code>2d6e<g c>==1</g> == 2?<g s>Snake eyes!</g>:<g s>Not your lucky day</g></code>
+<h3>Scramble word</h3>
+<code>--p@ <g s>some word</g>,z?zd1e<g c>1ds*<g>s*r-1</g> + s^r?r:r</g></code>
+<p></p>
+<div><a href="#top">Top</a> - <a href="ref.html">Reference</a></body></div></html>

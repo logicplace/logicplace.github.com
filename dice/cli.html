@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<title>Dice Help - Command Line Options</title>
+<script type="text/javascript" language="javascript" charset="utf-8" src="js.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+</head><body>
+<a name="top"></a>
+<h1>Command Line Options <a here="clo"></a></h1>
+<p>These come directly after the <icode>dice</icode> command and before all expressions. 
+Therefor like:</p>
+<code>dice --ct <g>1 &lt; 2</g>?1:<g s>never</g></code>
+<p>They affect output only. The rule to remember for command line options is that when 
+you use <em>lower-case</em> it means "attempt to resolve value" where <em>upper-case</em> 
+means "do not resolve value". A resolution will only fail if an item of higher precedence 
+inside of it will not be resolved.</p>
+<p>Listed below are the command line options, cased by their default, in order of 
+precedence:</p>
+<cl>
+	<li i="P">Print (ie. p resolves expression output to total only)</li>
+	<li i="R">dice Rolls</li>
+	<li>(Same precedence)</li>
+	<cl>
+		<li i="G">Groups</li>
+		<li i="d">Dice</li>
+	</cl>
+	<li i="U">Unary</li>
+	<li i="M">recursive Math (mul/div/mod/pow)</li>
+	<li i="S">Simple math</li>
+	<li i="C">Comparisons</li>
+	<li i="B">Bitwise operations</li>
+	<li i="A">boolean And</li>
+	<li i="O">boolean Or and xor</li>
+	<li i="T">conditional (Tertiary operator)</li>
+	<li i="i">Indexing</li>
+	<li i="V">Variable</li>
+	<li i="L">string Length (when used instead)</li>
+	<li i="N">full variable Name (proceedure is moreso as: if there is a variable in the expression, it converts it to a name)</li>
+	<li i="@">Do not show roll sets at all if used</li>
+</cl> 
+<div><a href="#top">Top</a> - <a href="ref.html">Reference</a></body></div></html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head>
+<title>Dice Help - Index</title>
+<script type="text/javascript" language="javascript" charset="utf-8" src="js.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8" />
+</head><body>
+<a name="top"></a>
+<h1>Introduction <a here="introduction"></a></h1>
+<p>The use of this module can be as complex as you want it to be. Simple use is akin to all 
+dice rollers I've seen, and based on standard notation for those who do this sort of thing 
+written. That is, of course, <icode>1d6</icode> being &quot;roll one six-sided die&quot;. It 
+may look something like this:</p>
+<code>dice 1d6
+Set 1: [ 4 ] = 4</code>
+<p>Where complex use can be something like:</p>
+<code>dice --p 5,<g s>Will Save: </g> + <g>1d10-z<g b>1</g> >> 0?<g s>Successful (by %)</g> % s:<g s>Failed</g></g>
+Set 1: [ 6 ] = 6
+Will Save: Successful (by 1)</code>
+<p>You may also use <icode>d</icode> instead of <icode>dice</icode> for the command.</p>
+<h1>Understanding Output <a here="understanding_output"></a></h1>
+<p>I tried to make the output as easily understandable as possible, but nonetheless here is 
+a quick explanation.</p>
+<p>Large integers are expressed in <icode>#e+#</icode> notation, entire output string is truncated 
+to 100 characters.</p>
+<p>First it outputs all of the dice rolls that were made with its set number. If the roll was 
+in a <a href="st.html#if">conditional</a>, it will not report that set if it wasn't rolled (this 
+does not affect numbering).</p>
+<p>Its display is in the form <icode>Set #: [ Rolls ] = Total</icode></p>
+<p>If used from an <a href="st.html#each">each statement</a>, form is: <icode>Set #: Totals</icode></p>
+<p>The set number is just a number, starting at 1.</p>
+<p>Rolls is a comma separated list of the rolls made and any calculations performed on them 
+individually. <em>If a roll value's representation is exactly the same as the previous, it will 
+output a period instead.</em> This is probably the most confusing part of the output, so remember 
+it.</p>
+<p>Total is simply all the rolls added together, in sequence.</p>
+<p>Afterwards is the expression output. Multiple expressions are separated by commas on input. 
+This output is one expression per line. By default, it output the calculation and its result 
+separated by an equals sign. If the expression and the result look the same, it does not 
+output anything for this expression, assuming the output is already obvious. There are 
+<a href="cli.html">command line options</a> to change the output.</p>
+<div><a href="#top">Top</a> - <a href="ref.html">Reference</a></body></div></html>
