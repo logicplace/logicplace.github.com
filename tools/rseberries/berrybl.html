@@ -1,0 +1,385 @@
+<link rel="stylesheet" href="tools/rseberries/berrybl.css" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="tools/rseberries/berrydb.js"></script>
+<script language="JavaScript" type="text/javascript">
+//How summing works..
+//Generate berry list+custom option
+//Buttons to switch custom between participants (1-4)
+//berries with a sour flavor cancel out bitter, bitter cancels sweet,
+//sweet cancels dry, dry cancels spicy, and spicy cancels sour
+
+var sorters = {
+	"index":  function(a, b) { return invif(a[20] - b[20], "index"); },
+	"name":   function(a, b) { return invif(stringSort(a[0], b[0]), "name"); },
+	"spicy":  function(a, b) { return invif(b[15] - a[15], "spicy"); },
+	"dry":    function(a, b) { return invif(b[16] - a[16], "dry"); },
+	"sweet":  function(a, b) { return invif(b[17] - a[17], "sweet"); },
+	"bitter": function(a, b) { return invif(b[14] - a[14], "bitter"); },
+	"sour":   function(a, b) { return invif(b[18] - a[18], "sour"); },
+	"smooth": function(a, b) { return invif(b[19] - a[19], "smooth"); },
+	"fast":   function(a, b) { return invif(a[3] - b[3], "fast"); },
+	"powder": function(a, b) { return invif(b[6] - a[6], "powder"); },
+	"precedent": function(precedent) {
+		return function(a, b) {
+			for(var i = 0; i < precedent.length; ++i) {
+				var sorted = sorters[precedent[i]](a, b);
+				if(sorted != 0) return sorted;
+			}
+			return 0;
+		};
+	}
+};
+
+function stringSort(a, b) {
+	if(a === b) return 0;
+	var l = [a, b];
+	l.sort();
+	if(l[0] == a) return -1;
+	else return 1;
+}
+
+function invif(val, id) {
+	if($("#inv" + id).is(":checked")) return -val;
+	return val;
+}
+
+function GenerateList(sorter, prec) {
+	var $berrylist = $("#berrylist").empty();
+	var b2 = berries.slice(0);
+	if(sorter != "index") {
+		if(prec) b2.sort(sorters[sorter](prec));
+		else b2.sort(sorters[sorter]);
+	}
+	for(var i = 0; i < b2.length; ++i){
+		if(b2[i][20] == 0) continue;
+		var $sp = $("<span>").addClass("berry").click(SetDex);
+		var $img = $("<img>");
+		$img.attr("src", "tools/rseberries/icons/" + b2[i][20] + "b2.png");
+		$sp.data("berry", b2[i][20]);
+		$sp.append($img);
+		$sp.append(document.createTextNode(b2[i][0]));
+		$berrylist.append($sp);
+	}
+}
+
+var imperial = true;
+function SetDex() {
+	var id = $(this).data("berry");
+	strid = id;
+	if(id < 10) strid = "0" + strid;
+	$("#dexnum").text(strid);
+	$("#dexname").text(berries[id][0].toUpperCase());
+	$("#deximg").attr("src", "tools/rseberries/icons/" + id + "b2.png");
+	var size = berries[id][1];
+	if(imperial) size = Math.round(size/ 2.54 * 10) / 10;
+	if(size == Math.floor(size)) size = size + ".0";
+	$("#dexsize").text(size);
+	$("#dexfirm").text(Firm[berries[id][2]]);
+	var desc = berries[id][7];
+	var tmp = desc.indexOf("\n");
+	if(tmp != -1) desc = desc.substr(0, tmp);
+	desc = desc.replace("|", "<br/ >");
+	$("#dexdesc").html(desc);
+	var act = berries[id][8];
+	tmp = act.indexOf("\n");
+	if(tmp != -1) act = act.substr(0, tmp);
+	desc = desc.replace("|", "<br/ >");
+	$("#dexact").text(act);
+
+	var bitter = berries[id][14];
+	var spicy = berries[id][15];
+	var dry = berries[id][16];
+	var sweet = berries[id][17];
+	var sour = berries[id][18];
+	var total = (Math.abs(bitter) + Math.abs(spicy) + Math.abs(dry) + Math.abs(sweet) + Math.abs(sour)) == 0;
+
+	$("#bitter").val(bitter);
+	if(bitter > 0 || total) $("#dexbitter").addClass("on");
+	else $("#dexbitter").removeClass("on");
+
+	$("#spicy").val(spicy);
+	if(spicy > 0 || total) $("#dexspicy").addClass("on");
+	else $("#dexspicy").removeClass("on");
+
+	$("#dry").val(dry);
+	if(dry > 0 || total) $("#dexdry").addClass("on");
+	else $("#dexdry").removeClass("on");
+
+	$("#sweet").val(sweet);
+	if(sweet > 0 || total) $("#dexsweet").addClass("on");
+	else $("#dexsweet").removeClass("on");
+
+	$("#sour").val(sour);
+	if(sour > 0 || total) $("#dexsour").addClass("on");
+	else $("#dexsour").removeClass("on");
+
+	$("#smooth").val(berries[id][19]);
+
+	$("#hours").val(berries[id][3]);
+	$("#yieldmin").val(berries[id][4]);
+	$("#yieldmax").val(berries[id][5]);
+	$("#powder").val(berries[id][6]);
+}
+
+function grow(x, starting, need, soils, hours) {
+	var ymin = x, ymax = x;
+
+	if(typeof(x) == "object"){
+		ymin = x[1]; ymax = x[2];
+		x = x[0];
+	}
+
+	if(x > 1){
+		var totalHours = 0,
+		    resultMin = 0,
+		    resultMax = 0;
+		var i = starting;
+		while(i < need) {
+			totalHours += hours;
+			var planted = Math.floor(Math.min(i, soils));
+			var holding = i - planted;
+			resultMin = Math.floor(holding + ymin * planted);
+			resultMax = Math.ceil(holding + ymax * planted);
+			i = holding + x * planted;
+		}
+		var totalDays = Math.floor(totalHours / 24);
+		totalHours -= totalDays * 24;
+		return [resultMin, resultMax, totalDays, totalHours]
+	}
+	return [starting, starting, "inf", "inf"];
+}
+
+function calctime() {
+	var hours = ($("#hours").val()) * 4; //four stages
+	var yieldmin = parseInt($("#yieldmin").val());
+	var yieldmax = parseInt($("#yieldmax").val());
+	var yieldavg = (yieldmin+yieldmax) / 2
+	if(yieldavg <= 1) return;
+
+	var need = parseInt($("#berries").val());
+	var starting = parseInt($("#stberries").val());
+	var soils = parseInt($("#soils").val());
+	if(need == 0 || starting == 0 || soils == 0) return;
+
+	var avg = grow([yieldavg, yieldmin, yieldmax], starting, need, soils, hours),
+	 mingrw = grow(yieldmin, starting, need, soils, hours),
+	 maxgrw = grow(yieldmax, starting, need, soils, hours);
+
+	$("#minDays").text(maxgrw[2]);
+	$("#minHours").text(maxgrw[3]);
+	$("#maxDays").text(mingrw[2]);
+	$("#maxHours").text(mingrw[3]);
+
+	$("#sumDays").text(avg[2]);
+	$("#sumHours").text(avg[3]);
+
+	$("#sumHoursMinReal").text(avg[0]);
+	$("#sumHoursMaxReal").text(avg[1]);
+}
+
+function calcpowder() {
+	var powder = parseInt($("#powder").val());
+	if(powder == 0) return;
+	var need = parseInt($("#needpowder").val());
+
+	var crush = Math.ceil(need / powder);
+	$("#sumPowder").text(crush);
+	$("#sumPowderReal").text(crush * powder);
+}
+
+function precedence() {
+	// Retrieve and sort by precedence
+	var a = [];
+	$(".berrysort li").each(function(idx, elem) {
+		var $elem = $(elem);
+		if($elem.children("a").length == 0) return;
+		a.push([$elem.children("a").data("name"), parseInt($elem.find('input[type="text"]').val())]);
+	});
+	console.log(a);
+	a.sort(function(a, b) { return b[1] - a[1]; });
+
+	// Return only names
+	var b = [];
+	for(var i = 0; i < a.length; ++i) {
+		if(a[i][1] == 0) break;
+		b.push(a[i][0]);
+	}
+	console.log(b);
+	return b;
+}
+
+$(function(){
+	var hash = window.location.hash.indexOf("#", 1);
+	if(hash != -1) {
+		GenerateList(window.location.hash.substr(hash + 1));
+		hash = window.location.hash.substr(0, hash);
+	}
+	else {
+		GenerateList("index");
+		hash = window.location.hash;
+	}
+
+	$(".berrysort a").each(function(idx, elem) {
+		var $elem = $(elem);
+		var sorter = $elem.attr("href").substr(1);
+		$elem.data("name", sorter);
+		$elem.attr("href", hash + $elem.attr("href"));
+		$elem.click(function() {
+			GenerateList(sorter);
+		});
+
+		var $more = $("<span>").addClass("extraopt").hide(),
+		    $psec = $("<span>").addClass("precedence"),
+		    $b1 = $('<input type="button" value="-">'),
+		    $prec = $('<input type="text" value="0">'),
+		    $b2 = $('<input type="button" value="+">'),
+		    $invsec = $("<span>Inv? </span>").addClass("invert");
+		    $inv = $('<input type="checkbox" id="inv' + sorter + '">'),
+		$b1.click(function() {
+			$prec.val(parseInt($prec.val()) - 1);
+			GenerateList("precedent", precedence());
+		});
+		$b2.click(function() {
+			$prec.val(parseInt($prec.val()) + 1);
+			GenerateList("precedent", precedence());
+		});
+		$inv.click(function() {
+			GenerateList("precedent", precedence());
+		});
+		$elem.parent().append(
+			$more.append(
+				$psec.append($b1).append($prec).append($b2)
+			).append(
+				$invsec.append($inv)
+			)
+		);
+	});
+});
+
+function moreOpts() {
+	$("#moreopts").hide();
+	$("#lessopts").show();
+	$(".extraopt").show();
+}
+
+function lessOpts() {
+	$("#lessopts").hide();
+	$("#moreopts").show();
+	$(".extraopt").hide();
+}
+</script>
+</head>
+<body>
+<div class="clear">
+<div id="berrylist"></div>
+<div class="berrysort">
+ <h3>Sort by...</h3>
+ <ul>
+  <li><a href="#index">Index</a></li>
+  <li><a href="#name">Name</a></li>
+  <li><a href="#spicy">Spiciness</a></li>
+  <li><a href="#dry">Dryness</a></li>
+  <li><a href="#sweet">Sweetness</a></li>
+  <li><a href="#bitter">Bitterness</a></li>
+  <li><a href="#sour">Sourness</a></li>
+  <li><a href="#smooth">Smoothness</a></li>
+  <li><a href="#fast">Fastest Growing</a></li>
+  <li><a href="#powder">Powder Yield</a></li>
+  <li>
+   <span id="moreopts" class="link" onclick="moreOpts()">More Options</span>
+   <span id="lessopts" class="link" onclick="lessOpts()" style="display:none">Less Options</span>
+  </li>
+ </ul>
+</div>
+</div>
+
+<div class="dex">
+ <!--Needs inch/cm options-->
+ <table cellpadding="0" cellspacing="0">
+  <tr>
+   <td class="dextab">&nbsp;</td>
+   <td rowspan="2">
+    <table class="entry">
+     <tr>
+      <td class="deximgcell"><span class="deximg"><img id="deximg" src="tools/rseberries/icons/43b2.png" /></span></td>
+      <td>
+       <div class="numname">
+        <span class="no">No</span><span id="dexnum">00</span>&nbsp;<span id="dexname">????</span>
+       </div>
+       <div class="sizefirm whitebox">
+        <label>SIZE/ <span id="dexsize">0.0</span><span id="dexincm">&quot;</span></label>
+        <label>FIRM/ <span id="dexfirm">????</span></label>
+       </div>
+      </td>
+     </tr>
+     <tr class="flavor">
+      <td colspan="2">
+       <span id="dexspicy">SPICY</span><span id="dexdry">DRY</span><span id="dexsweet">SWEET</span><span id="dexbitter">BITTER</span><span id="dexsour">SOUR</span>
+      </td>
+     </tr>
+     <tr class="whitebox">
+      <td id="dexdesc" colspan="2"></td>
+     </tr>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <td class="dexact">
+    <span id="dexact"></span>
+   <td>
+  </tr>
+ </table>
+</div>
+
+<div class="custom">
+ <label>Spicy: <input type="text" id="spicy" /></label>
+ <label>Dry: <input type="text" id="dry" /></label>
+ <label>Sweet: <input type="text" id="sweet" /></label>
+ <label>Bitter: <input type="text" id="bitter" /></label>
+ <label>Sour: <input type="text" id="sour" /></label>
+ <label>Smoothness: <input type="text" id="smooth" /></label>
+ <label>Hours per growth stage: <input type="text" id="hours" /></label>
+ <label>Yield: <input type="text" id="yieldmin" /> - <input type="text" id="yieldmax" /></label>
+ <label>Powder: <input type="text" id="powder" /></label>
+</div>
+
+<div class="calcs">
+ <div class="calc">
+  <div class="question">
+   <span>I want to grow</span>
+   <label><input type="text" id="berries" /> berries</label>
+   <label>starting with <input type="text" id="stberries" /> berries</label>
+   <label>with <input type="text" id="soils" /> available soils.</label>
+  </div>
+  <div class="calculate"><input type="button" onclick="calctime()" value="How long will it take?" /></div>
+  <div class="answer">
+   <label>At least <span id="minDays"></span> days <span id="minHours"></span> hours</label>
+   <label>At most <span id="maxDays"></span> days <span id="maxHours"></span> hours</label>
+   <label>About <span id="sumDays"></span> days <span id="sumHours"></span> hours</label>
+   <label>Will grow between <span id="sumHoursMinReal"></span> - <span id="sumHoursMaxReal"></span> berries</label>
+  </div>
+ </div>
+ <div class="calc">
+  <div class="question">
+   <span>I want</span>
+   <label><input type="text" id="needpowder" /> berry powder</label>
+  </div>
+  <div class="calculate"><input type="button" onclick="calcpowder()" value="How many berries do I need?" /></div>
+  <div class="answer">
+   <label><span id="sumPowder"></span> berries</label>
+   <label>Will get <span id="sumPowderReal"></span> powder</label>
+  </div>
+ </div>
+</div>
+
+<div class="pokeblock">
+<!--
+Ask RPM
+Ask amount of participants
+Show score required (perfects,goods,bads,missed) Should be adjustable (affects others to balance)
+Show level, feel
+Show result, technically, then dex entry
+Show how the results affects each mood, and stat
+-->
+</div>
+</body>
+</html>

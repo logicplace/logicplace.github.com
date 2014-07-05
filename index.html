@@ -6,19 +6,30 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
-$(".menu a").each(function(idx, elem) {
-	var $elem = $(elem);
-	console.log($elem.attr("href"));
-	$elem.click(function(){
-		LoadPage($elem.attr("href").substr(1));
+	$(".menu a").each(function(idx, elem) {
+		var $elem = $(elem);
+		console.log($elem.attr("href"));
+		$elem.click(LoadMe);
 	});
+
+	var hash2;
+	if((hash2 = window.location.hash.indexOf("#", 1)) != -1) {
+		LoadPage(window.location.hash.substring(1, hash2));
+	} else {
+		LoadPage(window.location.hash.substr(1));
+	}
 });
 
-LoadPage(window.location.hash.substr(1));
-});
+function LoadMe() {
+	LoadPage($(this).attr("href").substr(1));
+}
 
 function LoadPage(page) {
-	$("#meat").load(page == "" ? "index_content.html" : page + ".html");
+	$("#meat").load(page == "" ? "index_content.html" : page + ".html", function() {
+		$("#meat a.loadpage").each(function(idx, elem) {
+			$(elem).click(LoadMe);
+		});
+	});
 }
 </script>
 </head>
