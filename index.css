@@ -94,7 +94,7 @@ table, tbody, tr, td {
 	display: inline-block;
 }
 
-.meat {
+#meat {
 	border-left: 2px solid #888A85;
 	border-bottom: 2px solid #888A85;
 	border-radius: 10px;
