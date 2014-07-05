@@ -6,8 +6,9 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function() {
-$("a").each(function(elem) {
+$(".menu a").each(function(idx, elem) {
 	var $elem = $(elem);
+	console.log($elem.attr("href"));
 	$elem.click(function(){
 		LoadPage($elem.attr("href").substr(1));
 	});
