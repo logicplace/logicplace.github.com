@@ -208,21 +208,18 @@ function precedence() {
 }
 
 $(function(){
-	var hash = window.location.hash.indexOf("#", 1);
-	if(hash != -1) {
-		GenerateList(window.location.hash.substr(hash + 1));
-		hash = window.location.hash.substr(0, hash);
+	var hash = window.location.hash;
+	if(hash) {
+		GenerateList(hash.substr(1));
 	}
 	else {
 		GenerateList("index");
-		hash = window.location.hash;
 	}
 
 	$(".berrysort a").each(function(idx, elem) {
 		var $elem = $(elem);
 		var sorter = $elem.attr("href").substr(1);
 		$elem.data("name", sorter);
-		$elem.attr("href", hash + $elem.attr("href"));
 		$elem.click(function() {
 			GenerateList(sorter);
 		});

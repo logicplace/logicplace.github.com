@@ -12,12 +12,7 @@ $(function() {
 		$elem.click(LoadMe);
 	});
 
-	var hash2;
-	if((hash2 = window.location.hash.indexOf("#", 1)) != -1) {
-		LoadPage(window.location.hash.substring(1, hash2));
-	} else {
-		LoadPage(window.location.hash.substr(1));
-	}
+	LoadPage(window.location.search.substr(1));
 });
 
 function LoadMe() {
@@ -27,7 +22,10 @@ function LoadMe() {
 function LoadPage(page) {
 	$("#meat").load(page == "" ? "index_content.html" : page + ".html", function() {
 		$("#meat a.loadpage").each(function(idx, elem) {
-			$(elem).click(LoadMe);
+			var $elem = $(elem);
+			if($elem.attr("href").charAt(0) == "?") {
+				$(elem).click(LoadMe);
+			}
 		});
 	});
 }
@@ -41,12 +39,12 @@ function LoadPage(page) {
  </div>
  <table class="body"><tbody><tr>
   <td class="menutd"><ul class="menu">
-   <li><a href="#">Home</a></li>
+   <li><a href="?">Home</a></li>
    <li><a href="http://sweet-sheepy-faces.tumblr.com">Blog</a></li>
-   <li><a href="#gaming">Gaming</a></li>
-   <li><a href="#programming">Programming</a></li>
-   <li><a href="#drawing">Visual Arts</a></li>
-   <li><a href="#writing">Writing</a></li>
+   <li><a href="?gaming">Gaming</a></li>
+   <li><a href="?programming">Programming</a></li>
+   <li><a href="?drawing">Visual Arts</a></li>
+   <li><a href="?writing">Writing</a></li>
   </ul></td>
   <td><div id="meat">
   </div></td>
