@@ -1,0 +1,102 @@
+.template {
+	display: none;
+	margin: 0 !important;
+}
+
+.cardlist-pane {
+	min-height: 300px;
+}
+
+#cardlist {
+	display: block;
+	height: 250px;
+	width: 300px;
+
+	box-sizing: border-box;
+}
+
+.cardlist-pane button {
+	width: 49%;
+	padding 0px;
+	margin: auto 0;
+}
+
+.output-pane {
+	height: 100%;
+}
+
+.set {
+	display: inline-block;
+	margin: 10px;
+
+	text-align: center;
+}
+
+.color, .rarity {
+	display: none;
+	width: 2em;
+	height: 2em;
+	border-radius: 2em;
+	line-height: 2em;
+	text-align: center;
+}
+
+.rarity {
+	background-color: #eee;
+	background-size: 2em 2em;
+}
+
+.rarity.Common {
+	background-image: url(icons/common.png);
+}
+
+.rarity.Uncommon {
+	background-image: url(icons/uncommon.png);
+}
+
+.rarity.Rare {
+	background-image: url(icons/rare.png);
+}
+
+.rarity.Mythic-Rare {
+	background-image: url(icons/mythic-rare.png);
+}
+
+.color.None       { background-color: gray; }
+.color.Black      { background-color: black; color: white; }
+.color.Blue       { background-color: blue;  color: white; }
+.color.Green      { background-color: green; }
+.color.Red        { background-color: red; }
+.color.White      { background-color: #ddd; }
+.color.Multicolor { 
+	background: linear-gradient(135deg, #ffffff 0%, #ea2803 21%, #117210 49%, #0400fc 75%, #000000 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=1 );
+	color: white;
+}
+
+#hover {
+	display: none;
+	position: absolute;
+
+	background-color: lightyellow;
+	border: solid 2px DarkGoldenRod;
+	padding: 2px;
+}
+
+#hover .title, #hover .listing {
+	padding: 0px 8px;
+}
+
+#hover .title {
+	font-weight: bold;
+	border-bottom: solid 1px DarkGoldenRod;
+	margin-bottom: 4px;
+}
+
+#hover .listing div {
+	font-style: italic;
+}
+
+.listing .colors {
+	margin-left: 20px;
+}

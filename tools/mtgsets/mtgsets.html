@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magic: The Gathering - Card list to set list tool</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="tools/mtgsets/mtgsets.js"></script>
+	<link rel="stylesheet" type="text/css" href="tools/mtgsets/mtgsets.css">
+</head>
+<body><table id="mtgsets"><tr>
+<td class="cardlist-pane">
+	<textarea id="cardlist"></textarea>
+	<button onclick="formatCardList()">Clean</button>
+	<button onclick="getCards()">Fetch</button>
+</td>
+<td class="output-pane">
+	<span class="set template">
+		<div class="set-head"></div>
+		<div class="rarity-line">
+			<span class="rarity Promo"></span>
+			<span class="rarity Special"></span>
+			<span class="rarity Bonus"></span>
+			<span class="rarity Mythic-Rare"></span>
+			<span class="rarity Rare"></span>
+			<span class="rarity Uncommon"></span>
+			<span class="rarity Common"></span>
+			<span class="rarity Basic-Land"></span>
+		</div>
+		<div class="color-line">
+			<span class="color None"></span>
+			<span class="color Black"></span>
+			<span class="color Blue"></span>
+			<span class="color Green"></span>
+			<span class="color Red"></span>
+			<span class="color White"></span>
+			<span class="color Multicolor"></span>
+		</div>
+	</span>
+</td>
+</tr></table></body>
+<div id="hover">
+	<div class="title"></div>
+	<div class="listing"></div>
+</div>
+</html>
