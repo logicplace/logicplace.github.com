@@ -1,0 +1,80 @@
+/*** Game Styles ***/
+.bf-field {
+	position: relative;
+
+	width: 256px;
+	height: 176px;
+	display: inline-block;
+
+	border: 1px solid gray;
+	padding: 1px;
+}
+
+.bf-tile {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+
+	float: left;
+}
+
+.bf-object {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+}
+
+.bf-cat   { background-image: url(gfx/cat.png);   }
+.bf-rock  { background-image: url(gfx/rock.png);  }
+.bf-tree  { background-image: url(gfx/tree.png);  }
+.bf-box   { background-image: url(gfx/box.png);   }
+.bf-drum  { background-image: url(gfx/drum.png);  }
+.bf-grass { background-image: url(gfx/grass.png); }
+.bf-fish  { background-image: url(gfx/fish.png);  }
+
+/*** Interface Styles ***/
+.bombfish {
+	text-align: center;
+}
+
+.bf-level-name {
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.bf-level-button {
+	cursor: pointer;
+
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+
+	margin: 3px;
+}
+
+.bf-controls-regular span, .bf-controls-custom span {
+	cursor: pointer;
+
+	width: 60px;
+
+	border: 1px dashed gray;
+	padding: 1px 5px;
+}
+
+.bf-controls-regular span:hover, .bf-controls-custom span:hover {
+	background-color: lightblue;
+}
+
+/* TODO: Change these to icons? */
+.bf-restart:before { content: "Restart"; }
+.bf-solution:before { content: "Solve"; }
+.bf-create:before { content: "Create Level"; }
+
+.bf-custom {
+	display: none;
+}
