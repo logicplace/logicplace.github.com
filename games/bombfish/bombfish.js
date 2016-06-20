@@ -99,6 +99,8 @@ function loadLevel(name, data) {
 	} else {
 		$(".bf-custom-name").val(name);
 	}
+
+	beatLevel = false;
 }
 
 function selectLevel() {
@@ -218,19 +220,33 @@ function moveCat(nextX, nextY, furtherX, furtherY) {
 
 var catQueue = [];
 function popCatQueue() {
+	// Don't move if we've won.
+	var x = $(".bf-cat").data("x");
+	var y = $(".bf-cat").data("y");
+	if ([
+		whatTile(x-1, y), whatTile(x, y-1),
+		whatTile(x+1, y), whatTile(x, y+1)
+	].indexOf("bf-fish") != -1) {
+		catQueue = [];
+		playerWins();
+	}
+
 	if (catQueue.length) {
 		var next = catQueue.shift();
 		var x = $(".bf-cat").data("x"), y = $(".bf-cat").data("y");
 		switch(next) {
+			case "left":  moveCat(x-1, y,   x-2, y  ); break;
 			case "up":    moveCat(x,   y-1, x,   y-2); break;
 			case "right": moveCat(x+1, y,   x+2, y  ); break;
-			case "left":  moveCat(x-1, y,   x-2, y  ); break;
 			case "down":  moveCat(x,   y+1, x,   y+2); break;
 		}
 	}
 }
 
 function pushCatQueue(direction) {
+	// No more movement if level is beaten.
+	if (beatLevel) return;
+
 	catQueue.push(direction);
 	if (!$(".bf-cat").is(":animated")) {
 		popCatQueue();
@@ -249,18 +265,28 @@ function restartLevel() {
 	var x = $(".bf-cat").data("orig-x");
 	var y = $(".bf-cat").data("orig-y");
 	setObject("cat", x, y);
+
+	beatLevel = false;
+}
+
+var beatLevel = false;
+function playerWins() {
+	// TODO: Winning animations.
+	beatLevel = true;
+}
+
+
+//////// Editor Code /////////
+function toolTile() {
+	// Exercise tool on $this tile.
 }
 
 function selectPiece(piece) {
-	return function () {
 
-	}
 }
 
 function selectTool(tool) {
-	return function () {
 
-	}
 }
 
 function undoChange() {
@@ -269,10 +295,4 @@ function undoChange() {
 
 function redoChange() {
 
-}
-
-
-//////// Editor Code /////////
-function toolTile() {
-	// Exercise tool on $this tile.
 }
