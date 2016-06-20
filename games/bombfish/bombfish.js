@@ -16,29 +16,36 @@ $(function () {
 	}
 
 	// Register key presses.
-	$(".bombfish")
-	// Gameplay
-	.bind("keyup", "up",    queueCat("up"))
-	.bind("keyup", "right", queueCat("right"))
-	.bind("keyup", "left",  queueCat("left"))
-	.bind("keyup", "down",  queueCat("down"))
+	$(document).bind("keydown", function (ev) {
+		var cas = (ev.ctrlKey ? "c" : "") + (ev.altKey ? "a" : "") + (ev.shiftKey ? "s" : "")
+		switch(cas + ev.keyCode){
+			// Gameplay
+			case "37": pushCatQueue("left"); break;
+			case "38": pushCatQueue("up"); break;
+			case "39": pushCatQueue("right"); break;
+			case "40": pushCatQueue("down"); break;
 
-	.bind("keyup", "r", restartLevel)
+			// r
+			case "82": restartLevel();
 
-	// Editor
-	.bind("keyup", "1", selectPiece("S"))
-	.bind("keyup", "2", selectPiece("G"))
-	.bind("keyup", "3", selectPiece("R"))
-	.bind("keyup", "4", selectPiece("T"))
-	.bind("keyup", "5", selectPiece("B"))
-	.bind("keyup", "6", selectPiece("C"))
-	.bind("keyup", "7", selectPiece("F"))
-	.bind("keyup", "8", selectTool(1))
-	.bind("keyup", "9", selectTool(2))
-	.bind("keyup", "0", selectTool(3))
+			// Editor
+			// 1 2 3 4 5 6 7 8 9 0
+			case "49": selectPiece("S"); break;
+			case "50": selectPiece("G"); break;
+			case "51": selectPiece("R"); break;
+			case "52": selectPiece("T"); break;
+			case "53": selectPiece("B"); break;
+			case "54": selectPiece("C"); break;
+			case "55": selectPiece("F"); break;
+			case "56": selectTool(1); break;
+			case "57": selectTool(2); break;
+			case "48": selectTool(3); break;
 
-	.bind("keyup", "ctrl+z", undoChange)
-	.bind("keyup", "ctrl+r", redoChange)
+			// ctrl+z ctrl+r
+			case "c90": undoChange(); break;
+			case "c82": redoChange(); break;
+		}
+	});
 });
 
 function loadLevel(name, data) {
@@ -77,7 +84,12 @@ function loadLevel(name, data) {
 
 		if (tile == "S") {
 			// Move cat to start position.
-			setObject("cat", i % 16, Math.floor(i / 16));
+			var x = i % 16, y = Math.floor(i / 16);
+			setObject("cat", x, y);
+			$(".bf-cat").data({
+				"orig-x": x,
+				"orig-y": y,
+			});
 		}
 	});
 
@@ -107,7 +119,7 @@ function setObject(obj, x, y, animate) {
 		"top": y * 16,
 		"left": x * 16,
 	}, {
-		"duration": animate ? 200 : 0,
+		"duration": animate ? 150 : 0,
 		"complete": animate || $.noop,
 	}).data({
 		"x": x, "y": y,
@@ -115,29 +127,66 @@ function setObject(obj, x, y, animate) {
 }
 
 function moveObject($obj, fromX, fromY, toX, toY) {
-	// TODO: Set initial position of .bf-movable and give tile image
-	// TODO: Change tile to grass
+	// Set initial position of .bf-movable and give tile image
+	setObject("movable", fromX, fromY);
+	// Change tile to grass
+	var cls = whatTile($obj);
+	resetTile($obj, "bf-grass");
+	// Animate movement.
+	resetTile($(".bf-movable"), cls);
 	setObject("movable", toX, toY, function () {
-		// TODO: Change new tile to target.
-		// TODO: Clear movable's image
+		var leftTile = whatTile(toX-1, toY);
+		var upTile = whatTile(toX, toY-1);
+		var rightTile = whatTile(toX+1, toY);
+		var downTile = whatTile(toX, toY+1);
+		if ([leftTile, upTile, rightTile, downTile].indexOf("bf-rock") != -1) {
+			// Change to rock.
+			cls = "bf-rock";
+		} else {
+			var destroyed = false;
+			if (leftTile == cls) destroyed = resetTile(getTile(toX-1, toY), "bf-grass");
+			if (upTile == cls) destroyed = resetTile(getTile(toX, toY-1), "bf-grass");
+			if (rightTile == cls) destroyed = resetTile(getTile(toX+1, toY), "bf-grass");
+			if (downTile == cls) destroyed = resetTile(getTile(toX, toY+1), "bf-grass");
+			if (destroyed) cls = "bf-grass";
+		}
+		// Change new tile to target.
+		resetTile(getTile(toX, toY), cls);
+		// Clear movable's image
+		resetTile($(".bf-movable"), false);
 	});
 }
 
-function resetTile($obj) {
+function resetTile($obj, cls) {
 	// Reset image.
-	return $obj.removeClass("bf-grass bf-fish bf-tree bf-box bf-drum bf-rock").addClass($obj.data("orig"));
+	$obj.removeClass("bf-grass bf-fish bf-tree bf-box bf-drum bf-rock");
+	if (cls !== false) $obj.addClass(cls || $obj.data("orig"));
+	return $obj;
+}
+
+function whatTile($obj, y) {
+	if (typeof(y) !== "undefined") {
+		var x = $obj;
+		if (outBounds(x, y)) {
+			// Borders have no class.
+			return "";
+		}
+		$obj = getTile(x, y);
+	}
+	// Get tile class.
+	return $obj.attr("class").replace(/\bbf-tile\b| /g, "");
 }
 
 function outBounds(x, y) { return x < 0 || x >= 16 || y < 0 || y >= 11; }
 function getTile(x, y) { return $(".bf-tile:eq(" + (y * 16 + x) + ")"); }
 function isSolid($t) { return $t.is(".bf-fish, .bf-tree, .bf-box, .bf-drum, .bf-rock"); }
-function isMovable($t) { return t.is(".bf-tree, .bf-box, .bf-drum"); }
+function isMovable($t) { return $t.is(".bf-tree, .bf-box, .bf-drum"); }
 
 function moveCat(nextX, nextY, furtherX, furtherY) {
 	// Move cat to next, move whatever's in next to further.
 	if (outBounds(nextX, nextY)) {
 		// Can't move out of bounds.
-		return false;
+		return;
 	}
 
 	// Find what's in next, if anything.
@@ -145,36 +194,47 @@ function moveCat(nextX, nextY, furtherX, furtherY) {
 	if (isSolid($next)) {
 		if (!isMovable($next)) {
 			// Cannot move this.
-			return false;
+			return;
 		}
 
 		// If it's solid, it has to move, so we have to check further.
 		if (outBounds(furtherX, furtherY)) {
 			// Can't move out of bounds.
-			return false;
+			return;
 		}
 
 		var $further = getTile(furtherX, furtherY);
 		if (isSolid($further)) {
 			// Can't move this block.
-			return false;
+			return;
 		}
 
-		moveObject($next, furtherX, furtherY);
+		moveObject($next, nextX, nextY, furtherX, furtherY);
 	}
 	// If it's not solid (empty), the cat can just move here.
 	// Otherwise, the object in the way has already moved by this point.
 	setObject("cat", nextX, nextY, popCatQueue);
-
-	return true;
 }
 
+var catQueue = [];
 function popCatQueue() {
-
+	if (catQueue.length) {
+		var next = catQueue.shift();
+		var x = $(".bf-cat").data("x"), y = $(".bf-cat").data("y");
+		switch(next) {
+			case "up":    moveCat(x,   y-1, x,   y-2); break;
+			case "right": moveCat(x+1, y,   x+2, y  ); break;
+			case "left":  moveCat(x-1, y,   x-2, y  ); break;
+			case "down":  moveCat(x,   y+1, x,   y+2); break;
+		}
+	}
 }
 
-function pushCatQueue() {
-
+function pushCatQueue(direction) {
+	catQueue.push(direction);
+	if (!$(".bf-cat").is(":animated")) {
+		popCatQueue();
+	}
 }
 
 function queueCat(direction) {
@@ -182,7 +242,13 @@ function queueCat(direction) {
 }
 
 function restartLevel() {
+	$(".bf-tile").each(function () {
+		resetTile($(this));
+	});
 
+	var x = $(".bf-cat").data("orig-x");
+	var y = $(".bf-cat").data("orig-y");
+	setObject("cat", x, y);
 }
 
 function selectPiece(piece) {
