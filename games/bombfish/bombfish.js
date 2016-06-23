@@ -56,6 +56,8 @@ function loadLevel(name, data) {
 	 *  R: Rock
 	 *  T: Tree; B: Box; C: Drum
 	 */
+	if (winningAnimationTimer) clearTimeout(winningAnimationTimer);
+
 	// Expand and normalize all tiles.
 	data = data
 	.replace(/ /g, "G")
@@ -233,12 +235,14 @@ function popCatQueue() {
 
 	if (catQueue.length) {
 		var next = catQueue.shift();
-		var x = $(".bf-cat").data("x"), y = $(".bf-cat").data("y");
-		switch(next) {
-			case "left":  moveCat(x-1, y,   x-2, y  ); break;
-			case "up":    moveCat(x,   y-1, x,   y-2); break;
-			case "right": moveCat(x+1, y,   x+2, y  ); break;
-			case "down":  moveCat(x,   y+1, x,   y+2); break;
+		if (!$(".bf-cat").is(":animated")) {
+			var x = $(".bf-cat").data("x"), y = $(".bf-cat").data("y");
+			switch(next) {
+				case "left":  moveCat(x-1, y,   x-2, y  ); break;
+				case "up":    moveCat(x,   y-1, x,   y-2); break;
+				case "right": moveCat(x+1, y,   x+2, y  ); break;
+				case "down":  moveCat(x,   y+1, x,   y+2); break;
+			}
 		}
 	}
 }
@@ -248,7 +252,7 @@ function pushCatQueue(direction) {
 	if (beatLevel) return;
 
 	catQueue.push(direction);
-	if (!$(".bf-cat").is(":animated")) {
+	if (!$(".bf-cat").is(":animated") && catQueue.length == 1) {
 		popCatQueue();
 	}
 }
@@ -258,6 +262,8 @@ function queueCat(direction) {
 }
 
 function restartLevel() {
+	if (winningAnimationTimer) clearTimeout(winningAnimationTimer);
+
 	$(".bf-tile").each(function () {
 		resetTile($(this));
 	});
@@ -269,10 +275,27 @@ function restartLevel() {
 	beatLevel = false;
 }
 
-var beatLevel = false;
+var beatLevel = false, winningAnimationTimer = null;
 function playerWins() {
-	// TODO: Winning animations.
 	beatLevel = true;
+	// Winning animations. TODO: Cat's animations.
+	$fish = $(".bf-fish").removeClass("bf-fish");
+
+	function nextAnim(id) {
+		// Set next frame.
+		$fish.addClass("bf-exp" + id);
+
+		// Timer for next frame.
+		winningAnimationTimer = setTimeout(function () {
+			// Remove that frame's class.
+			$fish.removeClass("bf-exp" + id);
+			if (id < 6) {
+				// Set the next if there's more left.
+				nextAnim(id + 1);
+			}
+		}, 144);
+	}
+	nextAnim(0);
 }
 
 
