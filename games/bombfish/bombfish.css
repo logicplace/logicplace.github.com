@@ -8,6 +8,8 @@
 
 	border: 1px solid gray;
 	padding: 1px;
+
+	background-image: url(gfx/grass.png);
 }
 
 .bf-tile {
@@ -33,8 +35,16 @@
 .bf-tree  { background-image: url(gfx/tree.png);  }
 .bf-box   { background-image: url(gfx/box.png);   }
 .bf-drum  { background-image: url(gfx/drum.png);  }
-.bf-grass { background-image: url(gfx/grass.png); }
+.bf-grass { background-image: none; }
 .bf-fish  { background-image: url(gfx/fish.png);  }
+
+.bf-exp0  { background-image: url(gfx/bomb.png);  }
+.bf-exp1  { background-image: url(gfx/explosion1.png);  }
+.bf-exp2  { background-image: url(gfx/explosion2.png);  }
+.bf-exp3  { background-image: url(gfx/explosion3.png);  }
+.bf-exp4  { background-image: url(gfx/explosion4.png);  }
+.bf-exp5  { background-image: url(gfx/explosion5.png);  }
+.bf-exp6  { background-image: url(gfx/explosion6.png);  }
 
 /*** Interface Styles ***/
 .bombfish {
