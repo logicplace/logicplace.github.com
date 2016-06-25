@@ -4,7 +4,10 @@ $(function () {
 	var $field = $(".bf-field");
 	for (var y = 0; y < 11; ++y) {
 		for (var x = 0; x < 16; ++x) {
-			$tile.clone().appendTo($field).click(toolTile);
+			$tile.clone().data({
+				"x": x,
+				"y": y,
+			}).appendTo($field);
 		}
 	}
 
@@ -30,16 +33,16 @@ $(function () {
 
 			// Editor
 			// 1 2 3 4 5 6 7 8 9 0
-			case "49": selectPiece("S"); break;
+			case "49": selectPiece("c"); break;
 			case "50": selectPiece("G"); break;
 			case "51": selectPiece("R"); break;
 			case "52": selectPiece("T"); break;
 			case "53": selectPiece("B"); break;
 			case "54": selectPiece("C"); break;
 			case "55": selectPiece("F"); break;
-			case "56": selectTool(1); break;
-			case "57": selectTool(2); break;
-			case "48": selectTool(3); break;
+			case "56": selectTool("paint"); break;
+			case "57": selectTool("toggle"); break;
+			case "48": selectTool("cycle"); break;
 
 			// ctrl+z ctrl+r
 			case "c90": undoChange(); break;
@@ -53,9 +56,30 @@ $(function () {
 	$(".bf-create").click(showCustom);
 
 	// Level creation controls.
+	$(".bf-piece.bf-cat").click(  function () { selectPiece("c"); });
+	$(".bf-piece.bf-grass").click(function () { selectPiece("G"); });
+	$(".bf-piece.bf-rock").click( function () { selectPiece("R"); });
+	$(".bf-piece.bf-tree").click( function () { selectPiece("T"); });
+	$(".bf-piece.bf-box").click(  function () { selectPiece("B"); });
+	$(".bf-piece.bf-drum").click( function () { selectPiece("C"); });
+	$(".bf-piece.bf-fish").click( function () { selectPiece("F"); });
+
+	$(".bf-tool.bf-paint").click( function () { selectTool("paint");  });
+	$(".bf-tool.bf-toggle").click(function () { selectTool("toggle"); });
+	$(".bf-tool.bf-cycle").click( function () { selectTool("cycle");  });
+
 	$(".bf-quit").click(showRegular);
+	$(".bf-tile").mousedown(tileMouseDown)
+	.mouseenter(tileMouseEnter);
+	$(document).mouseup(tileMouseUp);
 });
 
+
+var id2class = {
+	"G": "bf-grass", "S": "bf-grass", "F": "bf-fish",
+	"T": "bf-tree",  "B": "bf-box",   "C": "bf-drum",
+	"R": "bf-rock",  "c": "bf-cat",
+};
 function loadLevel(name, data) {
 	/* Load level contents from string.
 	 * String is of form /(T\d*)+/ where T is one of the following:
@@ -82,23 +106,17 @@ function loadLevel(name, data) {
 	}
 
 	// Draw up tiles.
-	var assoc = {
-		"G": "bf-grass", "S": "bf-grass", "F": "bf-fish",
-		"T": "bf-tree",  "B": "bf-box",   "C": "bf-drum",
-		"R": "bf-rock",
-	};
-
 	$(".bf-tile").each(function (i) {
 		var tile = data.charAt(i);
-		var $this = resetTile($(this).data("orig", assoc[tile]));
+		var $this = resetTile($(this).data("orig", id2class[tile]));
 
 		if (tile == "S") {
 			// Move cat to start position.
 			var x = i % 16, y = Math.floor(i / 16);
 			setObject("cat", x, y);
-			$(".bf-cat").data({
-				"orig-x": x,
-				"orig-y": y,
+			$(".bf-field .bf-cat").data({
+				"origX": x,
+				"origY": y,
 			});
 		}
 	});
@@ -127,7 +145,7 @@ function selectLevel() {
 
 //////// Control Code ////////
 function setObject(obj, x, y, animate) {
-	return $(".bf-" + obj).animate({
+	return $(".bf-field .bf-" + obj).animate({
 		"top": y * 16,
 		"left": x * 16,
 	}, {
@@ -171,7 +189,7 @@ function moveObject($obj, fromX, fromY, toX, toY) {
 
 function resetTile($obj, cls) {
 	// Reset image.
-	$obj.removeClass("bf-grass bf-fish bf-tree bf-box bf-drum bf-rock");
+	$obj.removeClass("bf-grass bf-fish bf-tree bf-box bf-drum bf-rock bf-cat");
 	if (cls !== false) $obj.addClass(cls || $obj.data("orig"));
 	return $obj;
 }
@@ -231,11 +249,10 @@ function moveCat(nextX, nextY, furtherX, furtherY) {
 var catQueue = [];
 function popCatQueue() {
 	// Don't move if we've won.
-	var x = $(".bf-cat").data("x");
-	var y = $(".bf-cat").data("y");
+	var xy = $(".bf-field .bf-cat").data();
 	if ([
-		whatTile(x-1, y), whatTile(x, y-1),
-		whatTile(x+1, y), whatTile(x, y+1)
+		whatTile(xy.x-1, xy.y), whatTile(xy.x, xy.y-1),
+		whatTile(xy.x+1, xy.y), whatTile(xy.x, xy.y+1)
 	].indexOf("bf-fish") != -1) {
 		catQueue = [];
 		playerWins();
@@ -243,13 +260,13 @@ function popCatQueue() {
 
 	if (catQueue.length) {
 		var next = catQueue.shift();
-		if (!$(".bf-cat").is(":animated")) {
-			var x = $(".bf-cat").data("x"), y = $(".bf-cat").data("y");
+		if (!$(".bf-field .bf-cat").is(":animated")) {
+			var xy = $(".bf-field .bf-cat").data();
 			switch(next) {
-				case "left":  moveCat(x-1, y,   x-2, y  ); break;
-				case "up":    moveCat(x,   y-1, x,   y-2); break;
-				case "right": moveCat(x+1, y,   x+2, y  ); break;
-				case "down":  moveCat(x,   y+1, x,   y+2); break;
+				case "left":  moveCat(xy.x-1, xy.y,   xy.x-2, xy.y  ); break;
+				case "up":    moveCat(xy.x,   xy.y-1, xy.x,   xy.y-2); break;
+				case "right": moveCat(xy.x+1, xy.y,   xy.x+2, xy.y  ); break;
+				case "down":  moveCat(xy.x,   xy.y+1, xy.x,   xy.y+2); break;
 			}
 		}
 	}
@@ -260,7 +277,7 @@ function pushCatQueue(direction) {
 	if (beatLevel) return;
 
 	catQueue.push(direction);
-	if (!$(".bf-cat").is(":animated") && catQueue.length == 1) {
+	if (!$(".bf-field .bf-cat").is(":animated") && catQueue.length == 1) {
 		popCatQueue();
 	}
 }
@@ -276,9 +293,8 @@ function restartLevel() {
 		resetTile($(this));
 	});
 
-	var x = $(".bf-cat").data("orig-x");
-	var y = $(".bf-cat").data("orig-y");
-	setObject("cat", x, y);
+	var xy = $(".bf-field .bf-cat").data();
+	setObject("cat", xy.origX, xy.origY);
 
 	beatLevel = false;
 }
@@ -309,6 +325,9 @@ function playerWins() {
 function showRegular() {
 	$(".bf-custom").hide();
 	$(".bf-regular").show();
+
+	// TODO: reset tiles
+	$(".bf-field .bf-cat").show();
 }
 
 
@@ -316,18 +335,90 @@ function showRegular() {
 function showCustom() {
 	$(".bf-regular").hide();
 	$(".bf-custom").show();
+
+	resetTile($(".bf-movable"), "");
+	$(".bf-field .bf-cat").hide();
+
+	updateCurrent();
 }
 
-function toolTile() {
-	// Exercise tool on $this tile.
-}
-
+var currentPiece = "G";
 function selectPiece(piece) {
-
+	currentPiece = piece;
+	updateCurrent();
 }
 
+var currentTool = "paint";
 function selectTool(tool) {
+	currentTool = tool;
+	updateCurrent();
+}
 
+function updateCurrent() {
+	var $current = $(".bf-current").empty();
+
+	$(".bf-pieces .selected").removeClass("selected");
+	$(".bf-pieces").find("." + id2class[currentPiece]).addClass("selected");
+
+	$(".bf-tools .selected").removeClass("selected");
+	$(".bf-tools").find(".bf-" + currentTool).addClass("selected");
+
+	switch(currentTool) {
+		case "paint":
+			$("<div>").addClass("bf-cur1x2").append([
+				$("<span>").addClass("bf-paint"),
+				$("<span>").addClass(id2class[currentPiece])
+			]).appendTo($current);
+			break;
+
+		case "toggle":
+			$("<div>").addClass("bf-cur3x1").append([
+				$("<span>").addClass("bf-grass"),
+				$("<span>").addClass("bf-toggle"),
+				$("<span>").addClass(id2class[currentPiece])
+			]).appendTo($current);
+			break;
+
+		case "cycle":
+			switch(currentPiece) {
+				case "c":
+				case "F":
+					$("<div>").addClass("bf-cur3c").append([
+						$("<span>").addClass("bf-grass"),
+						$("<span>").addClass("bf-cat"),
+						$("<span>").addClass("bf-fish"),
+						$("<span>").addClass("bf-cycle")
+					]).appendTo($current);
+					break;
+
+				case "T":
+				case "B":
+				case "C":
+					$("<div>").addClass("bf-cur4c").append([
+						$("<span>").addClass("bf-grass"),
+						$("<span>").addClass("bf-tree"),
+						$("<span>").addClass("bf-box"),
+						$("<span>").addClass("bf-drum"),
+						$("<span>").addClass("bf-cycle")
+					]).appendTo($current);
+					break;
+
+				case "R":
+					$("<div>").addClass("bf-cur3x1").append([
+						$("<span>").addClass("bf-grass"),
+						$("<span>").addClass("bf-cycle"),
+						$("<span>").addClass("bf-rock")
+					]).appendTo($current);
+					break;
+
+				default:
+					$("<div>").addClass("bf-cur1x2").append([
+						$("<span>").addClass("bf-cycle"),
+						$("<span>").addClass(id2class[currentPiece])
+					]).appendTo($current);
+					break;
+			}
+	}
 }
 
 function undoChange() {
@@ -336,4 +427,101 @@ function undoChange() {
 
 function redoChange() {
 
+}
+
+function drawPiece(tile, piece) {
+	resetTile($(tile), id2class[piece || currentPiece]);
+}
+
+var isDrawing = false;
+function tileMouseDown() {
+	if ($(".bf-custom").is(":visible")) {
+		switch(currentTool) {
+			case "paint":
+				isDrawing = true;
+				drawPiece(this);
+				break;
+			case "toggle":
+				if (whatTile($(this)) == "bf-grass") {
+					drawPiece(this);
+				} else {
+					resetTile($(this), "bf-grass");
+				}
+				break;
+			case "cycle":
+				var tile = whatTile($(this));
+
+				switch(currentPiece) {
+					case "c":
+					case "F":
+						console.log(tile);
+						switch(tile) {
+							case id2class["c"]:
+								drawPiece(this, "F");
+								break;
+							case id2class["F"]:
+								drawPiece(this, "G");
+								break;
+							case id2class["G"]:
+								drawPiece(this, "c");
+								break;
+							default:
+								drawPiece(this);
+								break;
+						}
+						break;
+
+					case "T":
+					case "B":
+					case "C":
+						switch(tile) {
+							case id2class["T"]:
+								drawPiece(this, "B");
+								break;
+							case id2class["B"]:
+								drawPiece(this, "C");
+								break;
+							case id2class["C"]:
+								drawPiece(this, "G");
+								break;
+							case id2class["G"]:
+								drawPiece(this, "T");
+								break;
+							default:
+								drawPiece(this);
+								break;
+						}
+						break;
+
+					case "R":
+						switch(tile) {
+							case id2class["R"]:
+								drawPiece(this, "G");
+								break;
+							case id2class["G"]:
+								drawPiece(this, "R");
+								break;
+							default:
+								drawPiece(this);
+								break;
+						}
+						break;
+
+					default:
+						drawPiece(this);
+						break;
+				}
+				break;
+		}
+	}
+}
+
+function tileMouseEnter() {
+	if ($(".bf-custom").is(":visible") && currentTool == "paint" && isDrawing) {
+		drawPiece(this);
+	}
+}
+
+function tileMouseUp() {
+	isDrawing = false;
 }

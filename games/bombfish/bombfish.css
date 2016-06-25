@@ -57,6 +57,10 @@
 	letter-spacing: 2px;
 }
 
+.bf-custom-name {
+	margin-bottom: 5px;
+}
+
 .bf-level-button {
 	cursor: pointer;
 
@@ -93,7 +97,9 @@
 .bf-play:before { content: "Play"; }
 .bf-quit:before { content: "Quit"; }
 
-.bf-piece.bf-grass { background-image: url(gfx/grass.png); }
+.bf-piece.bf-grass, .bf-current .bf-grass {
+	background-image: url(gfx/grass.png);
+}
 .bf-paint  { background-image: url(gfx/paint.png);  }
 .bf-toggle { background-image: url(gfx/toggle.png); }
 .bf-cycle  { background-image: url(gfx/cycle.png);  }
@@ -104,6 +110,7 @@
 
 .bf-tool-panel {
 	width: 250px;
+	margin-bottom: 5px;
 	display: inline-block;
 }
 
@@ -131,10 +138,64 @@
 	border: 1px solid darkgray;
 }
 
+.bf-current span {
+	width: 16px;
+	height: 16px;
+
+	display: inline-block;
+}
+
 .bf-piece {
 	margin-top: 8px;
 }
 
 .bf-piece:first-child {
 	margin-left: 5px;
+}
+
+.bf-tool-panel .selected {
+	border: 1px solid pink;
+}
+
+.bf-current {
+	position: relative;
+}
+
+.bf-cur1x2 {
+	width: 16px;
+	margin: 4px auto;
+}
+
+.bf-cur3x1 {
+	margin: 16px auto;
+	display: inline-flex;
+}
+
+.bf-cur3c, .bf-cur4c {
+	width: 36px;
+	margin: 4px auto;
+}
+
+.bf-cur3c span:first-child {
+	margin-left: 10px;
+	margin-bottom: 4px;
+	display: block;
+}
+
+.bf-cur3c span:nth-child(2) {
+	margin-right: 4px;
+}
+
+.bf-cur3c span:last-child, .bf-cur4c span:last-child {
+	position: absolute;
+	left: 16px;
+	top: 16px;
+}
+
+.bf-cur4c span:first-child, .bf-cur4c span:nth-child(2) {
+	margin-bottom: 4px;
+}
+
+.bf-cur4c span:nth-child(odd) {
+	margin-right: 4px;
 }
