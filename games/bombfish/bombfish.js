@@ -46,6 +46,14 @@ $(function () {
 			case "c82": redoChange(); break;
 		}
 	});
+
+	// Gameplay controls.
+	$(".bf-restart").click(restartLevel);
+	$(".bf-solve").click($.noop);
+	$(".bf-create").click(showCustom);
+
+	// Level creation controls.
+	$(".bf-quit").click(showRegular);
 });
 
 function loadLevel(name, data) {
@@ -298,8 +306,18 @@ function playerWins() {
 	nextAnim(0);
 }
 
+function showRegular() {
+	$(".bf-custom").hide();
+	$(".bf-regular").show();
+}
+
 
 //////// Editor Code /////////
+function showCustom() {
+	$(".bf-regular").hide();
+	$(".bf-custom").show();
+}
+
 function toolTile() {
 	// Exercise tool on $this tile.
 }

@@ -30,21 +30,21 @@
 	display: inline-block;
 }
 
-.bf-cat   { background-image: url(gfx/cat.png);   }
-.bf-rock  { background-image: url(gfx/rock.png);  }
-.bf-tree  { background-image: url(gfx/tree.png);  }
-.bf-box   { background-image: url(gfx/box.png);   }
-.bf-drum  { background-image: url(gfx/drum.png);  }
-.bf-grass { background-image: none; }
-.bf-fish  { background-image: url(gfx/fish.png);  }
+.bf-cat   { background-image: url(gfx/cat.png);        }
+.bf-rock  { background-image: url(gfx/rock.png);       }
+.bf-tree  { background-image: url(gfx/tree.png);       }
+.bf-box   { background-image: url(gfx/box.png);        }
+.bf-drum  { background-image: url(gfx/drum.png);       }
+.bf-grass { background-image: none;                    }
+.bf-fish  { background-image: url(gfx/fish.png);       }
 
-.bf-exp0  { background-image: url(gfx/bomb.png);  }
-.bf-exp1  { background-image: url(gfx/explosion1.png);  }
-.bf-exp2  { background-image: url(gfx/explosion2.png);  }
-.bf-exp3  { background-image: url(gfx/explosion3.png);  }
-.bf-exp4  { background-image: url(gfx/explosion4.png);  }
-.bf-exp5  { background-image: url(gfx/explosion5.png);  }
-.bf-exp6  { background-image: url(gfx/explosion6.png);  }
+.bf-exp0  { background-image: url(gfx/bomb.png);       }
+.bf-exp1  { background-image: url(gfx/explosion1.png); }
+.bf-exp2  { background-image: url(gfx/explosion2.png); }
+.bf-exp3  { background-image: url(gfx/explosion3.png); }
+.bf-exp4  { background-image: url(gfx/explosion4.png); }
+.bf-exp5  { background-image: url(gfx/explosion5.png); }
+.bf-exp6  { background-image: url(gfx/explosion6.png); }
 
 /*** Interface Styles ***/
 .bombfish {
@@ -67,7 +67,7 @@
 	margin: 3px;
 }
 
-.bf-controls-regular span, .bf-controls-custom span {
+.bf-controls-regular span, .bf-controls span {
 	cursor: pointer;
 
 	width: 60px;
@@ -76,7 +76,7 @@
 	padding: 1px 5px;
 }
 
-.bf-controls-regular span:hover, .bf-controls-custom span:hover {
+.bf-controls-regular span:hover, .bf-controls span:hover {
 	background-color: lightblue;
 }
 
@@ -85,6 +85,56 @@
 .bf-solution:before { content: "Solve"; }
 .bf-create:before { content: "Create Level"; }
 
+.bf-undo:before { content: "Undo"; }
+.bf-redo:before { content: "Redo"; }
+.bf-save:before { content: "Save"; }
+.bf-load:before { content: "Load"; }
+.bf-copy-url:before { content: "Copy"; }
+.bf-play:before { content: "Play"; }
+.bf-quit:before { content: "Quit"; }
+
+.bf-piece.bf-grass { background-image: url(gfx/grass.png); }
+.bf-paint  { background-image: url(gfx/paint.png);  }
+.bf-toggle { background-image: url(gfx/toggle.png); }
+.bf-cycle  { background-image: url(gfx/cycle.png);  }
+
 .bf-custom {
 	display: none;
+}
+
+.bf-tool-panel {
+	width: 250px;
+	display: inline-block;
+}
+
+.bf-current {
+	width: 48px;
+	height: 48px;
+	padding: 1px;
+
+	display: inline-block;
+	float: left;
+
+	border: 3px double darkgray;
+}
+
+.bf-piece, .bf-tool {
+	width: 16px;
+	height: 16px;
+	padding: 1px;
+	margin-right: 1px;
+
+	display: inline-block;
+	background-position: 1px 1px;
+	background-repeat: no-repeat;
+
+	border: 1px solid darkgray;
+}
+
+.bf-piece {
+	margin-top: 8px;
+}
+
+.bf-piece:first-child {
+	margin-left: 5px;
 }
