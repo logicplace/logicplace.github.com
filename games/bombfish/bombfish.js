@@ -98,7 +98,9 @@ $(function () {
 	$(document).mouseup(tileMouseUp);
 
 	window.onhashchange = function () {
-		loadLevel("Copied level", location.hash.substr(1));
+		if (location.hash && location.hash.substr(1)) {
+			loadLevel("Copied level", location.hash.substr(1));
+		}
 	}
 	setTimeout(window.onhashchange, 50); // wtf
 });
