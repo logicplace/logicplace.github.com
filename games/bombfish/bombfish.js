@@ -312,8 +312,12 @@ function pushCatQueue(direction) {
 	// No more movement if level is beaten.
 	if (beatLevel || $(".bf-custom").is(":visible")) return;
 
-	if (catQueue.length < 5) catQueue.push(direction);
-	if (!$(".bf-field .bf-cat").is(":animated") && catQueue.length == 1) {
+	if (catQueue.length < 5) {
+		catQueue.push(direction);
+		if (!$(".bf-field .bf-cat").is(":animated") && catQueue.length == 1) {
+			popCatQueue();
+		}
+	} else {
 		popCatQueue();
 	}
 }
