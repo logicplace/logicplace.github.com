@@ -252,7 +252,7 @@ function moveCat(nextX, nextY, furtherX, furtherY) {
 	// Move cat to next, move whatever's in next to further.
 	if (outBounds(nextX, nextY)) {
 		// Can't move out of bounds.
-		return;
+		return popCatQueue();
 	}
 
 	// Find what's in next, if anything.
@@ -260,19 +260,19 @@ function moveCat(nextX, nextY, furtherX, furtherY) {
 	if (isSolid($next)) {
 		if (!isMovable($next)) {
 			// Cannot move this.
-			return;
+			return popCatQueue();
 		}
 
 		// If it's solid, it has to move, so we have to check further.
 		if (outBounds(furtherX, furtherY)) {
 			// Can't move out of bounds.
-			return;
+			return popCatQueue();
 		}
 
 		var $further = getTile(furtherX, furtherY);
 		if (isSolid($further)) {
 			// Can't move this block.
-			return;
+			return popCatQueue();
 		}
 
 		moveObject($next, nextX, nextY, furtherX, furtherY);
@@ -312,12 +312,8 @@ function pushCatQueue(direction) {
 	// No more movement if level is beaten.
 	if (beatLevel || $(".bf-custom").is(":visible")) return;
 
-	if (catQueue.length < 5) {
-		catQueue.push(direction);
-		if (!$(".bf-field .bf-cat").is(":animated") && catQueue.length == 1) {
-			popCatQueue();
-		}
-	} else {
+	catQueue.push(direction);
+	if (!$(".bf-field .bf-cat").is(":animated") && catQueue.length == 1) {
 		popCatQueue();
 	}
 }
