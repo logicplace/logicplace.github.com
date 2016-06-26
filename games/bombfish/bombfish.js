@@ -313,7 +313,7 @@ function pushCatQueue(direction) {
 	if (beatLevel || $(".bf-custom").is(":visible")) return;
 
 	catQueue.push(direction);
-	if (!$(".bf-field .bf-cat").is(":animated") && catQueue.length == 1) {
+	if (!$(".bf-field .bf-cat").is(":animated")) {
 		popCatQueue();
 	}
 }
