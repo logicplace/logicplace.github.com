@@ -199,3 +199,44 @@
 .bf-cur4c span:nth-child(odd) {
 	margin-right: 4px;
 }
+
+.bf-editor-error {
+	color: red;
+	font-weight: bold;
+}
+
+.bf-level-loader {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+
+	width: 200px;
+	height: 300px;
+	display: none;
+
+	margin-left: -100px;
+	margin-top: -150px;
+
+	border: 5px double black;
+	background-color: white;
+}
+
+.bf-loader-entry {
+	display: block;
+
+	margin: 0px 15px 10px 15px;
+
+	font-weight: bold;
+}
+
+.bf-loader-entry:first-child {
+	margin-top: 10px;
+}
+
+.bf-loader-entry :first-child:hover {
+	background-color: gray;
+}
+
+.bf-loader-entry :last-child {
+	float: right;
+}

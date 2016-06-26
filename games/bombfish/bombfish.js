@@ -45,8 +45,14 @@ $(function () {
 			case "48": selectTool("cycle"); break;
 
 			// ctrl+z ctrl+r
-			case "c90": undoChange(); break;
-			case "c82": redoChange(); break;
+			case "c90":
+				undoChange();
+				ev.preventDefault();
+				break;
+			case "c82":
+				redoChange();
+				ev.preventDefault();
+				break;
 		}
 	});
 
@@ -68,10 +74,33 @@ $(function () {
 	$(".bf-tool.bf-toggle").click(function () { selectTool("toggle"); });
 	$(".bf-tool.bf-cycle").click( function () { selectTool("cycle");  });
 
+	$(".bf-undo").click(undoChange);
+	$(".bf-redo").click(redoChange);
+	$(".bf-save").click(saveLevel);
+	$(".bf-load").click(loadSavedLevel);
+	//$(".bf-copy-url").click(copyLevelURL);
+	$(".bf-play").click(testLevel);
 	$(".bf-quit").click(showRegular);
+
+	function setupClipboard() {
+		if (typeof(Clipboard) === "undefined") {
+			setTimeout(setupClipboard, 50);
+		} else {
+			new Clipboard(".bf-copy-url", {
+			    "text": copyLevelURL
+			});
+		}
+	}
+	setupClipboard();
+
 	$(".bf-tile").mousedown(tileMouseDown)
 	.mouseenter(tileMouseEnter);
 	$(document).mouseup(tileMouseUp);
+
+	window.onhashchange = function () {
+		loadLevel("Copied level", location.hash.substr(1));
+	}
+	setTimeout(window.onhashchange, 50); // wtf
 });
 
 
@@ -79,7 +108,12 @@ var id2class = {
 	"G": "bf-grass", "S": "bf-grass", "F": "bf-fish",
 	"T": "bf-tree",  "B": "bf-box",   "C": "bf-drum",
 	"R": "bf-rock",  "c": "bf-cat",
+}, class2id = {
+	"bf-grass": "G", "bf-cat": "S", "bf-fish": "F",
+	"bf-tree":  "T", "bf-box": "B", "bf-drum": "C",
+	"bf-rock":  "R", "": "G",
 };
+
 function loadLevel(name, data) {
 	/* Load level contents from string.
 	 * String is of form /(T\d*)+/ where T is one of the following:
@@ -274,7 +308,7 @@ function popCatQueue() {
 
 function pushCatQueue(direction) {
 	// No more movement if level is beaten.
-	if (beatLevel) return;
+	if (beatLevel || $(".bf-custom").is(":visible")) return;
 
 	catQueue.push(direction);
 	if (!$(".bf-field .bf-cat").is(":animated") && catQueue.length == 1) {
@@ -287,6 +321,7 @@ function queueCat(direction) {
 }
 
 function restartLevel() {
+	if($(".bf-custom").is(":visible")) return;
 	if (winningAnimationTimer) clearTimeout(winningAnimationTimer);
 
 	$(".bf-tile").each(function () {
@@ -326,18 +361,22 @@ function showRegular() {
 	$(".bf-custom").hide();
 	$(".bf-regular").show();
 
-	// TODO: reset tiles
+	$(".bf-tile").each(function () {
+		resetTile($(this));
+	});
 	$(".bf-field .bf-cat").show();
 }
 
 
 //////// Editor Code /////////
 function showCustom() {
+	restartLevel();
 	$(".bf-regular").hide();
 	$(".bf-custom").show();
 
 	resetTile($(".bf-movable"), "");
-	$(".bf-field .bf-cat").hide();
+	var xy = $(".bf-field .bf-cat").hide().data();
+	resetTile(getTile(xy.origX, xy.origY), "bf-cat");
 
 	updateCurrent();
 }
@@ -421,24 +460,192 @@ function updateCurrent() {
 	}
 }
 
+var pastChanges = [], futureChanges = [];
 function undoChange() {
+	if (isDrawing || pastChanges.length == 0 || !$(".bf-custom").is(":visible")) return;
 
+	var change = pastChanges.pop(), cc;
+	if (change[0]) cc = change[1];
+	else cc = [change.slice(1)];
+
+	for (var i = cc.length - 1; i >= 0; --i) {
+		resetTile(cc[i][0], cc[i][1]);
+	}
+
+	futureChanges.unshift(change);
 }
 
 function redoChange() {
+	if (isDrawing || futureChanges.length == 0 || !$(".bf-custom").is(":visible")) return;
 
+	var change = futureChanges.shift(), cc;
+	if (change[0]) cc = change[1];
+	else cc = [change.slice(1)];
+
+	for (var i = 0; i < cc.length; ++i) {
+		resetTile(cc[i][0], cc[i][2]);
+	}
+
+	pastChanges.push(change);
+}
+
+function setError(err) {
+	$(".bf-editor-error").text(err);
+	return false;
+}
+
+function getCustomName() {
+	return $(".bf-custom-name").val().trim();
+}
+
+function verifyLevel() {
+	if (getCustomName() == "") {
+		$(".bf-custom-name").focus();
+		return setError("Enter a level name.");
+	}
+
+	if ($(".bf-field .bf-cat").length != 2) {
+		return setError("Level must have exactly one cat.");
+	}
+
+	if ($(".bf-field .bf-fish").length != 1) {
+		return setError("Level must have exactly one fish.");
+	}
+
+	$(".bf-editor-error").empty();
+	return true;
+}
+
+function levelToString() {
+	var tiles = "";
+	$(".bf-tile").each(function () {
+		tiles += class2id[whatTile($(this))];
+	});
+	return tiles;
+}
+
+function saveLevel() {
+	if (verifyLevel()) {
+		var name = getCustomName().replace(/\x01/g, "");
+		localStorage.setItem(name, levelToString());
+		if ("levels" in localStorage) {
+			localStorage.levels += "\x01" + name;
+		} else {
+			localStorage.levels = name;
+		}
+	}
+}
+
+function loadSavedLevel() {
+	if ("levels" in localStorage && localStorage.levels) {
+		var $loader = $(".bf-level-loader").empty().show(),
+		levels = localStorage.levels.split("\x01"),
+		$del = $("<span>").text("X");
+		for (var i = 0; i < levels.length; i++) {
+			if (levels[i]) {
+				$("<div>").addClass("bf-loader-entry").appendTo($loader)
+				.data("deleting", false).append([
+					$("<span>").text(levels[i]).click(doLoadLevel),
+					$del.clone().click(deleteLevel)
+				]);
+			}
+		}
+		$("<span>").addClass("bf-loader-entry").text("Close selector")
+		.appendTo($loader).click(dontLoadLevel);
+	} else {
+		setError("No saved levels.")
+	}
+}
+
+function doLoadLevel() {
+	var level = $(this).text(), $parent = $(this).parent();
+	if ($parent.data("deleting")) {
+		// Delete the level.
+		level = $parent.data("text");
+		localStorage.removeItem(level);
+		localStorage.levels = localStorage.levels.replace(level, "")
+		.replace(/^\x01|\x01$/, "").replace(/\x01\x01/g, "");
+		$parent.remove();
+		return;
+	}
+
+	$(".bf-custom-name").val(level);
+	loadLevel(level, localStorage.getItem(level));
+	var xy = $(".bf-field .bf-cat").data();
+	resetTile(getTile(xy.origX, xy.origY), "bf-cat");
+
+	pastChanges = [];
+	futureChanges = [];
+	$(".bf-level-loader").hide();
+}
+
+function dontLoadLevel() {
+	$(".bf-level-loader").hide();
+}
+
+function deleteLevel() {
+	var $parent = $(this).parent();
+	if ($parent.data("deleting")) {
+		// Cancel deletion.
+		$parent.data("deleting", false)
+		.children(":first").text($parent.data("text"));
+		return;
+	}
+
+	$parent.data({
+		"deleting": true,
+		"text": $parent.children(":first").text()
+	}).children(":first").text("Are you sure you want to delete this?");
+}
+
+function copyLevelURL() {
+	// RLE
+	var tiles = levelToString() + "\0", final = "", last = "", count = 0;
+	for (var i = 0; i < tiles.length; ++i) {
+		if (last != tiles[i]) {
+			if (count > 1) final += last + count;
+			else final += last;
+			last = tiles[i];
+			count = 1;
+		} else {
+			count += 1;
+		}
+	}
+	
+	var link = location.origin + location.pathname + location.search + "#" + final;
+	return link
+}
+
+function testLevel() {
+	loadLevel(getCustomName(), levelToString());
+	showRegular();
 }
 
 function drawPiece(tile, piece) {
-	resetTile($(tile), id2class[piece || currentPiece]);
+	var $tile = $(tile);
+	piece = id2class[piece || currentPiece];
+
+	// Store undo history.
+	pastChanges.push([
+		false,
+		$tile,
+		whatTile($tile),
+		piece,
+	]);
+	// Clear redo history.
+	if (futureChanges.length) futureChanges = [];
+
+	resetTile($tile, piece);
 }
 
-var isDrawing = false;
+var isDrawing = false,
+startDrawing = 0;
 function tileMouseDown() {
 	if ($(".bf-custom").is(":visible")) {
 		switch(currentTool) {
 			case "paint":
 				isDrawing = true;
+				startDrawing = pastChanges.length;
 				drawPiece(this);
 				break;
 			case "toggle":
@@ -524,4 +731,13 @@ function tileMouseEnter() {
 
 function tileMouseUp() {
 	isDrawing = false;
+
+	// Group changes
+	if (pastChanges.length - startDrawing > 1) {
+		var changes = pastChanges.splice(startDrawing), cc = [];
+		for (var i = 0; i < changes.length; i++) {
+			cc.push(changes[i].slice(1));
+		}
+		pastChanges.push([true, cc]);
+	}
 }
