@@ -135,8 +135,8 @@ function loadLevel(name, data) {
 
 	// Verify data.
 	if (!data.match(/^[GSFRTBC]{176}$/)
-	|| data.match(/S/g).length != 1
-	|| data.match(/F/g).length != 1) {
+	|| (data.match(/S/g) || "").length != 1
+	|| (data.match(/F/g) || "").length != 1) {
 		console.error("Bombfish Error: Bad level data.");
 		return;
 	}
@@ -366,7 +366,7 @@ function showRegular() {
 	$(".bf-tile").each(function () {
 		resetTile($(this));
 	});
-	$(".bf-field .bf-cat").show();
+	$(".bf-field .bf-cat, .bf-movable").show();
 }
 
 
@@ -376,7 +376,7 @@ function showCustom() {
 	$(".bf-regular").hide();
 	$(".bf-custom").show();
 
-	resetTile($(".bf-movable"), "");
+	resetTile($(".bf-movable").hide(), "");
 	var xy = $(".bf-field .bf-cat").hide().data();
 	resetTile(getTile(xy.origX, xy.origY), "bf-cat");
 
