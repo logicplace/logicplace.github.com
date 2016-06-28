@@ -9,11 +9,12 @@
 		<input type="text" class="bf-custom-name bf-custom" value="" />
 	</div>
 	<div><div class="bf-field"><span class="bf-object bf-cat"></span><span class="bf-object bf-movable"></span></div></div>
-	<div class="bf-level-select bf-regular"></div>
+	<div class="bf-level-select bf-regular"><span class="bf-official">Official Levels:</span></div>
 	<div class="bf-controls-regular bf-regular">
 		<span class="bf-restart" title="Restart level (r)"></span>
 		<span class="bf-solution" title="Solution"></span>
 		<span class="bf-create" title="Create custom level"></span>
+		<span class="bf-help" title="Show help"></span>
 	</div>
 	<div class="bf-controls-custom bf-custom">
 		<div class="bf-tool-panel">
@@ -41,8 +42,31 @@
 			<span class="bf-copy-url" title="Copy level URL"></span>
 			<span class="bf-play" title="Play level"></span>
 			<span class="bf-quit" title="Quit editor"></span>
+			<span class="bf-help" title="Show help"></span>
 		</div>
 	</div>
 	<div class="bf-editor-error bf-custom"></div>
-	<div class="bf-level-loader"></div>
+	<div class="bf-dialog bf-level-loader"></div>
+	<div class="bf-dialog bf-regular-help">
+		<h1>Game Help</h1>
+		<div>Click on a number to load that level.</div>
+		<div>Use the arrow keys to move the cat.</div>
+		<div>The cat can move these objects: <span class="bf-tree"></span> <span class="bf-box"></span> <span class="bf-drum"></span></div>
+		<div>Move one of these objects into another of the same type to destroy them.</div>
+		<div>If an object touches a <span class="bf-rock"></span>, it will turn into a <span class="bf-rock"></span>.</div>
+		<div>Reach the <span class="bf-fish"></span> to win!</div>
+		<div class="bf-close">Close</div>
+	</div>
+	<div class="bf-dialog bf-custom-help">
+		<h1>Editor Help</h1>
+		<div>Select a piece and a tool to draw.</div>
+		<div><span class="bf-paint"></span>: Draws selected piece over any tile. Click and drag to draw.</div>
+		<div><span class="bf-toggle"></span>: Toggle between <span class="bf-grass"></span> and the selected piece.</div>
+		<div><span class="bf-cycle"></span>: Cycle through a set of similar pieces with each click.</div>
+		<div>Pieces can be selected with hotkeys 1-7.</div>
+		<div>Tools can be selected with hotkeys 8, 9, and 0.</div>
+		<div>Levels are only saved locally. To share it with a friend, use copy.</div>
+		<div class="bf-close">Close</div>
+	</div>
+	<div class="bf-credits">Remake of Bomb Fish from the M3 Pocket Max Vmax-1 cart for One Station. Original game by Jungletac.</div>
 </div>

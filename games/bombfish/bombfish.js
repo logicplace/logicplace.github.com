@@ -60,6 +60,12 @@ $(function () {
 	$(".bf-restart").click(restartLevel);
 	$(".bf-solve").click($.noop);
 	$(".bf-create").click(showCustom);
+	$(".bf-controls-regular .bf-help").click(function () {
+		$(".bf-regular-help").show();
+	});
+	$(".bf-regular-help .bf-close").click(function () {
+		$(".bf-regular-help").hide();
+	});
 
 	// Level creation controls.
 	$(".bf-piece.bf-cat").click(  function () { selectPiece("c"); });
@@ -81,6 +87,12 @@ $(function () {
 	//$(".bf-copy-url").click(copyLevelURL);
 	$(".bf-play").click(testLevel);
 	$(".bf-quit").click(showRegular);
+	$(".bf-controls .bf-help").click(function () {
+		$(".bf-custom-help").show();
+	});
+	$(".bf-custom-help .bf-close").click(function () {
+		$(".bf-custom-help").hide();
+	});
 
 	function setupClipboard() {
 		if (typeof(Clipboard) === "undefined") {

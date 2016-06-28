@@ -35,7 +35,8 @@
 .bf-tree  { background-image: url(gfx/tree.png);       }
 .bf-box   { background-image: url(gfx/box.png);        }
 .bf-drum  { background-image: url(gfx/drum.png);       }
-.bf-grass { background-image: none;                    }
+.bf-grass { background-image: url(gfx/grass.png);      }
+.bf-field .bf-grass { background-image: none;          }
 .bf-fish  { background-image: url(gfx/fish.png);       }
 
 .bf-exp0  { background-image: url(gfx/bomb.png);       }
@@ -97,9 +98,8 @@
 .bf-play:before { content: "Play"; }
 .bf-quit:before { content: "Quit"; }
 
-.bf-piece.bf-grass, .bf-current .bf-grass {
-	background-image: url(gfx/grass.png);
-}
+.bf-help:before { content: "Help"; }
+
 .bf-paint  { background-image: url(gfx/paint.png);  }
 .bf-toggle { background-image: url(gfx/toggle.png); }
 .bf-cycle  { background-image: url(gfx/cycle.png);  }
@@ -125,7 +125,7 @@
 	border: 3px double darkgray;
 }
 
-.bf-piece, .bf-tool {
+.bf-piece, .bf-tool, .bf-dialog span {
 	width: 16px;
 	height: 16px;
 	padding: 1px;
@@ -205,20 +205,42 @@
 	font-weight: bold;
 }
 
-.bf-level-loader {
+.bf-dialog {
 	position: fixed;
 	left: 50%;
 	top: 50%;
 
-	width: 200px;
-	height: 300px;
+	width: 300px;
+	height: 400px;
 	display: none;
 
-	margin-left: -100px;
-	margin-top: -150px;
+	margin-left: -150px;
+	margin-top: -200px;
 
 	border: 5px double black;
 	background-color: white;
+
+	overflow: auto;
+}
+
+.bf-dialog h1 {
+	padding: 0px;
+	margin: 0px 5px;
+
+	border-bottom: 2px solid black;
+}
+
+.bf-dialog div {
+	text-align: left;
+	margin-bottom: 2px;
+}
+
+.bf-dialog .bf-close {
+	text-align: center;
+}
+
+.bf-dialog .bf-close:hover {
+	background-color: gray;
 }
 
 .bf-loader-entry {
@@ -239,4 +261,11 @@
 
 .bf-loader-entry :last-child {
 	float: right;
+}
+
+.bf-credits {
+	text-align: left;
+	margin-top: 50px;
+	font-style: italic;
+	font-size: 10pt;
 }
