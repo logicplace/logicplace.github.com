@@ -128,17 +128,4 @@ C C C C C C C C \
  TTTTTTTTTTTTTT \
  T     TT     T \
 STRRRRRRRRRRRRT ",
-
-/*  Level 11  */"\
-                \
-                \
-                \
-                \
-S      B       F\
-                \
-                \
-                \
-                \
-                \
-                ",
 ];
