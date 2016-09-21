@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 1,
+	"at": 2,
+	"element": "Aqua",
+	"field": "100100100",
+	"pins": "00000100124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ef\u30a4\u30c9\u30b7\u30e7\u30c3\u30c8\uff11",
+			"set": null,
+			"image": "009-\u30ef\u30a4\u30c9\u30b7\u30e7\u30c3\u30c8\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "WideShot1",
+			"set": null,
+			"image": "009-WideShot1 (bad).jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 6,
+	"element": "Electric",
+	"field": "010010010",
+	"pins": "01100001024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b5\u30f3\u30c0\u30fc\u30de\u30f3\uff24\uff33",
+			"set": null,
+			"image": "238-\u30b5\u30f3\u30c0\u30fc\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "ThunderManDS",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

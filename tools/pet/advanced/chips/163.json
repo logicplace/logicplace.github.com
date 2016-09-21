@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 4,
+	"element": "Fire",
+	"field": "101010101",
+	"pins": "01000100124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 3",
+			"set": null,
+			"image": "163-CP 3.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30e1\u30c6\u30aa\u30ec\u30a4\u30f3\uff11",
+			"set": null,
+			"image": "163-\u30e1\u30c6\u30aa\u30ec\u30a4\u30f3\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Meteors1",
+			"set": null,
+			"image": "163-Meteors1 (bad).jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

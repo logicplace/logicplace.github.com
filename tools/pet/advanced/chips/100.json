@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 2,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "00101111124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30aa\u30a6\u30a8\u30f3\u30ab",
+			"set": null,
+			"image": "100-\u30aa\u30a6\u30a8\u30f3\u30ab (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Cheer",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

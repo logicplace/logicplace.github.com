@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 4,
+	"element": "Neutral",
+	"field": "200211200",
+	"pins": "00111100024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 3",
+			"set": "217 < EXCLUSIVE",
+			"image": "146-CP 3.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30b7\u30e9\u30cf\u30c9\u30ea",
+			"set": null,
+			"image": "146-\u30b7\u30e9\u30cf\u30c9\u30ea.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "WhiteFeatheredBird",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

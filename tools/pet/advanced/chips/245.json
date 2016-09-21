@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 5,
+	"element": "Neutral",
+	"field": "000100000",
+	"pins": "01100100124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30e1\u30bf\u30eb\u30de\u30f3",
+			"set": null,
+			"image": "245-\u30e1\u30bf\u30eb\u30de\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "MetalMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

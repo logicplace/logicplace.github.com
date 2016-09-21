@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 10,
+	"at": 11,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "01111111024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ab\u30fc\u30b9\u30aa\u30d6\u30d0\u30b0",
+			"set": null,
+			"image": "303-\u30ab\u30fc\u30b9\u30aa\u30d6\u30d0\u30b0 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "CurseOfBug",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

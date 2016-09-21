@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 4,
+	"element": "Fire",
+	"field": "111001111",
+	"pins": "00111001024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ab\u30ad\u30b2\u30f3\u30ad\u30f3",
+			"set": null,
+			"image": "140-\u30ab\u30ad\u30b2\u30f3\u30ad\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "AntiFire",
+			"set": null,
+			"image": "140-AntiFire (bad).jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

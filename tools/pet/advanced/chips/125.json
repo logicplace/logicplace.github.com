@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 6,
+	"element": "Neutral",
+	"field": "111101111",
+	"pins": "00110101024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30c7\u30b9\u30de\u30c3\u30c1\uff13",
+			"set": null,
+			"image": "125-\u30c7\u30b9\u30de\u30c3\u30c1\uff13 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Geddon3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

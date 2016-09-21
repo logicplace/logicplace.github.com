@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 2,
+	"element": "Neutral",
+	"field": "111101111",
+	"pins": "00100001024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 4",
+			"set": null,
+			"image": "066-CP 4.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff11",
+			"set": null,
+			"image": "066-\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "CircleGun1",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

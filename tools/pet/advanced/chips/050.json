@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "000110000",
+	"pins": "00011001024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ed\u30f3\u30b0\u30bd\u30fc\u30c9",
+			"set": null,
+			"image": "050-\u30ed\u30f3\u30b0\u30bd\u30fc\u30c9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "LongSword",
+			"set": "10\" ProtoMan",
+			"image": null,
+			"official": true,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "00111111124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ed\u30fc\u30eb\u30a2\u30ed\u30fc\uff13",
+			"set": null,
+			"image": "153-\u30ed\u30fc\u30eb\u30a2\u30ed\u30fc\uff13 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "RollArrow3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

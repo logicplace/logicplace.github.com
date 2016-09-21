@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Wood",
+	"field": "010110010",
+	"pins": "01110011124",
+	"notes": "Chip shows Neutral??",
+	"releases": {
+		"jp": {
+			"name": "\u30b1\u30f3\u30c9\u30fc\u30de\u30f3",
+			"set": null,
+			"image": "275-\u30b1\u30f3\u30c9\u30fc\u30de\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "KendoMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

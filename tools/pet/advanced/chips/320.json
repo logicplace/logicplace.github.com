@@ -1,0 +1,25 @@
+{
+	"type": "Navi",
+	"cp": -1,
+	"at": -1,
+	"element": "Neutral",
+	"field": "?",
+	"pins": "10010111024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d6\u30eb\u30fc\u30b9",
+			"set": null,
+			"image": "320-\u30d6\u30eb\u30fc\u30b9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "ProtoMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

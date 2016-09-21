@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 4,
+	"element": "Aqua",
+	"field": "111001111",
+	"pins": "00111001124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30c0\u30a4\u30b3\u30a6\u30ba\u30a4",
+			"set": null,
+			"image": "141-\u30c0\u30a4\u30b3\u30a6\u30ba\u30a4 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "HeavyFlood",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

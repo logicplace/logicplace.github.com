@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 9,
+	"at": 6,
+	"element": "Electric",
+	"field": "111111111",
+	"pins": "01110001124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b9\u30d1\u30fc\u30af\u30de\u30f3\uff24\uff33",
+			"set": null,
+			"image": "271-\u30b9\u30d1\u30fc\u30af\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "SparkManDS",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

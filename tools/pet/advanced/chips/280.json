@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 7,
+	"element": "Neutral",
+	"field": "110110110",
+	"pins": "01110110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d3\u30c7\u30aa\u30de\u30f3\uff24\uff33",
+			"set": null,
+			"image": "280-\u30d3\u30c7\u30aa\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "VideoManDS",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

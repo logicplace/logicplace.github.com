@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "01011001124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ed\u30fc\u30eb\uff24\uff33",
+			"set": null,
+			"image": "223-\u30ed\u30fc\u30eb\uff24\uff33 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "RollDS",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

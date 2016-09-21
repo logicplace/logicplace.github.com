@@ -1,0 +1,25 @@
+{
+	"type": "Navi",
+	"cp": -1,
+	"at": -1,
+	"element": "Neutral",
+	"field": "?",
+	"pins": "10011101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d5\u30a9\u30eb\u30c6",
+			"set": null,
+			"image": "333-\u30d5\u30a9\u30eb\u30c6 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "Bass",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

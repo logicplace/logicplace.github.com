@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 2,
+	"element": "Neutral",
+	"field": "010010010",
+	"pins": "00010000024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff11",
+			"set": null,
+			"image": "032-\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff11.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "GunDelSol1",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

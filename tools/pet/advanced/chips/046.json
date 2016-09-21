@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 7,
+	"at": 2,
+	"element": "Fire",
+	"field": "111111111",
+	"pins": "00010111024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d6\u30e9\u30c3\u30af\u30dc\u30e0",
+			"set": null,
+			"image": "046-\u30d6\u30e9\u30c3\u30af\u30dc\u30e0 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "BlackBomb",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

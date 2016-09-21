@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 5,
+	"element": "Aqua",
+	"field": "111000111",
+	"pins": "01001110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a2\u30af\u30a2\u30a2\u30c3\u30d1\u30fc\uff12",
+			"set": null,
+			"image": "182-\u30a2\u30af\u30a2\u30a2\u30c3\u30d1\u30fc\uff12.jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "AquaUpper2",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

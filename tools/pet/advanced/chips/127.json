@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 3,
+	"element": "Neutral",
+	"field": "111000111",
+	"pins": "00110110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ab\u30e9\u30fc\u30dd\u30a4\u30f3\u30c8",
+			"set": null,
+			"image": "127-\u30ab\u30e9\u30fc\u30dd\u30a4\u30f3\u30c8 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "ColorPoint",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

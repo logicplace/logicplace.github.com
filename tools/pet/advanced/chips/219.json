@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 4,
+	"element": "Neutral",
+	"field": "110110110",
+	"pins": "01010111124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff25\uff38",
+			"set": null,
+			"image": "219-\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff25\uff38.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "GunDelSolEX",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

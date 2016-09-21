@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": 1,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "00110100024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30c7\u30b9\u30de\u30c3\u30c1\uff11",
+			"set": null,
+			"image": "123-\u30c7\u30b9\u30de\u30c3\u30c1\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Geddon1",
+			"set": null,
+			"image": "123-Geddon1 (bad).jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 4,
+	"element": "Neutral",
+	"field": "111101111",
+	"pins": "00100010024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff13",
+			"set": null,
+			"image": "068-\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff13.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "CircleGun3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

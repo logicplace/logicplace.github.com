@@ -1,0 +1,24 @@
+{
+	"type": "Attack",
+	"cp": 11,
+	"at": 13,
+	"element": "Neutral",
+	"field": "110110110",
+	"pins": "10000000024",
+	"releases": {
+		"jp": {
+			"name": "",
+			"set": null,
+			"image": null,
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": null,
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": "Best battle chip EVER!"
+		}
+	}
+}

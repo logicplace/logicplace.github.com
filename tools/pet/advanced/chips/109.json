@@ -1,0 +1,32 @@
+{
+	"type": "Ability",
+	"cp": 3,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10000110124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 3",
+			"set": null,
+			"image": "109-CP 3.jpg",
+			"official": true,
+			"notes": "RECOVERY HP (+50)"
+		},
+		"jp": {
+			"name": "\u30ea\u30ab\u30d0\u30ea\u30fc\uff15\uff10",
+			"set": null,
+			"image": "109-\u30ea\u30ab\u30d0\u30ea\u30fc\uff15\uff10.png",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Recovery50",
+			"set": null,
+			"image": "109-Recovery50 (bad).jpg",
+			"official": true,
+			"notes": "RECOVERY HP (+50)"
+		}
+	}
+}

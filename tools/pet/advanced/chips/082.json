@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 3,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "00101001024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30c0\u30fc\u30af\u30db\u30fc\u30eb",
+			"set": null,
+			"image": "082-\u30c0\u30fc\u30af\u30db\u30fc\u30eb.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "DarkHole",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

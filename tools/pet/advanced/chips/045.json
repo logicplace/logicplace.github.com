@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 6,
+	"element": "Aqua",
+	"field": "111101111",
+	"pins": "00010110124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ab\u30f3\u30b1\u30c4\u30bb\u30f3",
+			"set": null,
+			"image": "045-\u30ab\u30f3\u30b1\u30c4\u30bb\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Geyser",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

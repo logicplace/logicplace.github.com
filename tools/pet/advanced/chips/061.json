@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Neutral",
+	"field": "000110000",
+	"pins": "00011110124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ab\u30a6\u30f3\u30bf\u30fc\uff12",
+			"set": null,
+			"image": "061-\u30ab\u30a6\u30f3\u30bf\u30fc\uff12.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "Counter2",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 5,
+	"element": "Neutral",
+	"field": "001001001",
+	"pins": "01111001024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b5\u30f3\u30c0\u30fc\u30d7\u30e9\u30b9",
+			"set": null,
+			"image": "286-\u30b5\u30f3\u30c0\u30fc\u30d7\u30e9\u30b9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "ThunderPlus",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Fire",
+	"field": "000111000",
+	"pins": "01011110124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d5\u30a1\u30a4\u30a2\u30de\u30f3",
+			"set": null,
+			"image": "233-\u30d5\u30a1\u30a4\u30a2\u30de\u30f3.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "FireMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

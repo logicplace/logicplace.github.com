@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": -1,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "00111000124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30db\u30fc\u30ea\u30fc\u30d1\u30cd\u30eb",
+			"set": null,
+			"image": "139-\u30db\u30fc\u30ea\u30fc\u30d1\u30cd\u30eb (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "HolyPanel",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

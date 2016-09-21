@@ -1,0 +1,25 @@
+{
+	"type": "Navi",
+	"cp": -1,
+	"at": -1,
+	"element": "Neutral",
+	"field": "?",
+	"pins": "10011001024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a2\u30af\u30a2\u30de\u30f3",
+			"set": null,
+			"image": "324-\u30a2\u30af\u30a2\u30de\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "AquaMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

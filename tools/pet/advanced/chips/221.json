@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "01011000124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ed\u30fc\u30eb",
+			"set": null,
+			"image": "221-\u30ed\u30fc\u30eb.jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Roll",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

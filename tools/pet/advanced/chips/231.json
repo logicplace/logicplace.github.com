@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 3,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "01011101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b5\u30fc\u30c1\u30de\u30f3\uff33\uff30",
+			"set": null,
+			"image": "231-\u30b5\u30fc\u30c1\u30de\u30f3\uff33\uff30 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "SearchManSP",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

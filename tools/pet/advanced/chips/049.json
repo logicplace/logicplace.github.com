@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Neutral",
+	"field": "100100100",
+	"pins": "00011000124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ef\u30a4\u30c9\u30bd\u30fc\u30c9",
+			"set": null,
+			"image": "049-\u30ef\u30a4\u30c9\u30bd\u30fc\u30c9.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "WideSword",
+			"set": null,
+			"image": "049-WideSword.jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

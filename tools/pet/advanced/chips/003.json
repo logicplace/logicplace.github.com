@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "00000001124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30e1\u30ac\u30ad\u30e3\u30ce\u30f3",
+			"set": null,
+			"image": "003-\u30e1\u30ac\u30ad\u30e3\u30ce\u30f3.jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "M-Cannon",
+			"set": null,
+			"image": null,
+			"official": true,
+			"notes": ""
+		}
+	}
+}

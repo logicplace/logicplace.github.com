@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": 10,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10010011024",
+	"notes": "RECOVERY HP",
+	"releases": {
+		"jp": {
+			"name": "",
+			"set": null,
+			"image": null,
+			"official": true,
+			"notes": ""
+		},
+		"en": {
+			"name": null,
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

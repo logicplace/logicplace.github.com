@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": 9,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10010010024",
+	"notes": "RIVAL AT (DOWN)",
+	"releases": {
+		"jp": {
+			"name": "\u30b5\u30f3\u30af\u30c1\u30e5\u30a2\u30ea",
+			"set": null,
+			"image": "208-\u30b5\u30f3\u30af\u30c1\u30e5\u30a2\u30ea (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Sanctuary",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

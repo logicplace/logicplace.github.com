@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": -1,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10001110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d0\u30ea\u30a2",
+			"set": null,
+			"image": "135-\u30d0\u30ea\u30a2.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "Barrier",
+			"set": null,
+			"image": "135-Barrier (bad).jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

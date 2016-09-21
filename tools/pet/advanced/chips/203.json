@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 9,
+	"at": 5,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "01010001024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30aa\u30b8\u30be\u30a6\u30b5\u30f3",
+			"set": null,
+			"image": "203-\u30aa\u30b8\u30be\u30a6\u30b5\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Guardian",
+			"set": null,
+			"image": "203-Guardian.jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

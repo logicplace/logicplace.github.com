@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 5,
+	"element": "Neutral",
+	"field": "100100100",
+	"pins": "01111001124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a2\u30af\u30a2\u30d1\u30ef\u30fc",
+			"set": null,
+			"image": "287-\u30a2\u30af\u30a2\u30d1\u30ef\u30fc (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "AquaPower",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

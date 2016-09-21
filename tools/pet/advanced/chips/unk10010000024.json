@@ -1,0 +1,10 @@
+{
+	"type": "Ability",
+	"cp": 8,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10010000024",
+	"notes": "RECOVERY HP",
+	"releases": {}
+}

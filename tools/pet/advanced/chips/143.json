@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 4,
+	"element": "Wood",
+	"field": "111001111",
+	"pins": "00111010124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30de\u30e8\u30a4\u30ce\u30e2\u30ea",
+			"set": null,
+			"image": "143-\u30de\u30e8\u30a4\u30ce\u30e2\u30ea.jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "LostForest",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

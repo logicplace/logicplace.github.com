@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 6,
+	"element": "Neutral",
+	"field": "111000111",
+	"pins": "01001011024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30e1\u30bf\u30eb\u30ae\u30a2\uff12",
+			"set": null,
+			"image": "176-\u30e1\u30bf\u30eb\u30ae\u30a2\uff12 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "MetalGear2",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

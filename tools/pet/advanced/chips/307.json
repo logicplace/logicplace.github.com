@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 7,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10010010124",
+	"notes": "RECOVERY CP",
+	"releases": {
+		"jp": {
+			"name": "\u30db\u30fc\u30ea\u30fc\u30c9\u30ea\u30fc\u30e0",
+			"set": null,
+			"image": "307-\u30db\u30fc\u30ea\u30fc\u30c9\u30ea\u30fc\u30e0 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "HolyDream",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

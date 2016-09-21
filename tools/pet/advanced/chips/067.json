@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 3,
+	"element": "Neutral",
+	"field": "111101111",
+	"pins": "00100001124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff12",
+			"set": null,
+			"image": "067-\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff12 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "CircleGun2",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

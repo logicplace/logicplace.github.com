@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 4,
+	"element": "Neutral",
+	"field": "110110110",
+	"pins": "01000001124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d7\u30ed\u30da\u30e9\u30dc\u30e0\uff11",
+			"set": null,
+			"image": "157-\u30d7\u30ed\u30da\u30e9\u30dc\u30e0\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "PropellerBomb1",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

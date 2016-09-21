@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 7,
+	"element": "Neutral",
+	"field": "000100000",
+	"pins": "01100101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30e1\u30bf\u30eb\u30de\u30f3\uff24\uff33",
+			"set": null,
+			"image": "247-\u30e1\u30bf\u30eb\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "MetalManDS",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 1,
+	"at": 2,
+	"element": "Fire",
+	"field": "000111000",
+	"pins": "00001100124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a8\u30ec\u30e1\u30f3\u30c8\u30d5\u30ec\u30a2",
+			"set": null,
+			"image": "025-\u30a8\u30ec\u30e1\u30f3\u30c8\u30d5\u30ec\u30a2 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "ElementFlare",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

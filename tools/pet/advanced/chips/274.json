@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 7,
+	"element": "Neutral",
+	"field": "000111000",
+	"pins": "01110011024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ec\u30fc\u30b6\u30fc\u30de\u30f3\uff24\uff33",
+			"set": null,
+			"image": "274-\u30ec\u30fc\u30b6\u30fc\u30de\u30f3\uff24\uff33.jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "LaserManDS",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

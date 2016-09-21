@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 4,
+	"element": "Neutral",
+	"field": "010010010",
+	"pins": "00101100124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30de\u30b0\u30ca\u30e0",
+			"set": null,
+			"image": "094-\u30de\u30b0\u30ca\u30e0 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Magnum",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

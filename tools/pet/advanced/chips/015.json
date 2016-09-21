@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 1,
+	"at": 1,
+	"element": "Neutral",
+	"field": "002112002",
+	"pins": "00000111124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d0\u30eb\u30ab\u30f3\uff11",
+			"set": null,
+			"image": "015-\u30d0\u30eb\u30ab\u30f3\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Vulcan1",
+			"set": null,
+			"image": "015-Vulcan1.jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

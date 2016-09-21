@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Neutral",
+	"field": "010101010",
+	"pins": "00100000124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a8\u30a2\u30db\u30c3\u30b1\u30fc\uff13",
+			"set": null,
+			"image": "065-\u30a8\u30a2\u30db\u30c3\u30b1\u30fc\uff13 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "AirHockey3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

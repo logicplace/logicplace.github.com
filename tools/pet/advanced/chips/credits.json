@@ -1,0 +1,15 @@
+{
+	"_format": {
+		"([0-9]{3}[ty]?)(.+)": {
+			"_filename": "$1 '.json'",
+
+			"releases": {
+				"$2": {
+					"notes": "data"
+				}
+			}
+		}
+	},
+
+	"Example: 001jp": "credit line"
+}

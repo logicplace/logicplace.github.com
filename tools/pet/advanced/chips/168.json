@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 6,
+	"element": "Electric",
+	"field": "010111010",
+	"pins": "01000111024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 5",
+			"set": null,
+			"image": "168-CP 5 (bad).jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30e9\u30a4\u30c8\u30cb\u30f3\u30b0\uff13",
+			"set": null,
+			"image": "168-\u30e9\u30a4\u30c8\u30cb\u30f3\u30b0\uff13 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Lightning3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

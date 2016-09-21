@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "01001100024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d1\u30cd\u30eb\u30b7\u30e5\u30fc\u30c8\uff11",
+			"set": null,
+			"image": "178-\u30d1\u30cd\u30eb\u30b7\u30e5\u30fc\u30c8\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "PanelShoot1",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

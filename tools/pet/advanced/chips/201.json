@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": 9,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10010000124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30c9\u30ea\u30fc\u30e0\u30aa\u30fc\u30e9",
+			"set": null,
+			"image": "201-\u30c9\u30ea\u30fc\u30e0\u30aa\u30fc\u30e9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "LifeAura",
+			"set": null,
+			"image": "201-LifeAura (bad).jpg",
+			"official": true,
+			"notes": "INCREASE RIVAL MISS"
+		}
+	}
+}

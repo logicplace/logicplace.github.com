@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 4,
+	"element": "Fire",
+	"field": "010111010",
+	"pins": "01101101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d0\u30fc\u30ca\u30fc\u30de\u30f3",
+			"set": null,
+			"image": null,
+			"official": true,
+			"notes": ""
+		},
+		"en": {
+			"name": "BurnerMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

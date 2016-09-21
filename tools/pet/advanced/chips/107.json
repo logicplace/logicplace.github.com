@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": -1,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10000101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ea\u30ab\u30d0\u30ea\u30fc\uff11\uff10",
+			"set": null,
+			"image": "107-\u30ea\u30ab\u30d0\u30ea\u30fc\uff11\uff10.jpg",
+			"official": true,
+			"notes": "Image courtesy of dawnfounditforsale"
+		},
+		"en": {
+			"name": "Recovery10",
+			"set": "MegaMan vs. FreezeMan",
+			"image": "107-Recovery10 (bad).jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

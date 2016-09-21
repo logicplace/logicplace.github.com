@@ -1,0 +1,25 @@
+{
+	"type": "Navi",
+	"cp": -1,
+	"at": -1,
+	"element": "Neutral",
+	"field": "?",
+	"pins": "10010101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b5\u30fc\u30c1\u30de\u30f3",
+			"set": null,
+			"image": "317-\u30b5\u30fc\u30c1\u30de\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "SearchMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

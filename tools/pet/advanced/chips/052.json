@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 6,
+	"element": "Neutral",
+	"field": "000111000",
+	"pins": "00011010024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 4",
+			"set": null,
+			"image": null,
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30ed\u30f3\u30b0\u30d6\u30ec\u30fc\u30c9",
+			"set": null,
+			"image": "052-\u30ed\u30f3\u30b0\u30d6\u30ec\u30fc\u30c9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "LongBlade",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

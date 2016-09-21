@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 9,
+	"at": 12,
+	"element": "Neutral",
+	"field": "110110110",
+	"pins": "01100010124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d6\u30eb\u30fc\u30b9\uff24\uff33",
+			"set": null,
+			"image": "241-\u30d6\u30eb\u30fc\u30b9\uff24\uff33.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "ProtoManDS",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

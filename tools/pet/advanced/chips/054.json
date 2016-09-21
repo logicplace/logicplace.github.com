@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 8,
+	"element": "Neutral",
+	"field": "002112002",
+	"pins": "00011011024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 5",
+			"set": "169 < EXCLUSIVE",
+			"image": "054-CP 5.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30ab\u30b9\u30bf\u30e0\u30bd\u30fc\u30c9",
+			"set": null,
+			"image": "054-\u30ab\u30b9\u30bf\u30e0\u30bd\u30fc\u30c9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "CustomSword",
+			"set": null,
+			"image": "054-CustomSword.jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

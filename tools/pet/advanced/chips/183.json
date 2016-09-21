@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 6,
+	"element": "Aqua",
+	"field": "111000111",
+	"pins": "01001110124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a2\u30af\u30a2\u30a2\u30c3\u30d1\u30fc\uff13",
+			"set": null,
+			"image": "183-\u30a2\u30af\u30a2\u30a2\u30c3\u30d1\u30fc\uff13.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "AquaUpper3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

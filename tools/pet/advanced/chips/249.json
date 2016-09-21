@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "101010101",
+	"pins": "01100110124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b8\u30e3\u30f3\u30af\u30de\u30f3SP",
+			"set": null,
+			"image": "249-\u30b8\u30e3\u30f3\u30af\u30de\u30f3SP (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "JunkManSP",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

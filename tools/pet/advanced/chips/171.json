@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 7,
+	"element": "Neutral",
+	"field": "000110000",
+	"pins": "01001000124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30cf\u30e4\u30d6\u30b5\u30ae\u30ea\uff13",
+			"set": null,
+			"image": "171-\u30cf\u30e4\u30d6\u30b5\u30ae\u30ea\uff13 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "FalconPride3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

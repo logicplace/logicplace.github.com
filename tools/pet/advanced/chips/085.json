@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 2,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "00101001124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 6",
+			"set": "TorchSoul",
+			"image": "085-CP 6.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30dc\u30fc\u30a4\u30ba\u30dc\u30e0\uff11",
+			"set": null,
+			"image": "085-\u30dc\u30fc\u30a4\u30ba\u30dc\u30e0\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "BoysBomb1",
+			"set": "TorchSoul",
+			"image": "085-BoysBomb1.jpg",
+			"official": true,
+			"notes": "On the poster, it says this chip is number 86 and has AT 3"
+		}
+	}
+}

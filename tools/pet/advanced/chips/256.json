@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 7,
+	"element": "Wood",
+	"field": "101010101",
+	"pins": "01101010024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a6\u30c3\u30c9\u30de\u30f3\uff24\uff33",
+			"set": null,
+			"image": "256-\u30a6\u30c3\u30c9\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "WoodManDS",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

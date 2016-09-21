@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 6,
+	"at": 4,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "01010001124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30dd\u30a4\u30ba\u30f3\u30a2\u30cc\u30d3\u30b9",
+			"set": null,
+			"image": "204-\u30dd\u30a4\u30ba\u30f3\u30a2\u30cc\u30d3\u30b9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "PoisonAnubis",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

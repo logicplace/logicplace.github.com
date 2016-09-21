@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "100100100",
+	"pins": "00011001124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 3",
+			"set": "169 < EXCLUSIVE",
+			"image": "051-CP 3.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30ef\u30a4\u30c9\u30d6\u30ec\u30fc\u30c9",
+			"set": null,
+			"image": "051-\u30ef\u30a4\u30c9\u30d6\u30ec\u30fc\u30c9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "WideBlade",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

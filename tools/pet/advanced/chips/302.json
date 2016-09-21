@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 9,
+	"at": 11,
+	"element": "Neutral",
+	"field": "002112002",
+	"pins": "01111110124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 9",
+			"set": null,
+			"image": "302-CP 9.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30c7\u30eb\u30bf\u30ec\u30a4\u30a8\u30c3\u30b8",
+			"set": null,
+			"image": "302-\u30c7\u30eb\u30bf\u30ec\u30a4\u30a8\u30c3\u30b8 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "DeltaRayEdge",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

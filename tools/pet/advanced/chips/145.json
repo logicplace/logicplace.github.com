@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 8,
+	"at": 3,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "00111011124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ab\u30ef\u30ea\u30df",
+			"set": null,
+			"image": "145-\u30ab\u30ef\u30ea\u30df (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Dodge",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

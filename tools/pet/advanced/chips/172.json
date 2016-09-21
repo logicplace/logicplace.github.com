@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Neutral",
+	"field": "000111000",
+	"pins": "01001001024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ca\u30f3\u30d0\u30fc\u30dc\u30fc\u30eb\uff11",
+			"set": null,
+			"image": "172-\u30ca\u30f3\u30d0\u30fc\u30dc\u30fc\u30eb\uff11.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "NumberBall1",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

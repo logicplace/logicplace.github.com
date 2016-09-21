@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "100100100",
+	"pins": "00111000024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30e2\u30b3\u30e9\u30c3\u30b7\u30e5\uff13",
+			"set": null,
+			"image": "132-\u30e2\u30b3\u30e9\u30c3\u30b7\u30e5\uff13 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "MokoRush3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

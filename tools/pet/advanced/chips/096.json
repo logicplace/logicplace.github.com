@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "00101101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ab\u30e2\u30f3\u30b9\u30cd\u30fc\u30af",
+			"set": null,
+			"image": "096-\u30ab\u30e2\u30f3\u30b9\u30cd\u30fc\u30af (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "GateSnake",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 6,
+	"element": "Fire",
+	"field": "010010010",
+	"pins": "00000111024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d5\u30ec\u30a4\u30e0\u30e9\u30a4\u30f3\uff13",
+			"set": null,
+			"image": "014-\u30d5\u30ec\u30a4\u30e0\u30e9\u30a4\u30f3\uff13 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "FlameLine3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

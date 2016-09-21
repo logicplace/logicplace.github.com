@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 5,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "00010100024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d0\u30a6\u30f3\u30c9\u30ce\u30fc\u30c8\uff13",
+			"set": null,
+			"image": "040-\u30d0\u30a6\u30f3\u30c9\u30ce\u30fc\u30c8\uff13 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "BoundNote3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

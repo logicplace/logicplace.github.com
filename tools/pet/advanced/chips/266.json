@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 4,
+	"element": "Aqua",
+	"field": "000011000",
+	"pins": "01101111024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b3\u30fc\u30eb\u30c9\u30de\u30f3",
+			"set": null,
+			"image": "266-\u30b3\u30fc\u30eb\u30c9\u30de\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "ColdMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

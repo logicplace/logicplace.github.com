@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 8,
+	"at": 4,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "00110000124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30c6\u30a3\u30f3\u30d1\u30cb\u30fc",
+			"set": null,
+			"image": "102-\u30c6\u30a3\u30f3\u30d1\u30cb\u30fc.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "Timpani",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

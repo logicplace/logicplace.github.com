@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 4,
+	"element": "Neutral",
+	"field": "111000111",
+	"pins": "00100011124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff13",
+			"set": null,
+			"image": "071-\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff13.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "TwinFang3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

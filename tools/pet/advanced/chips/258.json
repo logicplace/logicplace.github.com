@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "101010101",
+	"pins": "01101011024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30bf\u30c3\u30d7\u30de\u30f3\uff33\uff30",
+			"set": null,
+			"image": "258-\u30bf\u30c3\u30d7\u30de\u30f3\uff33\uff30 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "TopManSP",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

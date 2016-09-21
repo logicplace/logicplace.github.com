@@ -1,0 +1,32 @@
+{
+	"type": "Ability",
+	"cp": 4,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10001011124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 4",
+			"set": null,
+			"image": "121-CP 4 (bad).jpg",
+			"official": true,
+			"notes": "Reduce opponent\'s attack time to 3 sec<BR>\u2022For 2P NetNavi battle"
+		},
+		"jp": {
+			"name": "\u30af\u30a4\u30c3\u30af\u30b2\u30fc\u30b8",
+			"set": null,
+			"image": "121-\u30af\u30a4\u30c3\u30af\u30b2\u30fc\u30b8 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "QuickGauge",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": "Reduce opponent\'s attack time to 3 sec<BR>\u2022For 2P NetNavi battle"
+		}
+	}
+}

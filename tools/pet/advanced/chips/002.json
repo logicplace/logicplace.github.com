@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "00000001024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 2",
+			"set": "MegaMan",
+			"image": "002-CP 2 (bad).jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30cf\u30a4\u30ad\u30e3\u30ce\u30f3",
+			"set": null,
+			"image": "002-\u30cf\u30a4\u30ad\u30e3\u30ce\u30f3.jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "HiCannon",
+			"set": null,
+			"image": "002-HiCannon.jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

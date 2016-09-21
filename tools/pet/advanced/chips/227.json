@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 3,
+	"element": "Neutral",
+	"field": "111221111",
+	"pins": "01011011124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 3",
+			"set": null,
+			"image": "227-CP 3 (bad).jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30a6\u30a4\u30f3\u30c9\u30de\u30f3",
+			"set": null,
+			"image": "227-\u30a6\u30a4\u30f3\u30c9\u30de\u30f3.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "WindMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

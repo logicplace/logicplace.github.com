@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 1,
+	"at": 2,
+	"element": "Fire",
+	"field": "200211200",
+	"pins": "00001001124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d2\u30fc\u30c8\u30b7\u30e7\u30c3\u30c8",
+			"set": null,
+			"image": "019-\u30d2\u30fc\u30c8\u30b7\u30e7\u30c3\u30c8 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "HeatShot",
+			"set": "Starter",
+			"image": "019-HeatShot.jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

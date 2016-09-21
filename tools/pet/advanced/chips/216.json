@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Neutral",
+	"field": "000110000",
+	"pins": "01010110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30c0\u30fc\u30af\u30e9\u30a4\u30f3",
+			"set": null,
+			"image": "216-\u30c0\u30fc\u30af\u30e9\u30a4\u30f3.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "DarkLine",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

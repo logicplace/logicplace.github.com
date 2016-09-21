@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": -1,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10000111024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ea\u30ab\u30d0\u30ea\u30fc\uff18\uff10",
+			"set": null,
+			"image": "110-\u30ea\u30ab\u30d0\u30ea\u30fc\uff18\uff10 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Recovery80",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

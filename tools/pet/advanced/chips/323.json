@@ -1,0 +1,25 @@
+{
+	"type": "Navi",
+	"cp": -1,
+	"at": -1,
+	"element": "Neutral",
+	"field": "?",
+	"pins": "10011000124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b8\u30e3\u30f3\u30af\u30de\u30f3",
+			"set": null,
+			"image": "323-\u30b8\u30e3\u30f3\u30af\u30de\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "JunkMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

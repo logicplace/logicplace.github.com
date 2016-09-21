@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 7,
+	"element": "Neutral",
+	"field": "200211200",
+	"pins": "01010110124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 5",
+			"set": "217 < EXCLUSIVE",
+			"image": "217-CP 5.jpg",
+			"official": true,
+			"notes": "Featured Chip"
+		},
+		"jp": {
+			"name": "\u30cd\u30aa\u30d0\u30ea\u30a2\u30d6\u30eb",
+			"set": null,
+			"image": "217-\u30cd\u30aa\u30d0\u30ea\u30a2\u30d6\u30eb (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "NeoBarrierBlue",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

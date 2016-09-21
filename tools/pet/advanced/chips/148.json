@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 1,
+	"at": 2,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "00111101024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b3\u30d4\u30fc\u30c0\u30e1\u30fc\u30b8",
+			"set": null,
+			"image": "148-\u30b3\u30d4\u30fc\u30c0\u30e1\u30fc\u30b8 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "CopyDamage",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

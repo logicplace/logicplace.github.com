@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": 1,
+	"at": 0,
+	"element": "Neutral",
+	"field": "000200000",
+	"pins": "10000100024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30af\u30e9\u30c3\u30af\u30a2\u30a6\u30c8",
+			"set": null,
+			"image": "091-\u30af\u30e9\u30c3\u30af\u30a2\u30a6\u30c8.jpg",
+			"official": true,
+			"notes": "Image courtesy of dawnfounditforsale"
+		},
+		"en": {
+			"name": "CrackOut",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

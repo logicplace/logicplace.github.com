@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "00110001024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ef\u30e9\u30cb\u30f3\u30ae\u30e7\u30a6",
+			"set": null,
+			"image": "103-\u30ef\u30e9\u30cb\u30f3\u30ae\u30e7\u30a6.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "StrawDoll",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

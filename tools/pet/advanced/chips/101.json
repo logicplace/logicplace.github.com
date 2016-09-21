@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 7,
+	"at": 3,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "00110000024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 7",
+			"set": "SearchMan",
+			"image": "101-CP 7 (bad).jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30c7\u30a3\u30b9\u30b3\u30fc\u30c9",
+			"set": null,
+			"image": "101-\u30c7\u30a3\u30b9\u30b3\u30fc\u30c9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "Discord",
+			"set": "SearchMan",
+			"image": "101-Discord.jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

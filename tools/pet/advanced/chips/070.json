@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 3,
+	"element": "Neutral",
+	"field": "111222111",
+	"pins": "00100011024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 3",
+			"set": null,
+			"image": null,
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff12",
+			"set": null,
+			"image": "070-\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff12 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "TwinFang2",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

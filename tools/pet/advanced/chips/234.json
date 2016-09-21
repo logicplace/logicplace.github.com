@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 5,
+	"element": "Fire",
+	"field": "000111000",
+	"pins": "01011111024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d5\u30a1\u30a4\u30a2\u30de\u30f3\uff33\uff30",
+			"set": null,
+			"image": "234-\u30d5\u30a1\u30a4\u30a2\u30de\u30f3\uff33\uff30 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "FireManSP",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

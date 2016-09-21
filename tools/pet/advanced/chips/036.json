@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Electric",
+	"field": "000111000",
+	"pins": "00010010024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 2",
+			"set": null,
+			"image": null,
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30de\u30b0\u30dc\u30eb\u30c8\uff12",
+			"set": null,
+			"image": "036-\u30de\u30b0\u30dc\u30eb\u30c8\uff12 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Magbolt2",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "002112002",
+	"pins": "00011100024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 3",
+			"set": null,
+			"image": "056-CP 3.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30a4\u30a2\u30a4\u30d5\u30a9\u30fc\u30e0",
+			"set": null,
+			"image": "056-\u30a4\u30a2\u30a4\u30d5\u30a9\u30fc\u30e0 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "IaiForm",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

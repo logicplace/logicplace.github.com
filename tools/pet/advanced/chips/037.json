@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Electric",
+	"field": "000111000",
+	"pins": "00010010124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30de\u30b0\u30dc\u30eb\u30c8\uff13",
+			"set": null,
+			"image": "037-\u30de\u30b0\u30dc\u30eb\u30c8\uff13 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Magbolt3",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

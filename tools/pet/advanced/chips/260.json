@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 7,
+	"element": "Neutral",
+	"field": "010110010",
+	"pins": "01101100024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b7\u30a7\u30fc\u30c9\u30de\u30f3",
+			"set": null,
+			"image": "260-\u30b7\u30a7\u30fc\u30c9\u30de\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "ShadeMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

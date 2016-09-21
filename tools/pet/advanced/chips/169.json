@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "002112002",
+	"pins": "01000111124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 3",
+			"set": "169 < EXCLUSIVE",
+			"image": "169-CP 3.jpg",
+			"official": true,
+			"notes": "Featured Chip"
+		},
+		"jp": {
+			"name": "\u30cf\u30e4\u30d6\u30b5\u30ae\u30ea\uff11",
+			"set": null,
+			"image": "169-\u30cf\u30e4\u30d6\u30b5\u30ae\u30ea\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "FalconPride1",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

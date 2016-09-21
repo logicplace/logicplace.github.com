@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": 2,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10000110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ea\u30ab\u30d0\u30ea\u30fc\uff13\uff10",
+			"set": null,
+			"image": "108-\u30ea\u30ab\u30d0\u30ea\u30fc\uff13\uff10 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Recovery30",
+			"set": null,
+			"image": "108-Recovery30.jpg",
+			"official": true,
+			"notes": "RECOVERY HP (+30)"
+		}
+	}
+}

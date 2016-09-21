@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 4,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10010001124",
+	"notes": "INCREASE RIVAL MISS",
+	"releases": {
+		"jp": {
+			"name": "\u30c0\u30d6\u30eb\u30dd\u30a4\u30f3\u30c8",
+			"set": null,
+			"image": "207-\u30c0\u30d6\u30eb\u30dd\u30a4\u30f3\u30c8 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "DoublePoint",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

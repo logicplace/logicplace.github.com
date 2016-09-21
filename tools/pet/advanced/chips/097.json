@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 9,
+	"at": 5,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "00101110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ab\u30a6\u30f3\u30c8\u30dc\u30e0",
+			"set": null,
+			"image": "097-\u30ab\u30a6\u30f3\u30c8\u30dc\u30e0.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "CountBomb",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

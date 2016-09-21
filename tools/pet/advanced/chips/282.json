@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Neutral",
+	"field": "000111000",
+	"pins": "01110111024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ad\u30e3\u30ce\u30f3\u30e2\u30fc\u30c9",
+			"set": null,
+			"image": "282-\u30ad\u30e3\u30ce\u30f3\u30e2\u30fc\u30c9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "CannonMode",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

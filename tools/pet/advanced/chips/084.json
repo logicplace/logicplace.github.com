@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": -1,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10000011124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b9\u30a4\u30b3\u30df",
+			"set": null,
+			"image": "084-\u30b9\u30a4\u30b3\u30df (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Suction",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

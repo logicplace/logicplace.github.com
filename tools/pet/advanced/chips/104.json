@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 5,
+	"element": "Neutral",
+	"field": "022122022",
+	"pins": "00110001124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 3",
+			"set": null,
+			"image": "104-CP 3 (bad).jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30d3\u30c3\u30b0\u30cf\u30f3\u30de\u30fc\uff11",
+			"set": null,
+			"image": "104-\u30d3\u30c3\u30b0\u30cf\u30f3\u30de\u30fc\uff11 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "BigHammer1",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

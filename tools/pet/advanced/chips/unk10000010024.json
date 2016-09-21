@@ -1,0 +1,10 @@
+{
+	"type": "Attack",
+	"cp": 16,
+	"at": 15,
+	"element": "Neutral",
+	"field": "001110001",
+	"pins": "10000010024",
+	"notes": "",
+	"releases": {}
+}

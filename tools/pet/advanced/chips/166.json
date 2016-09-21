@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 3,
+	"at": 4,
+	"element": "Electric",
+	"field": "010111010",
+	"pins": "01000110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30e9\u30a4\u30c8\u30cb\u30f3\u30b0\uff11",
+			"set": null,
+			"image": "166-\u30e9\u30a4\u30c8\u30cb\u30f3\u30b0\uff11.jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Lightning1",
+			"set": "CrossFusion MegaMan",
+			"image": "166-Lightning1.jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

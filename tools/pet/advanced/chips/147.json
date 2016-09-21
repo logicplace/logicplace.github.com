@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 4,
+	"element": "Neutral",
+	"field": "111222111",
+	"pins": "00111100124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 5",
+			"set": null,
+			"image": "147-CP 5 (bad).jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30d0\u30c3\u30c9\u30e1\u30c7\u30a3\u30b9\u30f3",
+			"set": null,
+			"image": "147-\u30d0\u30c3\u30c9\u30e1\u30c7\u30a3\u30b9\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "BadMedicine",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

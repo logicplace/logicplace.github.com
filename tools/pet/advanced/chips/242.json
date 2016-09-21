@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 7,
+	"at": 3,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "01100011024",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 7",
+			"set": null,
+			"image": "242-CP 7.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30ca\u30f3\u30d0\u30fc\u30de\u30f3",
+			"set": null,
+			"image": "242-\u30ca\u30f3\u30d0\u30fc\u30de\u30f3.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "NumberMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

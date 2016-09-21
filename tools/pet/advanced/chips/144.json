@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 4,
+	"element": "Neutral",
+	"field": "111000111",
+	"pins": "00111011024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ca\u30d3\u30b9\u30ab\u30a6\u30c8",
+			"set": null,
+			"image": "144-\u30ca\u30d3\u30b9\u30ab\u30a6\u30c8.jpg",
+			"official": true,
+			"notes": "Image courtesy of dawnfounditforsale"
+		},
+		"en": {
+			"name": "NaviScout",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

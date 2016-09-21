@@ -1,0 +1,25 @@
+{
+	"type": "Ability",
+	"cp": -1,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "01010010024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a2\u30bf\u30c3\u30af\uff0b\uff13\uff10",
+			"set": null,
+			"image": "205-\u30a2\u30bf\u30c3\u30af\uff0b\uff13\uff10.jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Attack+30",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

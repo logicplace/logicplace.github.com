@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 2,
+	"element": "Neutral",
+	"field": "010111010",
+	"pins": "00110011124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b9\u30c1\u30fc\u30eb\u30d1\u30cb\u30b7\u30e5",
+			"set": null,
+			"image": "119-\u30b9\u30c1\u30fc\u30eb\u30d1\u30cb\u30b7\u30e5 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "StealPunish",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

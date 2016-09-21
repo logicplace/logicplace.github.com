@@ -1,0 +1,32 @@
+{
+	"type": "Ability",
+	"cp": 5,
+	"at": 0,
+	"element": "Neutral",
+	"field": "",
+	"pins": "10001001124",
+	"notes": "",
+	"releases": {
+		"cp": {
+			"name": "CP 5",
+			"set": null,
+			"image": null,
+			"official": true,
+			"notes": ""
+		},
+		"jp": {
+			"name": "\u30ea\u30da\u30a2\u30fc",
+			"set": null,
+			"image": "115-\u30ea\u30da\u30a2\u30fc (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Repair",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

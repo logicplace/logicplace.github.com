@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 5,
+	"at": 6,
+	"element": "Neutral",
+	"field": "110110110",
+	"pins": "01110101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d3\u30c7\u30aa\u30de\u30f3\uff33\uff30",
+			"set": null,
+			"image": "279-\u30d3\u30c7\u30aa\u30de\u30f3\uff33\uff30 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "VideoManSP",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

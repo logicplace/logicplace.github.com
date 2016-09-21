@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 7,
+	"at": 3,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "01011110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b5\u30fc\u30c1\u30de\u30f3\uff24\uff33",
+			"set": null,
+			"image": "232-\u30b5\u30fc\u30c1\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "SearchManDS",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

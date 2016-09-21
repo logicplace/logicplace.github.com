@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Neutral",
+	"field": "100100100",
+	"pins": "01010011124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d0\u30b0\u30c1\u30a7\u30fc\u30f3",
+			"set": null,
+			"image": "211-\u30d0\u30b0\u30c1\u30a7\u30fc\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "BugChain",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

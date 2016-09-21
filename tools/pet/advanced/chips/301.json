@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 14,
+	"at": 8,
+	"element": "Neutral",
+	"field": "111111111",
+	"pins": "01111110024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30d5\u30a9\u30eb\u30c6",
+			"set": null,
+			"image": "301-\u30d5\u30a9\u30eb\u30c6 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Bass",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

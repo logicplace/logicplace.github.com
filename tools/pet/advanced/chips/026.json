@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Aqua",
+	"field": "000111000",
+	"pins": "00001101024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a8\u30ec\u30e1\u30f3\u30c8\u30a2\u30a4\u30b9",
+			"set": null,
+			"image": "026-\u30a8\u30ec\u30e1\u30f3\u30c8\u30a2\u30a4\u30b9 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "ElementIce",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

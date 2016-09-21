@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 9,
+	"at": 4,
+	"element": "Fire",
+	"field": "111111111",
+	"pins": "01010011024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ea\u30e5\u30a6\u30bb\u30a4\u30b0\u30f3",
+			"set": null,
+			"image": "210-\u30ea\u30e5\u30a6\u30bb\u30a4\u30b0\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "MetSwarm",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

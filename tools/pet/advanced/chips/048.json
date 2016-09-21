@@ -1,0 +1,32 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Neutral",
+	"field": "022122022",
+	"pins": "00011000024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "ソード",
+			"set": null,
+			"image": "048-ソード.png",
+			"official": true,
+			"notes": "Image courtesy of dawnfounditforsale"
+		},
+		"en": {
+			"name": "CyberSword",
+			"set": "Starter",
+			"image": "048-CyberSword.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"?b": {
+			"name": "(blank)",
+			"set": null,
+			"image": "048-(blank).jpg",
+			"official": true,
+			"notes": "Got this image from an eBay auction picture, but I'm not too sure about it. Kinda looks like there's a black rectangle where the text should be."
+		}
+	}
+}

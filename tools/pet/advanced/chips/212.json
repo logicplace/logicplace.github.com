@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 4,
+	"element": "Neutral",
+	"field": "001110001",
+	"pins": "01010100024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30b8\u30a7\u30e9\u30b7\u30fc",
+			"set": null,
+			"image": "212-\u30b8\u30a7\u30e9\u30b7\u30fc (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "Jealousy",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 1,
+	"at": 1,
+	"element": "Neutral",
+	"field": "000011000",
+	"pins": "00001110124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30df\u30cb\u30dc\u30e0",
+			"set": null,
+			"image": "029-\u30df\u30cb\u30dc\u30e0 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "MiniBoomer",
+			"set": "ProtoMan vs. MegaMan",
+			"image": "029-MiniBoomer (bad).jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

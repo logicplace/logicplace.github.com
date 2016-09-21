@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Electric",
+	"field": "010110010",
+	"pins": "00010101024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a8\u30ec\u30ad\u30b7\u30e7\u30c3\u30af",
+			"set": null,
+			"image": "042-\u30a8\u30ec\u30ad\u30b7\u30e7\u30c3\u30af (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "ElecShock",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

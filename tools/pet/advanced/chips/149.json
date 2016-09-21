@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 1,
+	"at": 4,
+	"element": "Neutral",
+	"field": "000010000",
+	"pins": "00111101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a2\u30bf\u30c3\u30af\uff0b\uff11\uff10",
+			"set": null,
+			"image": "149-\u30a2\u30bf\u30c3\u30af\uff0b\uff11\uff10.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "Attack+10",
+			"set": "Starter",
+			"image": "149-Attack+10.jpg",
+			"official": true,
+			"notes": ""
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Wood",
+	"field": "000111000",
+	"pins": "00110101124",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30a8\u30ec\u30e1\u30f3\u30c8\u30ea\u30fc\u30d5",
+			"set": null,
+			"image": "126-\u30a8\u30ec\u30e1\u30f3\u30c8\u30ea\u30fc\u30d5.jpg",
+			"official": true,
+			"notes": "Image courtesy of suruga-ya.jp"
+		},
+		"en": {
+			"name": "ElementLeaf",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}

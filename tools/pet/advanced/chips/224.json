@@ -1,0 +1,25 @@
+{
+	"type": "Attack",
+	"cp": 2,
+	"at": 3,
+	"element": "Neutral",
+	"field": "101010101",
+	"pins": "01011010024",
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30ac\u30c3\u30c4\u30de\u30f3",
+			"set": null,
+			"image": "224-\u30ac\u30c3\u30c4\u30de\u30f3 (bad).jpg",
+			"official": true,
+			"notes": "Image courtesy of FlashManEXE"
+		},
+		"en": {
+			"name": "GutsMan",
+			"set": null,
+			"image": null,
+			"official": false,
+			"notes": ""
+		}
+	}
+}
