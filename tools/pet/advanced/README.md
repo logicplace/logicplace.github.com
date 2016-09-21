@@ -14,10 +14,10 @@ Chips contain the following important information:
         + Giga: Red border
     - Element
         + ![Neutral](http://logicplace.com/tools/pet/advanced/images/element-neutral.jpg "Neutral")
-        + ![Aqua](http://logicplace.com/tools/pet/advanced/images/element-aqua.jpg "Aqua")
-        + ![Fire](http://logicplace.com/tools/pet/advanced/images/element-fire.jpg "Fire")
-        + ![Wood](http://logicplace.com/tools/pet/advanced/images/element-wood.jpg "Wood")
-        + ![Elec](http://logicplace.com/tools/pet/advanced/images/element-elec.jpg "Electric")
+        ![Aqua](http://logicplace.com/tools/pet/advanced/images/element-aqua.jpg "Aqua")
+        ![Fire](http://logicplace.com/tools/pet/advanced/images/element-fire.jpg "Fire")
+        ![Wood](http://logicplace.com/tools/pet/advanced/images/element-wood.jpg "Wood")
+        ![Elec](http://logicplace.com/tools/pet/advanced/images/element-elec.jpg "Electric")
     - Name (by region)
         + Japanese
         + Korean?
@@ -29,10 +29,10 @@ Chips contain the following important information:
     - AT - Attack power
     - Element - Probably the same as on the face
         + ![Neutral](http://logicplace.com/tools/pet/advanced/images/element-neutral.gif "Neutral")
-        + ![Aqua](http://logicplace.com/tools/pet/advanced/images/element-aqua.gif "Aqua")
-        + ![Fire](http://logicplace.com/tools/pet/advanced/images/element-fire.gif "Fire")
-        + ![Wood](http://logicplace.com/tools/pet/advanced/images/element-wood.gif "Wood")
-        + ![Elec](http://logicplace.com/tools/pet/advanced/images/element-elec.gif "Electric")
+        ![Aqua](http://logicplace.com/tools/pet/advanced/images/element-aqua.gif "Aqua")
+        ![Fire](http://logicplace.com/tools/pet/advanced/images/element-fire.gif "Fire")
+        ![Wood](http://logicplace.com/tools/pet/advanced/images/element-wood.gif "Wood")
+        ![Elec](http://logicplace.com/tools/pet/advanced/images/element-elec.gif "Electric")
     - One of:
         + Field - Attack chips have this
             * Target start position & shape
