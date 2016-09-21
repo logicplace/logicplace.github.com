@@ -225,10 +225,12 @@ def main(args):
 	parser.add_argument("-q", "--query-files", action="store_true",
 		help="Query a set of JSON files using translation syntax. You may pass any number of files or a regex prefixed with re:")
 	parser.add_argument("-s", "--sort-objects", default="",
-		help="Sort object keys according to given list.")
+		help="Sort object keys according to given list of given files/regex (see -q).")
+	parser.add_argument("-u", "--updated", default="",
+		help="Write out when the files/regex (see -q) were last updated to the given file.")
 	parser.add_argument("-h", "-?", "--help", action="store_true",
 		help=argparse.SUPPRESS)
-	parser.add_argument("optionals", nargs="*",
+	parser.add_argument("files", nargs="*",
 		help=argparse.SUPPRESS)
 	
 	args = parser.parse_args(args)
@@ -263,6 +265,34 @@ def main(args):
 		#endif
 		return 0
 	#endif
+
+	# Use the provided file(s)/regex or request one.
+	files, regexs = [], []
+	if args.files:
+		for x in args.files:
+			if x[0:3] != "re:": files.append((x, None))
+			else: regexs.append(re.compile(x[3:] + "$"))
+	elif args.query_files or args.sort_objects or args.updated:
+		regexs.append(re.compile(input("Enter a file regex: ") + "$"))
+	#endif
+
+	if regexs:
+		for root, dirs, fns in os.walk("."):
+			root = root[2:] # delete ./
+			for fn in fns:
+				fn = os.path.join(root, fn)
+				for r in regexs:
+					mo = r.match(fn)
+					if mo:
+						files.append((fn, mo))
+						break
+					#endif
+				#endfor
+			#endfor
+		#endfor
+	#endif
+
+	files = sorted(list(set(files)))
 
 	if args.generate_adv:
 		en = re.compile("^[a-zA-Z0-9 \-+]+$")
@@ -406,26 +436,6 @@ def main(args):
 			#endfor
 		#endwith
 	elif args.query_files:
-		# Use the provided file(s)/regex or request one.
-		files, regexs = [], []
-		if args.optionals:
-			for x in args.optionals:
-				if x[0:3] != "re:": files.append((x, None))
-				else: regexs.append(re.compile(x[3:] + "$"))
-		else: regexs.append(re.compile(input("Enter a file regex: ") + "$"))
-
-		for fn in os.listdir("."):
-			for r in regexs:
-				mo = r.match(fn)
-				if mo:
-					files.append((fn, mo))
-					break
-				#endif
-			#endfor
-		#endfor
-
-		files = sorted(list(set(files)))
-
 		if not files: return error("No files found or selected.", 6)
 
 		full = odict()
@@ -545,6 +555,8 @@ def main(args):
 			#endtry
 		#endwhile
 	elif args.sort_objects:
+		if not files: return error("No files found or selected.", 6)
+
 		order = args.sort_objects.split(",")
 		warned = set()
 
@@ -570,10 +582,20 @@ def main(args):
 			return odict(x)
 		#enddef
 
-		for x in args.optionals:
-			newfile, json = openJSON(x, odict())
+		for fn, key in files:
+			newfile, json = openJSON(fn, odict())
 			writeJSON(newfile, recurse(json))
 		#endfor
+	elif args.updated:
+		if not files: return error("No files found or selected.", 6)
+
+		f = open(args.updated, "w")
+		json = odict()
+		for fn, key in files:
+			stat = os.stat(fn)
+			json[(key.group(1, None) if key and len(key.groups()) > 1 else None) or fn] = int(stat.st_mtime)
+		#endfor
+		writeJSON(f, json)
 	#endif
 
 	return 0
