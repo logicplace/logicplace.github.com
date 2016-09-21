@@ -1,4 +1,4 @@
-*.jpg
-*.png
+*/chips/*.jpg
+*/chips/*.png
 names.txt
 unsplit
