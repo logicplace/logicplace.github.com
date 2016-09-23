@@ -1,11 +1,11 @@
 {
 	"type": "Ability",
-	"cp": -1,
+	"cp": 2,
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
 	"pins": "10000011024",
-	"notes": "",
+	"notes": "RIVAL MOVE (DOWN)",
 	"releases": {
 		"jp": {
 			"name": "\u30c8\u30c3\u30d7\u30a6",

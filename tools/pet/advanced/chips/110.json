@@ -1,11 +1,11 @@
 {
 	"type": "Ability",
-	"cp": -1,
+	"cp": 4,
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
 	"pins": "10000111024",
-	"notes": "",
+	"notes": "RECOVERY HP",
 	"releases": {
 		"jp": {
 			"name": "\u30ea\u30ab\u30d0\u30ea\u30fc\uff18\uff10",

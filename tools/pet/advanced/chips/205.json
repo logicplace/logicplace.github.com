@@ -1,9 +1,9 @@
 {
 	"type": "Ability",
-	"cp": -1,
-	"at": 0,
+	"cp": 2,
+	"at": 4,
 	"element": "Neutral",
-	"field": "",
+	"field": "000100000",
 	"pins": "01010010024",
 	"notes": "",
 	"releases": {

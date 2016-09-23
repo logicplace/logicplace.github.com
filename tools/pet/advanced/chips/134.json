@@ -1,11 +1,11 @@
 {
 	"type": "Ability",
-	"cp": -1,
+	"cp": 2,
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
 	"pins": "10001101024",
-	"notes": "",
+	"notes": "INCREASE RIVAL MISS",
 	"releases": {
 		"jp": {
 			"name": "\u30e6\u30ab\u30b7\u30bf",
