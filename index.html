@@ -4,60 +4,35 @@
 <title>LogicPlace - Home</title>
 <link rel="stylesheet" href="index.css" type="text/css" media="screen" charset="utf-8" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(function() {
-	$(".menu a").each(function(idx, elem) {
-		var $elem = $(elem);
-		//console.log($elem.attr("href"));
-		$elem.click(LoadMe);
-	});
-
-	LoadPage(window.location.search.substr(1));
-});
-
-function LoadMe() {
-	LoadPage($(this).attr("href").substr(1));
-}
-
-function LoadPage(page) {
-	$("#meat").load(page == "" ? "index_content.html" : page + ".html", function() {
-		$("#meat a.loadpage").each(function(idx, elem) {
-			var $elem = $(elem);
-			if($elem.attr("href").charAt(0) == "?") {
-				$(elem).click(LoadMe);
-			}
-		});
-	});
-}
-</script>
+<script src="index.js"></script>
 </head>
 <body>
- <div class="head">
-  <span class="innerhead">
-   <h1>LogicPlace</h1>
-  </span>
- </div>
- <table class="body"><tbody><tr>
-  <td class="menutd"><ul class="menu">
-   <li><a href="?">Home</a></li>
-   <li><a href="http://sweet-sheepy-faces.tumblr.com">Blog</a></li>
-   <li><a href="?gaming">Gaming</a></li>
-   <li><a href="?programming">Programming</a></li>
-   <li><a href="?drawing">Visual Arts</a></li>
-   <li><a href="?writing">Writing</a></li>
-  </ul></td>
-  <td><div id="meat">
-  </div></td>
- </tbody></table>
- <div class="foot">
-  <span class="footcirc circ1"></span>
-  <span class="footcirc circ2"></span>
-  <span class="footcirc circ3"></span>
-  <span class="footcirc circ3"></span>
-  <span class="footnote">
-   <p>Self-designed</p>
-   <p>Copyrights are for suckers</p>
-  </span>
- </div>
+	<div class="head">
+		<span class="innerhead">
+			<h1>LogicPlace</h1>
+		</span>
+	</div>
+	<table class="body"><tbody><tr>
+		<td class="menutd"><ul class="menu">
+			<li><a href="?" class="loadpage">Home</a></li>
+			<li><a href="http://sweet-sheepy-faces.tumblr.com">Blog</a></li>
+			<li><a href="?gaming" class="loadpage">Gaming</a></li>
+			<li><a href="?programming" class="loadpage">Programming</a></li>
+			<li><a href="?drawing" class="loadpage">Visual Arts</a></li>
+			<li><a href="?writing" class="loadpage">Writing</a></li>
+		</ul></td>
+		<td><div id="meat">
+		</div></td>
+	</tbody></table>
+	<div class="foot">
+		<span class="footcirc circ1"></span>
+		<span class="footcirc circ2"></span>
+		<span class="footcirc circ3"></span>
+		<span class="footcirc circ3"></span>
+		<span class="footnote">
+			<p>Self-designed</p>
+			<p>Copyrights are for suckers</p>
+		</span>
+	</div>
 </body>
 </html>
