@@ -1,7 +1,11 @@
 /* http://colorschemedesigner.com/#3M31Xw0w0w0w0 */
+html {
+	height: 100%;
+}
 
 body {
 	width: 100%;
+	min-height: 100%;
 	margin: 0px;
 
 	position: relative;
