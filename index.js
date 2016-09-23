@@ -16,6 +16,14 @@ function LoadPage(page) {
 
 function ModLinks(base) {
 	$(base || "#meat").find("a.loadpage").each(function(idx, elem) {
-		$(elem).click(LoadMe);
+		var $elem = $(elem), href = $elem.attr("href");
+		if (href[0] == "/") {
+			$elem.attr("href", "?" + href.substr(1));
+		} else if (!href.match(/^https?:\/\//) && href[0] != "?") {
+			var search = window.location.search.substr(1);
+			if (search && search[search.length - 1] != "/") search += "/";
+			$elem.attr("href", "?" + search + href);
+		}
+		$elem.click(LoadMe);
 	});
 }
