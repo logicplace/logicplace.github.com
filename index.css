@@ -54,15 +54,15 @@ table, tbody, tr, td {
 }
 
 .body {
+	position: relative;
 	padding: 0px 50px 120px 50px;
 }
 
-.menutd {
+.menu {
+	position: absolute;
 	width: 20%;
 	max-width: 240px;
-}
 
-.menu {
 	border-left: 2px solid #A68E00;
 	border-bottom: 2px solid #A68E00;
 	border-radius: 10px;
@@ -75,8 +75,6 @@ table, tbody, tr, td {
 .menu a {
 	width: 100%;
 	padding: 2px;
-
-	display: inline-block;
 
 	background-color: transparent;
 }
@@ -103,12 +101,12 @@ table, tbody, tr, td {
 	border-bottom: 2px solid #888A85;
 	border-radius: 10px;
 
-	width: 100%;
+	width: 80%;
 	min-height: 60%;
 	padding: 12px 12px 10px 10px;
 
 	top: 40px;
-	left: -40px;
+	left: 16%;
 	display: inline-block;
 	margin: 0px -40px 40px 0px;
 	position: relative;
