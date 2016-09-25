@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "002112002",
 	"effect": "",
+	"icon": null,
 	"pins": "00011111024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30a6\u30f3\u30bf\u30fc\uff13",
 			"set": null,
-			"image": "062-\u30ab\u30a6\u30f3\u30bf\u30fc\uff13 (bad).jpg",
+			"front": {
+				"image": "062-\u30ab\u30a6\u30f3\u30bf\u30fc\uff13 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Counter3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

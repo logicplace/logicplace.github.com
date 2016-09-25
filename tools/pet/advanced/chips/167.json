@@ -5,20 +5,35 @@
 	"element": "Electric",
 	"field": "010111010",
 	"effect": "",
+	"icon": null,
 	"pins": "01000110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e9\u30a4\u30c8\u30cb\u30f3\u30b0\uff12",
 			"set": null,
-			"image": "167-\u30e9\u30a4\u30c8\u30cb\u30f3\u30b0\uff12 (bad).jpg",
+			"front": {
+				"image": "167-\u30e9\u30a4\u30c8\u30cb\u30f3\u30b0\uff12 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Lightning2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

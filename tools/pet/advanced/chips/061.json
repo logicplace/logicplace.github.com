@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000110000",
 	"effect": "",
+	"icon": null,
 	"pins": "00011110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30a6\u30f3\u30bf\u30fc\uff12",
 			"set": null,
-			"image": "061-\u30ab\u30a6\u30f3\u30bf\u30fc\uff12.jpg",
+			"front": {
+				"image": "061-\u30ab\u30a6\u30f3\u30bf\u30fc\uff12.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Counter2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

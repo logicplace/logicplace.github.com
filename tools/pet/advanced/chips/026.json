@@ -5,20 +5,35 @@
 	"element": "Aqua",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "00001101024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a8\u30ec\u30e1\u30f3\u30c8\u30a2\u30a4\u30b9",
 			"set": null,
-			"image": "026-\u30a8\u30ec\u30e1\u30f3\u30c8\u30a2\u30a4\u30b9 (bad).jpg",
+			"front": {
+				"image": "026-\u30a8\u30ec\u30e1\u30f3\u30c8\u30a2\u30a4\u30b9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "ElementIce",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

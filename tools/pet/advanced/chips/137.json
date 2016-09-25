@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RIVAL AT (DOWN)",
+	"icon": null,
 	"pins": "10001111024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30ea\u30a2\uff12\uff10\uff10",
 			"set": null,
-			"image": "137-\u30d0\u30ea\u30a2\uff12\uff10\uff10.jpg",
+			"front": {
+				"image": "137-\u30d0\u30ea\u30a2\uff12\uff10\uff10.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Barrier200",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

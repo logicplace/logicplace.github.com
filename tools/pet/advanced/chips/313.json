@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "?",
 	"effect": "",
+	"icon": null,
 	"pins": "10010011124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ed\u30c3\u30af\u30de\u30f3",
 			"set": null,
-			"image": "313-\u30ed\u30c3\u30af\u30de\u30f3.jpg",
+			"front": {
+				"image": "313-\u30ed\u30c3\u30af\u30de\u30f3.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "MegaMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

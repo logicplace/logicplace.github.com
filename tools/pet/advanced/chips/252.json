@@ -5,20 +5,35 @@
 	"element": "Aqua",
 	"field": "000110000",
 	"effect": "",
+	"icon": null,
 	"pins": "01101000024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a2\u30af\u30a2\u30de\u30f3\uff33\uff30",
 			"set": null,
-			"image": "252-\u30a2\u30af\u30a2\u30de\u30f3\uff33\uff30 (bad).jpg",
+			"front": {
+				"image": "252-\u30a2\u30af\u30a2\u30de\u30f3\uff33\uff30 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "AquaManSP",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

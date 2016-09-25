@@ -5,20 +5,35 @@
 	"element": "Wood",
 	"field": "010010010",
 	"effect": "",
+	"icon": null,
 	"pins": "00101000024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b5\u30a4\u30c9\u30d0\u30f3\u30d6\u30fc\uff13",
 			"set": null,
-			"image": "080-\u30b5\u30a4\u30c9\u30d0\u30f3\u30d6\u30fc\uff13 (bad).jpg",
+			"front": {
+				"image": "080-\u30b5\u30a4\u30c9\u30d0\u30f3\u30d6\u30fc\uff13 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "SideBamboo3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

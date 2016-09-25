@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00000100024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c8\u30eb\u30cd\u30fc\u30c9",
 			"set": null,
-			"image": "008-\u30c8\u30eb\u30cd\u30fc\u30c9 (bad).jpg",
+			"front": {
+				"image": "008-\u30c8\u30eb\u30cd\u30fc\u30c9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Tornado",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 1",
 			"set": null,
-			"image": "008-CP 1.jpg",
+			"front": {
+				"image": "008-CP 1.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

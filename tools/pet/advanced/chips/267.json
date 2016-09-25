@@ -5,20 +5,35 @@
 	"element": "Aqua",
 	"field": "000011000",
 	"effect": "",
+	"icon": null,
 	"pins": "01101111124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b3\u30fc\u30eb\u30c9\u30de\u30f3\uff33\uff30",
 			"set": null,
-			"image": "267-\u30b3\u30fc\u30eb\u30c9\u30de\u30f3\uff33\uff30.jpg",
+			"front": {
+				"image": "267-\u30b3\u30fc\u30eb\u30c9\u30de\u30f3\uff33\uff30.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "ColdManSP",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "001001001",
 	"effect": "",
+	"icon": null,
 	"pins": "01111000124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d5\u30a1\u30a4\u30a2\u30d7\u30e9\u30b9",
 			"set": null,
-			"image": "285-\u30d5\u30a1\u30a4\u30a2\u30d7\u30e9\u30b9 (bad).jpg",
+			"front": {
+				"image": "285-\u30d5\u30a1\u30a4\u30a2\u30d7\u30e9\u30b9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "FirePlus",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

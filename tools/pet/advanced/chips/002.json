@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00000001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30cf\u30a4\u30ad\u30e3\u30ce\u30f3",
 			"set": null,
-			"image": "002-\u30cf\u30a4\u30ad\u30e3\u30ce\u30f3.jpg",
+			"front": {
+				"image": "002-\u30cf\u30a4\u30ad\u30e3\u30ce\u30f3.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "HiCannon",
 			"set": null,
-			"image": "002-HiCannon.jpg",
+			"front": {
+				"image": "002-HiCannon.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 2",
 			"set": "MegaMan",
-			"image": "002-CP 2 (bad).jpg",
+			"front": {
+				"image": "002-CP 2 (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

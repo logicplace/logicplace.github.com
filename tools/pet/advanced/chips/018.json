@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "110110110",
 	"effect": "",
+	"icon": null,
 	"pins": "00001001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b9\u30d7\u30ec\u30c3\u30c9\u30ac\u30f3",
 			"set": null,
-			"image": "018-\u30b9\u30d7\u30ec\u30c3\u30c9\u30ac\u30f3.jpg",
+			"front": {
+				"image": "018-\u30b9\u30d7\u30ec\u30c3\u30c9\u30ac\u30f3.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Spreader",
 			"set": "9\" MegaMan",
-			"image": "018-Spreader (bad).jpg",
+			"front": {
+				"image": "018-Spreader (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 4",
 			"set": "217 < EXCLUSIVE",
-			"image": "018-CP 4.jpg",
+			"front": {
+				"image": "018-CP 4.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

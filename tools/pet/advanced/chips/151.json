@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00111110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ed\u30fc\u30eb\u30a2\u30ed\u30fc\uff11",
 			"set": null,
-			"image": "151-\u30ed\u30fc\u30eb\u30a2\u30ed\u30fc\uff11.jpg",
+			"front": {
+				"image": "151-\u30ed\u30fc\u30eb\u30a2\u30ed\u30fc\uff11.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "RollArrow1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

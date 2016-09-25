@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "10000001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d6\u30eb\u30fc\u30e0\u30fc\u30f3\u30ec\u30a4",
 			"set": null,
-			"image": "309-\u30d6\u30eb\u30fc\u30e0\u30fc\u30f3\u30ec\u30a4.jpg",
+			"front": {
+				"image": "309-\u30d6\u30eb\u30fc\u30e0\u30fc\u30f3\u30ec\u30a4.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "BlueMoonRay",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

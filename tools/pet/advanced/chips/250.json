@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "101010101",
 	"effect": "",
+	"icon": null,
 	"pins": "01100111024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b8\u30e3\u30f3\u30af\u30de\u30f3\uff24\uff33",
 			"set": null,
-			"image": "250-\u30b8\u30e3\u30f3\u30af\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"front": {
+				"image": "250-\u30b8\u30e3\u30f3\u30af\u30de\u30f3\uff24\uff33 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "JunkManDS",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

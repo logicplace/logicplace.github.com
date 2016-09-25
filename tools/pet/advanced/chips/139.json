@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00111000124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30db\u30fc\u30ea\u30fc\u30d1\u30cd\u30eb",
 			"set": null,
-			"image": "139-\u30db\u30fc\u30ea\u30fc\u30d1\u30cd\u30eb (bad).jpg",
+			"front": {
+				"image": "139-\u30db\u30fc\u30ea\u30fc\u30d1\u30cd\u30eb (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "HolyPanel",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

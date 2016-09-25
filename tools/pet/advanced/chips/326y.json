@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "?",
 	"effect": "",
+	"icon": null,
 	"pins": "10011010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b9\u30bf\u30fc\u30de\u30f3",
 			"set": null,
-			"image": "326-\u30b9\u30bf\u30fc\u30de\u30f3 (yellow) (bad).jpg",
+			"front": {
+				"image": "326-\u30b9\u30bf\u30fc\u30de\u30f3 (yellow) (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "StarMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

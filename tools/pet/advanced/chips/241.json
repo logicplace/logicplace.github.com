@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "110110110",
 	"effect": "",
+	"icon": null,
 	"pins": "01100010124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d6\u30eb\u30fc\u30b9\uff24\uff33",
 			"set": null,
-			"image": "241-\u30d6\u30eb\u30fc\u30b9\uff24\uff33.jpg",
+			"front": {
+				"image": "241-\u30d6\u30eb\u30fc\u30b9\uff24\uff33.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "ProtoManDS",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

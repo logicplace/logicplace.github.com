@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "200211200",
 	"effect": "",
+	"icon": null,
 	"pins": "01010110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30cd\u30aa\u30d0\u30ea\u30a2\u30d6\u30eb",
 			"set": null,
-			"image": "217-\u30cd\u30aa\u30d0\u30ea\u30a2\u30d6\u30eb (bad).jpg",
+			"front": {
+				"image": "217-\u30cd\u30aa\u30d0\u30ea\u30a2\u30d6\u30eb (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "NeoBarrierBlue",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 5",
 			"set": "217 < EXCLUSIVE",
-			"image": "217-CP 5.jpg",
+			"front": {
+				"image": "217-CP 5.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": "Featured Chip"
 		}

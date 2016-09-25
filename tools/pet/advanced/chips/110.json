@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RECOVERY HP",
+	"icon": null,
 	"pins": "10000111024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ea\u30ab\u30d0\u30ea\u30fc\uff18\uff10",
 			"set": null,
-			"image": "110-\u30ea\u30ab\u30d0\u30ea\u30fc\uff18\uff10 (bad).jpg",
+			"front": {
+				"image": "110-\u30ea\u30ab\u30d0\u30ea\u30fc\uff18\uff10 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Recovery80",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

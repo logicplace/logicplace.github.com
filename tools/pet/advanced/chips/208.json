@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RIVAL AT (DOWN)",
+	"icon": null,
 	"pins": "10010010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b5\u30f3\u30af\u30c1\u30e5\u30a2\u30ea",
 			"set": null,
-			"image": "208-\u30b5\u30f3\u30af\u30c1\u30e5\u30a2\u30ea (bad).jpg",
+			"front": {
+				"image": "208-\u30b5\u30f3\u30af\u30c1\u30e5\u30a2\u30ea (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Sanctuary",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "002112002",
 	"effect": "",
+	"icon": null,
 	"pins": "00011110024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30a6\u30f3\u30bf\u30fc\uff11",
 			"set": null,
-			"image": "060-\u30ab\u30a6\u30f3\u30bf\u30fc\uff11 (bad).jpg",
+			"front": {
+				"image": "060-\u30ab\u30a6\u30f3\u30bf\u30fc\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Counter1",
 			"set": "SearchSoul",
-			"image": "060-Counter1.jpg",
+			"front": {
+				"image": "060-Counter1.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

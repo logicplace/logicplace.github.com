@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RIVAL AT (DOWN)",
+	"icon": null,
 	"pins": "10001111124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b9\u30fc\u30d1\u30fc\u30ad\u30bf\u30ab\u30bc",
 			"set": null,
-			"image": "138-\u30b9\u30fc\u30d1\u30fc\u30ad\u30bf\u30ab\u30bc (bad).jpg",
+			"front": {
+				"image": "138-\u30b9\u30fc\u30d1\u30fc\u30ad\u30bf\u30ab\u30bc (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "SuperNorthWind",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

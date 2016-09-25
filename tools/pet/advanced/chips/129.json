@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "INCREASE RIVAL MISS",
+	"icon": null,
 	"pins": "10001100124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d6\u30e9\u30a4\u30f3\u30c9",
 			"set": null,
-			"image": "129-\u30d6\u30e9\u30a4\u30f3\u30c9.jpg",
+			"front": {
+				"image": "129-\u30d6\u30e9\u30a4\u30f3\u30c9.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Blind",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

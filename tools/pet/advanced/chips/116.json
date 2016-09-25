@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000300000",
 	"effect": "",
+	"icon": null,
 	"pins": "10001010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d1\u30cd\u30eb\u30b9\u30c1\u30fc\u30eb",
 			"set": null,
-			"image": "116-\u30d1\u30cd\u30eb\u30b9\u30c1\u30fc\u30eb (bad).jpg",
+			"front": {
+				"image": "116-\u30d1\u30cd\u30eb\u30b9\u30c1\u30fc\u30eb (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "PanelSteal",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

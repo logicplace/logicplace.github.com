@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "110110110",
 	"effect": "",
+	"icon": null,
 	"pins": "01000010124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d7\u30ed\u30da\u30e9\u30dc\u30e0\uff13",
 			"set": null,
-			"image": "159-\u30d7\u30ed\u30da\u30e9\u30dc\u30e0\uff13.jpg",
+			"front": {
+				"image": "159-\u30d7\u30ed\u30da\u30e9\u30dc\u30e0\uff13.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "PropellerBomb3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

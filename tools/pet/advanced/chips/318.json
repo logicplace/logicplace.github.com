@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "?",
 	"effect": "",
+	"icon": null,
 	"pins": "10010110024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d5\u30a1\u30a4\u30a2\u30de\u30f3",
 			"set": null,
-			"image": "318-\u30d5\u30a1\u30a4\u30a2\u30de\u30f3 (bad).jpg",
+			"front": {
+				"image": "318-\u30d5\u30a1\u30a4\u30a2\u30de\u30f3 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "FireMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

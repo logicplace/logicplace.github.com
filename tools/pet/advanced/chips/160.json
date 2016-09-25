@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "01000011024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b5\u30fc\u30c1\u30dc\u30e0\uff11",
 			"set": null,
-			"image": "160-\u30b5\u30fc\u30c1\u30dc\u30e0\uff11 (bad).jpg",
+			"front": {
+				"image": "160-\u30b5\u30fc\u30c1\u30dc\u30e0\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "SearchBomb1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 3",
 			"set": "215 < EXCLUSIVE",
-			"image": "160-CP 3.jpg",
+			"front": {
+				"image": "160-CP 3.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "010111010",
 	"effect": "",
+	"icon": null,
 	"pins": "01010111024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\uff3a\u30bb\u30a4\u30d0\u30fc",
 			"set": null,
-			"image": "218-\uff3a\u30bb\u30a4\u30d0\u30fc (bad).jpg",
+			"front": {
+				"image": "218-\uff3a\u30bb\u30a4\u30d0\u30fc (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Z-Saber",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

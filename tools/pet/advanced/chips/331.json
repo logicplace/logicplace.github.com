@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "?",
 	"effect": "",
+	"icon": null,
 	"pins": "10011100124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d7\u30e9\u30f3\u30c8\u30de\u30f3",
 			"set": null,
-			"image": "331-\u30d7\u30e9\u30f3\u30c8\u30de\u30f3.jpg",
+			"front": {
+				"image": "331-\u30d7\u30e9\u30f3\u30c8\u30de\u30f3.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "PlantMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

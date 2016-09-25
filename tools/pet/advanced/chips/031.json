@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000011000",
 	"effect": "",
+	"icon": null,
 	"pins": "00001111124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e1\u30ac\u30a8\u30ca\u30b8\u30fc\u30dc\u30e0",
 			"set": null,
-			"image": "031-\u30e1\u30ac\u30a8\u30ca\u30b8\u30fc\u30dc\u30e0 (bad).jpg",
+			"front": {
+				"image": "031-\u30e1\u30ac\u30a8\u30ca\u30b8\u30fc\u30dc\u30e0 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "M-EnergyBomb",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

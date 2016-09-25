@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "010111010",
 	"effect": "",
+	"icon": null,
 	"pins": "00110011124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b9\u30c1\u30fc\u30eb\u30d1\u30cb\u30b7\u30e5",
 			"set": null,
-			"image": "119-\u30b9\u30c1\u30fc\u30eb\u30d1\u30cb\u30b7\u30e5 (bad).jpg",
+			"front": {
+				"image": "119-\u30b9\u30c1\u30fc\u30eb\u30d1\u30cb\u30b7\u30e5 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "StealPunish",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "01010101024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d6\u30e9\u30c3\u30af\u30a6\u30a4\u30f3\u30b0",
 			"set": null,
-			"image": "214-\u30d6\u30e9\u30c3\u30af\u30a6\u30a4\u30f3\u30b0.jpg",
+			"front": {
+				"image": "214-\u30d6\u30e9\u30c3\u30af\u30a6\u30a4\u30f3\u30b0.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "BlackWing",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000011000",
 	"effect": "",
+	"icon": null,
 	"pins": "00001110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30df\u30cb\u30dc\u30e0",
 			"set": null,
-			"image": "029-\u30df\u30cb\u30dc\u30e0 (bad).jpg",
+			"front": {
+				"image": "029-\u30df\u30cb\u30dc\u30e0 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "MiniBoomer",
 			"set": "ProtoMan vs. MegaMan",
-			"image": "029-MiniBoomer (bad).jpg",
+			"front": {
+				"image": "029-MiniBoomer (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

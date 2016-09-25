@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "010010010",
 	"effect": "",
+	"icon": null,
 	"pins": "00010000124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff12",
 			"set": null,
-			"image": "033-\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff12.jpg",
+			"front": {
+				"image": "033-\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff12.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "GunDelSol2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

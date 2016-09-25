@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "110110110",
 	"effect": "",
+	"icon": null,
 	"pins": "10000000024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"en": {
 			"name": null,
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": "Best battle chip EVER!"
 		}

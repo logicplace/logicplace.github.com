@@ -5,20 +5,35 @@
 	"element": "Fire",
 	"field": "200211200",
 	"effect": "",
+	"icon": null,
 	"pins": "00001001124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d2\u30fc\u30c8\u30b7\u30e7\u30c3\u30c8",
 			"set": null,
-			"image": "019-\u30d2\u30fc\u30c8\u30b7\u30e7\u30c3\u30c8 (bad).jpg",
+			"front": {
+				"image": "019-\u30d2\u30fc\u30c8\u30b7\u30e7\u30c3\u30c8 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "HeatShot",
 			"set": "Starter",
-			"image": "019-HeatShot.jpg",
+			"front": {
+				"image": "019-HeatShot.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "01001100024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d1\u30cd\u30eb\u30b7\u30e5\u30fc\u30c8\uff11",
 			"set": null,
-			"image": "178-\u30d1\u30cd\u30eb\u30b7\u30e5\u30fc\u30c8\uff11 (bad).jpg",
+			"front": {
+				"image": "178-\u30d1\u30cd\u30eb\u30b7\u30e5\u30fc\u30c8\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "PanelShoot1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

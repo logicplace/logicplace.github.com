@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00111101124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a2\u30bf\u30c3\u30af\uff0b\uff11\uff10",
 			"set": null,
-			"image": "149-\u30a2\u30bf\u30c3\u30af\uff0b\uff11\uff10.jpg",
+			"front": {
+				"image": "149-\u30a2\u30bf\u30c3\u30af\uff0b\uff11\uff10.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Attack+10",
 			"set": "Starter",
-			"image": "149-Attack+10.jpg",
+			"front": {
+				"image": "149-Attack+10.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

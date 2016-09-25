@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "022122022",
 	"effect": "",
+	"icon": null,
 	"pins": "01000000124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ac\u30c3\u30c4\u30d1\u30f3\u30c1\uff12",
 			"set": null,
-			"image": "155-\u30ac\u30c3\u30c4\u30d1\u30f3\u30c1\uff12 (bad).jpg",
+			"front": {
+				"image": "155-\u30ac\u30c3\u30c4\u30d1\u30f3\u30c1\uff12 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "GutsPunch2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 3",
 			"set": "155 < EXCLUSIVE",
-			"image": "155-CP 3 (bad).png",
+			"front": {
+				"image": "155-CP 3 (bad).png",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

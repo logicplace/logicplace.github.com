@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111000111",
 	"effect": "",
+	"icon": null,
 	"pins": "01001011124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e1\u30bf\u30eb\u30ae\u30a2\uff13",
 			"set": null,
-			"image": "177-\u30e1\u30bf\u30eb\u30ae\u30a2\uff13 (bad).jpg",
+			"front": {
+				"image": "177-\u30e1\u30bf\u30eb\u30ae\u30a2\uff13 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "MetalGear3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

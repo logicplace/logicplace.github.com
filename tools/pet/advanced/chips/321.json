@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "?",
 	"effect": "",
+	"icon": null,
 	"pins": "10010111124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ca\u30f3\u30d0\u30fc\u30de\u30f3",
 			"set": null,
-			"image": "321-\u30ca\u30f3\u30d0\u30fc\u30de\u30f3 (bad).jpg",
+			"front": {
+				"image": "321-\u30ca\u30f3\u30d0\u30fc\u30de\u30f3 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "NumberMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

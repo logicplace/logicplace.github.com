@@ -5,20 +5,35 @@
 	"element": "Electric",
 	"field": "010110010",
 	"effect": "",
+	"icon": null,
 	"pins": "00010101024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a8\u30ec\u30ad\u30b7\u30e7\u30c3\u30af",
 			"set": null,
-			"image": "042-\u30a8\u30ec\u30ad\u30b7\u30e7\u30c3\u30af (bad).jpg",
+			"front": {
+				"image": "042-\u30a8\u30ec\u30ad\u30b7\u30e7\u30c3\u30af (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "ElecShock",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

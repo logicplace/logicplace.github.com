@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00101110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b9\u30c6\u30eb\u30b9\u30de\u30a4\u30f3",
 			"set": null,
-			"image": "098-\u30b9\u30c6\u30eb\u30b9\u30de\u30a4\u30f3 (bad).jpg",
+			"front": {
+				"image": "098-\u30b9\u30c6\u30eb\u30b9\u30de\u30a4\u30f3 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "StealthMine",
 			"set": "GutsMan vs. TorchMan",
-			"image": "098-StealthMine.jpg",
+			"front": {
+				"image": "098-StealthMine.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 2",
 			"set": "215 < EXCLUSIVE",
-			"image": "098-CP 2.jpg",
+			"front": {
+				"image": "098-CP 2.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

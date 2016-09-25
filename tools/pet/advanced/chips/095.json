@@ -5,20 +5,35 @@
 	"element": "Aqua",
 	"field": "000100000",
 	"effect": "",
+	"icon": null,
 	"pins": "00101101024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b9\u30c1\u30fc\u30eb\u30bc\u30ea\u30fc",
 			"set": null,
-			"image": "095-\u30b9\u30c1\u30fc\u30eb\u30bc\u30ea\u30fc (bad).jpg",
+			"front": {
+				"image": "095-\u30b9\u30c1\u30fc\u30eb\u30bc\u30ea\u30fc (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "SteelJelly",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

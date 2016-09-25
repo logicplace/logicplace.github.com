@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
+	"icon": null,
 	"pins": "01011110024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b5\u30fc\u30c1\u30de\u30f3\uff24\uff33",
 			"set": null,
-			"image": "232-\u30b5\u30fc\u30c1\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"front": {
+				"image": "232-\u30b5\u30fc\u30c1\u30de\u30f3\uff24\uff33 (bad).jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "SearchManDS",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

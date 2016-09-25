@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
+	"icon": null,
 	"pins": "01111111024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30fc\u30b9\u30aa\u30d6\u30d0\u30b0",
 			"set": null,
-			"image": "303-\u30ab\u30fc\u30b9\u30aa\u30d6\u30d0\u30b0 (bad).jpg",
+			"front": {
+				"image": "303-\u30ab\u30fc\u30b9\u30aa\u30d6\u30d0\u30b0 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "CurseOfBug",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

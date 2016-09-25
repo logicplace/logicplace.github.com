@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "",
+	"icon": null,
 	"pins": "00111110024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ca\u30d3\uff0b\uff12\uff10",
 			"set": null,
-			"image": "150-\u30ca\u30d3\uff0b\uff12\uff10 (bad).jpg",
+			"front": {
+				"image": "150-\u30ca\u30d3\uff0b\uff12\uff10 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Navi+20",
 			"set": "MagnetMan vs. MegaMan",
-			"image": "150-Navi+20 (bad).jpg",
+			"front": {
+				"image": "150-Navi+20 (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 4",
 			"set": null,
-			"image": "150-CP 4.jpg",
+			"front": {
+				"image": "150-CP 4.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

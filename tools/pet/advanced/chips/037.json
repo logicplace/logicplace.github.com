@@ -5,20 +5,35 @@
 	"element": "Electric",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "00010010124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30de\u30b0\u30dc\u30eb\u30c8\uff13",
 			"set": null,
-			"image": "037-\u30de\u30b0\u30dc\u30eb\u30c8\uff13 (bad).jpg",
+			"front": {
+				"image": "037-\u30de\u30b0\u30dc\u30eb\u30c8\uff13 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Magbolt3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

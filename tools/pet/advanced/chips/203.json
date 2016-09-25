@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
+	"icon": null,
 	"pins": "01010001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30aa\u30b8\u30be\u30a6\u30b5\u30f3",
 			"set": null,
-			"image": "203-\u30aa\u30b8\u30be\u30a6\u30b5\u30f3 (bad).jpg",
+			"front": {
+				"image": "203-\u30aa\u30b8\u30be\u30a6\u30b5\u30f3 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Guardian",
 			"set": null,
-			"image": "203-Guardian.jpg",
+			"front": {
+				"image": "203-Guardian.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

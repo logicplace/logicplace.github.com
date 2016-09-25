@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "200211200",
 	"effect": "",
+	"icon": null,
 	"pins": "00111100024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b7\u30e9\u30cf\u30c9\u30ea",
 			"set": null,
-			"image": "146-\u30b7\u30e9\u30cf\u30c9\u30ea.jpg",
+			"front": {
+				"image": "146-\u30b7\u30e9\u30cf\u30c9\u30ea.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "WhiteFeatheredBird",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 3",
 			"set": "217 < EXCLUSIVE",
-			"image": "146-CP 3.jpg",
+			"front": {
+				"image": "146-CP 3.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "200211200",
 	"effect": "",
+	"icon": null,
 	"pins": "00000010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a8\u30a2\u30b7\u30e5\u30fc\u30c8",
 			"set": null,
-			"image": "004-\u30a8\u30a2\u30b7\u30e5\u30fc\u30c8.jpg",
+			"front": {
+				"image": "004-\u30a8\u30a2\u30b7\u30e5\u30fc\u30c8.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "AirShoot",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

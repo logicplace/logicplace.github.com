@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
+	"icon": null,
 	"pins": "01010101124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b4\u30c3\u30c9\u30cf\u30f3\u30de\u30fc",
 			"set": null,
-			"image": "215-\u30b4\u30c3\u30c9\u30cf\u30f3\u30de\u30fc.jpg",
+			"front": {
+				"image": "215-\u30b4\u30c3\u30c9\u30cf\u30f3\u30de\u30fc.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "GodHammer",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 10",
 			"set": "215 < EXCLUSIVE",
-			"image": "215-CP 10.jpg",
+			"front": {
+				"image": "215-CP 10.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": "Featured Chip"
 		}

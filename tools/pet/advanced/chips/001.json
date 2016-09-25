@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00000000124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ad\u30e3\u30ce\u30f3",
 			"set": null,
-			"image": "001-\u30ad\u30e3\u30ce\u30f3 (bad).jpg",
+			"front": {
+				"image": "001-\u30ad\u30e3\u30ce\u30f3 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Cannon",
 			"set": null,
-			"image": "001-Cannon (bad).jpg",
+			"front": {
+				"image": "001-Cannon (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

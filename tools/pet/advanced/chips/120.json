@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "INCREASE TIME",
+	"icon": null,
 	"pins": "10001011024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d8\u30d3\u30fc\u30b2\u30fc\u30b8",
 			"set": null,
-			"image": "120-\u30d8\u30d3\u30fc\u30b2\u30fc\u30b8.jpg",
+			"front": {
+				"image": "120-\u30d8\u30d3\u30fc\u30b2\u30fc\u30b8.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "HeavyGauge",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111000111",
 	"effect": "",
+	"icon": null,
 	"pins": "00110110024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30e9\u30fc\u30dd\u30a4\u30f3\u30c8",
 			"set": null,
-			"image": "127-\u30ab\u30e9\u30fc\u30dd\u30a4\u30f3\u30c8 (bad).jpg",
+			"front": {
+				"image": "127-\u30ab\u30e9\u30fc\u30dd\u30a4\u30f3\u30c8 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "ColorPoint",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

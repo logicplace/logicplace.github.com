@@ -5,20 +5,35 @@
 	"element": "Fire",
 	"field": "101010101",
 	"effect": "",
+	"icon": null,
 	"pins": "01000101024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e1\u30c6\u30aa\u30ec\u30a4\u30f3\uff12",
 			"set": null,
-			"image": "164-\u30e1\u30c6\u30aa\u30ec\u30a4\u30f3\uff12 (bad).jpg",
+			"front": {
+				"image": "164-\u30e1\u30c6\u30aa\u30ec\u30a4\u30f3\uff12 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Meteors2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

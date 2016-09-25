@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "01110111124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30db\u30a6\u30ac\u30f3\u30e2\u30fc\u30c9",
 			"set": null,
-			"image": "283-\u30db\u30a6\u30ac\u30f3\u30e2\u30fc\u30c9.jpg",
+			"front": {
+				"image": "283-\u30db\u30a6\u30ac\u30f3\u30e2\u30fc\u30c9.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "CannonBallMode",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

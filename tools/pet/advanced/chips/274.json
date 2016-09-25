@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "01110011024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ec\u30fc\u30b6\u30fc\u30de\u30f3\uff24\uff33",
 			"set": null,
-			"image": "274-\u30ec\u30fc\u30b6\u30fc\u30de\u30f3\uff24\uff33.jpg",
+			"front": {
+				"image": "274-\u30ec\u30fc\u30b6\u30fc\u30de\u30f3\uff24\uff33.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "LaserManDS",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Fire",
 	"field": "010010010",
 	"effect": "",
+	"icon": null,
 	"pins": "00000110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d5\u30ec\u30a4\u30e0\u30e9\u30a4\u30f3\uff12",
 			"set": null,
-			"image": "013-\u30d5\u30ec\u30a4\u30e0\u30e9\u30a4\u30f3\uff12 (bad).jpg",
+			"front": {
+				"image": "013-\u30d5\u30ec\u30a4\u30e0\u30e9\u30a4\u30f3\uff12 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "FlameLine2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

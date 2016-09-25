@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "100100100",
 	"effect": "",
+	"icon": null,
 	"pins": "00011010124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d5\u30a6\u30b8\u30f3\u30e9\u30b1\u30c3\u30c8",
 			"set": null,
-			"image": "053-\u30d5\u30a6\u30b8\u30f3\u30e9\u30b1\u30c3\u30c8 (bad).jpg",
+			"front": {
+				"image": "053-\u30d5\u30a6\u30b8\u30f3\u30e9\u30b1\u30c3\u30c8 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "FuujinRacket",
 			"set": "BattleChip Collector Case",
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 3",
 			"set": "BattleChip Collector Case",
-			"image": "053-CP 3.jpg",
+			"front": {
+				"image": "053-CP 3.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

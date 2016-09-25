@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "022122022",
 	"effect": "",
+	"icon": null,
 	"pins": "00011000024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30bd\u30fc\u30c9",
 			"set": null,
-			"image": "048-\u30bd\u30fc\u30c9.png",
+			"front": {
+				"image": "048-\u30bd\u30fc\u30c9.png",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": "Image courtesy of dawnfounditforsale"
 		},
 		"en": {
 			"name": "CyberSword",
 			"set": "Starter",
-			"image": "048-CyberSword.jpg",
+			"front": {
+				"image": "048-CyberSword.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"blank": {
 			"name": "(blank)",
 			"set": null,
-			"image": "048-(blank).jpg",
+			"front": {
+				"image": "048-(blank).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": "Got this image from an eBay auction picture, but I'm not too sure about it. Kinda looks like there's a black rectangle where the text should be."
 		}

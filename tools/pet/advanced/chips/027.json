@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00001101124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ce\u30a4\u30ba\u30b9\u30c8\u30fc\u30e0",
 			"set": null,
-			"image": "027-\u30ce\u30a4\u30ba\u30b9\u30c8\u30fc\u30e0 (bad).jpg",
+			"front": {
+				"image": "027-\u30ce\u30a4\u30ba\u30b9\u30c8\u30fc\u30e0 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "NoiseStorm",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

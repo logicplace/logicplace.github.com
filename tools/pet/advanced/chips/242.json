@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
+	"icon": null,
 	"pins": "01100011024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ca\u30f3\u30d0\u30fc\u30de\u30f3",
 			"set": null,
-			"image": "242-\u30ca\u30f3\u30d0\u30fc\u30de\u30f3.jpg",
+			"front": {
+				"image": "242-\u30ca\u30f3\u30d0\u30fc\u30de\u30f3.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "NumberMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 7",
 			"set": null,
-			"image": "242-CP 7.jpg",
+			"front": {
+				"image": "242-CP 7.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "",
+	"icon": null,
 	"pins": "10001001124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ea\u30da\u30a2\u30fc",
 			"set": null,
-			"image": "115-\u30ea\u30da\u30a2\u30fc (bad).jpg",
+			"front": {
+				"image": "115-\u30ea\u30da\u30a2\u30fc (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Repair",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 5",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

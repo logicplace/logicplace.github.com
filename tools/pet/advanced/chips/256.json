@@ -5,20 +5,35 @@
 	"element": "Wood",
 	"field": "101010101",
 	"effect": "",
+	"icon": null,
 	"pins": "01101010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a6\u30c3\u30c9\u30de\u30f3\uff24\uff33",
 			"set": null,
-			"image": "256-\u30a6\u30c3\u30c9\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"front": {
+				"image": "256-\u30a6\u30c3\u30c9\u30de\u30f3\uff24\uff33 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "WoodManDS",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

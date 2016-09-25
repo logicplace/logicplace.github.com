@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111000111",
 	"effect": "",
+	"icon": null,
 	"pins": "00100010124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff11",
 			"set": null,
-			"image": "069-\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff11 (bad).jpg",
+			"front": {
+				"image": "069-\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "TwinFang1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

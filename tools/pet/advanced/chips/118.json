@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "101010101",
 	"effect": "",
+	"icon": null,
 	"pins": "00110011024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b9\u30c1\u30fc\u30eb\u30ea\u30d9\u30f3\u30b8",
 			"set": null,
-			"image": "118-\u30b9\u30c1\u30fc\u30eb\u30ea\u30d9\u30f3\u30b8 (bad).jpg",
+			"front": {
+				"image": "118-\u30b9\u30c1\u30fc\u30eb\u30ea\u30d9\u30f3\u30b8 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "StealRevenge",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

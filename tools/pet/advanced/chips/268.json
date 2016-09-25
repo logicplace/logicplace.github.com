@@ -5,20 +5,35 @@
 	"element": "Aqua",
 	"field": "000011000",
 	"effect": "",
+	"icon": null,
 	"pins": "01110000024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b3\u30fc\u30eb\u30c9\u30de\u30f3\uff24\uff33",
 			"set": null,
-			"image": "268-\u30b3\u30fc\u30eb\u30c9\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"front": {
+				"image": "268-\u30b3\u30fc\u30eb\u30c9\u30de\u30f3\uff24\uff33 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "ColdManDS",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

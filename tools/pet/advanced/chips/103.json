@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00110001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ef\u30e9\u30cb\u30f3\u30ae\u30e7\u30a6",
 			"set": null,
-			"image": "103-\u30ef\u30e9\u30cb\u30f3\u30ae\u30e7\u30a6.jpg",
+			"front": {
+				"image": "103-\u30ef\u30e9\u30cb\u30f3\u30ae\u30e7\u30a6.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "StrawDoll",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

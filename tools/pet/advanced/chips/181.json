@@ -5,20 +5,35 @@
 	"element": "Aqua",
 	"field": "111000111",
 	"effect": "",
+	"icon": null,
 	"pins": "01001101124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a2\u30af\u30a2\u30a2\u30c3\u30d1\u30fc\uff11",
 			"set": null,
-			"image": "181-\u30a2\u30af\u30a2\u30a2\u30c3\u30d1\u30fc\uff11.jpg",
+			"front": {
+				"image": "181-\u30a2\u30af\u30a2\u30a2\u30c3\u30d1\u30fc\uff11.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "AquaUpper1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

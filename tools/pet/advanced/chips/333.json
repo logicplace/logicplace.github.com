@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "?",
 	"effect": "",
+	"icon": null,
 	"pins": "10011101124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d5\u30a9\u30eb\u30c6",
 			"set": null,
-			"image": "333-\u30d5\u30a9\u30eb\u30c6 (bad).jpg",
+			"front": {
+				"image": "333-\u30d5\u30a9\u30eb\u30c6 (bad).jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Bass",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

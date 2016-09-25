@@ -5,20 +5,35 @@
 	"element": "Wood",
 	"field": "111001111",
 	"effect": "",
+	"icon": null,
 	"pins": "00111010124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30de\u30e8\u30a4\u30ce\u30e2\u30ea",
 			"set": null,
-			"image": "143-\u30de\u30e8\u30a4\u30ce\u30e2\u30ea.jpg",
+			"front": {
+				"image": "143-\u30de\u30e8\u30a4\u30ce\u30e2\u30ea.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "LostForest",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

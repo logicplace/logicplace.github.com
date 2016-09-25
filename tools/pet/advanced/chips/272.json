@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "01110010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ec\u30fc\u30b6\u30fc\u30de\u30f3",
 			"set": null,
-			"image": "272-\u30ec\u30fc\u30b6\u30fc\u30de\u30f3.jpg",
+			"front": {
+				"image": "272-\u30ec\u30fc\u30b6\u30fc\u30de\u30f3.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "LaserMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

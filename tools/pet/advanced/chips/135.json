@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RIVAL AT (DOWN)",
+	"icon": null,
 	"pins": "10001110024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30ea\u30a2",
 			"set": null,
-			"image": "135-\u30d0\u30ea\u30a2.jpg",
+			"front": {
+				"image": "135-\u30d0\u30ea\u30a2.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Barrier",
 			"set": null,
-			"image": "135-Barrier (bad).jpg",
+			"front": {
+				"image": "135-Barrier (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

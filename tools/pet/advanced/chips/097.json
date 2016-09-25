@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
+	"icon": null,
 	"pins": "00101110024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30a6\u30f3\u30c8\u30dc\u30e0",
 			"set": null,
-			"image": "097-\u30ab\u30a6\u30f3\u30c8\u30dc\u30e0.jpg",
+			"front": {
+				"image": "097-\u30ab\u30a6\u30f3\u30c8\u30dc\u30e0.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "CountBomb",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

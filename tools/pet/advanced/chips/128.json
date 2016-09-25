@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "00110110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a8\u30ec\u30e1\u30f3\u30c8\u30b5\u30f3\u30c9",
 			"set": null,
-			"image": "128-\u30a8\u30ec\u30e1\u30f3\u30c8\u30b5\u30f3\u30c9.jpg",
+			"front": {
+				"image": "128-\u30a8\u30ec\u30e1\u30f3\u30c8\u30b5\u30f3\u30c9.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "ElementSand",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

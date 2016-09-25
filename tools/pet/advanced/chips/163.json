@@ -5,27 +5,49 @@
 	"element": "Fire",
 	"field": "101010101",
 	"effect": "",
+	"icon": null,
 	"pins": "01000100124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e1\u30c6\u30aa\u30ec\u30a4\u30f3\uff11",
 			"set": null,
-			"image": "163-\u30e1\u30c6\u30aa\u30ec\u30a4\u30f3\uff11 (bad).jpg",
+			"front": {
+				"image": "163-\u30e1\u30c6\u30aa\u30ec\u30a4\u30f3\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Meteors1",
 			"set": null,
-			"image": "163-Meteors1 (bad).jpg",
+			"front": {
+				"image": "163-Meteors1 (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 3",
 			"set": null,
-			"image": "163-CP 3.jpg",
+			"front": {
+				"image": "163-CP 3.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Aqua",
 	"field": "001001001",
 	"effect": "",
+	"icon": null,
 	"pins": "00001100024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30d6\u30eb\u30b5\u30a4\u30c9",
 			"set": null,
-			"image": "024-\u30d0\u30d6\u30eb\u30b5\u30a4\u30c9 (bad).jpg",
+			"front": {
+				"image": "024-\u30d0\u30d6\u30eb\u30b5\u30a4\u30c9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "BubbleSide",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

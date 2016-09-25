@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "100100100",
 	"effect": "",
+	"icon": null,
 	"pins": "01111010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a6\u30c3\u30c9\u30d1\u30ef\u30fc",
 			"set": null,
-			"image": "288-\u30a6\u30c3\u30c9\u30d1\u30ef\u30fc (bad).jpg",
+			"front": {
+				"image": "288-\u30a6\u30c3\u30c9\u30d1\u30ef\u30fc (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "WoodPower",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

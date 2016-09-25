@@ -5,27 +5,49 @@
 	"element": "Electric",
 	"field": "010010010",
 	"effect": "",
+	"icon": null,
 	"pins": "01100000024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b5\u30f3\u30c0\u30fc\u30de\u30f3",
 			"set": null,
-			"image": "236-\u30b5\u30f3\u30c0\u30fc\u30de\u30f3.jpg",
+			"front": {
+				"image": "236-\u30b5\u30f3\u30c0\u30fc\u30de\u30f3.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "ThunderMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 2",
 			"set": null,
-			"image": "236-CP 2 (bad).jpg",
+			"front": {
+				"image": "236-CP 2 (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

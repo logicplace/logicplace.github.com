@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "",
+	"icon": null,
 	"pins": "10010000124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c9\u30ea\u30fc\u30e0\u30aa\u30fc\u30e9",
 			"set": null,
-			"image": "201-\u30c9\u30ea\u30fc\u30e0\u30aa\u30fc\u30e9 (bad).jpg",
+			"front": {
+				"image": "201-\u30c9\u30ea\u30fc\u30e0\u30aa\u30fc\u30e9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "LifeAura",
 			"set": null,
-			"image": "201-LifeAura (bad).jpg",
+			"front": {
+				"image": "201-LifeAura (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": "INCREASE RIVAL MISS"
 		}

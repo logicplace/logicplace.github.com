@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "?",
 	"effect": "",
+	"icon": null,
 	"pins": "10010100024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ed\u30fc\u30eb",
 			"set": null,
-			"image": "314-\u30ed\u30fc\u30eb.jpg",
+			"front": {
+				"image": "314-\u30ed\u30fc\u30eb.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Roll",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

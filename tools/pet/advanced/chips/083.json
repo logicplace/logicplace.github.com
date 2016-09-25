@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RIVAL MOVE (DOWN)",
+	"icon": null,
 	"pins": "10000011024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c8\u30c3\u30d7\u30a6",
 			"set": null,
-			"image": "083-\u30c8\u30c3\u30d7\u30a6 (bad).jpg",
+			"front": {
+				"image": "083-\u30c8\u30c3\u30d7\u30a6 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Wind",
 			"set": null,
-			"image": "083-Wind (bad).jpg",
+			"front": {
+				"image": "083-Wind (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "",
+	"icon": null,
 	"pins": "10001011124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30af\u30a4\u30c3\u30af\u30b2\u30fc\u30b8",
 			"set": null,
-			"image": "121-\u30af\u30a4\u30c3\u30af\u30b2\u30fc\u30b8 (bad).jpg",
+			"front": {
+				"image": "121-\u30af\u30a4\u30c3\u30af\u30b2\u30fc\u30b8 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "QuickGauge",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": "Reduce opponent's attack time to 3 sec<BR>\u2022For 2P NetNavi battle"
 		},
 		"cp": {
 			"name": "CP 4",
 			"set": null,
-			"image": "121-CP 4 (bad).jpg",
+			"front": {
+				"image": "121-CP 4 (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": "Reduce opponent's attack time to 3 sec<BR>\u2022For 2P NetNavi battle"
 		}

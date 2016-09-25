@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "INCREASE RIVAL MISS",
+	"icon": null,
 	"pins": "10010001124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c0\u30d6\u30eb\u30dd\u30a4\u30f3\u30c8",
 			"set": null,
-			"image": "207-\u30c0\u30d6\u30eb\u30dd\u30a4\u30f3\u30c8 (bad).jpg",
+			"front": {
+				"image": "207-\u30c0\u30d6\u30eb\u30dd\u30a4\u30f3\u30c8 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "DoublePoint",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

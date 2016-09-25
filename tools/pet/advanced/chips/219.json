@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "110110110",
 	"effect": "",
+	"icon": null,
 	"pins": "01010111124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff25\uff38",
 			"set": null,
-			"image": "219-\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff25\uff38.jpg",
+			"front": {
+				"image": "219-\u30ac\u30f3\u30c7\u30eb\u30bd\u30eb\uff25\uff38.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "GunDelSolEX",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

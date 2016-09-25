@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "00101011024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e1\u30c3\u30c8\u30ac\u30fc\u30c9\uff11",
 			"set": null,
-			"image": "088-\u30e1\u30c3\u30c8\u30ac\u30fc\u30c9\uff11.jpg",
+			"front": {
+				"image": "088-\u30e1\u30c3\u30c8\u30ac\u30fc\u30c9\uff11.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Guard1",
 			"set": "ElecMan vs. MegaMan",
-			"image": "088-Guard1.jpg",
+			"front": {
+				"image": "088-Guard1.jpg",
+				"credits": "Image courtesy of catsrformeow of eBay"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of catsrformeow of eBay"
+			"notes": ""
 		},
 		"cp": {
 			"name": "CP 1",
 			"set": "217 < EXCLUSIVE",
-			"image": "088-CP 1.jpg",
+			"front": {
+				"image": "088-CP 1.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "110110110",
 	"effect": "",
+	"icon": null,
 	"pins": "01100001124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d6\u30eb\u30fc\u30b9",
 			"set": null,
-			"image": "239-\u30d6\u30eb\u30fc\u30b9 (bad).jpg",
+			"front": {
+				"image": "239-\u30d6\u30eb\u30fc\u30b9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "ProtoMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 7",
 			"set": null,
-			"image": "239-CP 7 (bad).jpg",
+			"front": {
+				"image": "239-CP 7 (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

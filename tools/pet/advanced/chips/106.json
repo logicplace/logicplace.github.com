@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "022122022",
 	"effect": "",
+	"icon": null,
 	"pins": "00110010124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d3\u30c3\u30b0\u30cf\u30f3\u30de\u30fc\uff13",
 			"set": null,
-			"image": "106-\u30d3\u30c3\u30b0\u30cf\u30f3\u30de\u30fc\uff13 (bad).jpg",
+			"front": {
+				"image": "106-\u30d3\u30c3\u30b0\u30cf\u30f3\u30de\u30fc\uff13 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "BigHammer3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 5",
 			"set": "106 < EXCLUSIVE",
-			"image": "106-CP 5 (bad).jpg",
+			"front": {
+				"image": "106-CP 5 (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

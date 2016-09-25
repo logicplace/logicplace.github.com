@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00001110024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e9\u30a4\u30d5\u30b7\u30f3\u30af\u30ed",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"en": {
 			"name": "LifeSynchro",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 1",
 			"set": "169 < EXCLUSIVE",
-			"image": "028-CP 1.jpg",
+			"front": {
+				"image": "028-CP 1.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

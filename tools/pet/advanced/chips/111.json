@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "",
+	"icon": null,
 	"pins": "10000111124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ea\u30ab\u30d0\u30ea\u30fc\uff11\uff12\uff10",
 			"set": null,
-			"image": "111-\u30ea\u30ab\u30d0\u30ea\u30fc\uff11\uff12\uff10.jpg",
+			"front": {
+				"image": "111-\u30ea\u30ab\u30d0\u30ea\u30fc\uff11\uff12\uff10.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Recovery120",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 6",
 			"set": null,
-			"image": "111-CP 6.jpg",
+			"front": {
+				"image": "111-CP 6.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

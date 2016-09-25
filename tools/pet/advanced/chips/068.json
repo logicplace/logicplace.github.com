@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111101111",
 	"effect": "",
+	"icon": null,
 	"pins": "00100010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff13",
 			"set": null,
-			"image": "068-\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff13.jpg",
+			"front": {
+				"image": "068-\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff13.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "CircleGun3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

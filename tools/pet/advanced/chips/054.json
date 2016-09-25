@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "002112002",
 	"effect": "",
+	"icon": null,
 	"pins": "00011011024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30b9\u30bf\u30e0\u30bd\u30fc\u30c9",
 			"set": null,
-			"image": "054-\u30ab\u30b9\u30bf\u30e0\u30bd\u30fc\u30c9 (bad).jpg",
+			"front": {
+				"image": "054-\u30ab\u30b9\u30bf\u30e0\u30bd\u30fc\u30c9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "CustomSword",
 			"set": null,
-			"image": "054-CustomSword.jpg",
+			"front": {
+				"image": "054-CustomSword.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 5",
 			"set": "169 < EXCLUSIVE",
-			"image": "054-CP 5.jpg",
+			"front": {
+				"image": "054-CP 5.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

@@ -5,27 +5,49 @@
 	"element": "Fire",
 	"field": "001001001",
 	"effect": "",
+	"icon": null,
 	"pins": "00001010124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d2\u30fc\u30c8\u30b5\u30a4\u30c9",
 			"set": null,
-			"image": "021-\u30d2\u30fc\u30c8\u30b5\u30a4\u30c9 (bad).jpg",
+			"front": {
+				"image": "021-\u30d2\u30fc\u30c8\u30b5\u30a4\u30c9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "HeatSide",
 			"set": "CrossFusion ProtoMan",
-			"image": "021-HeatSide (bad).jpg",
+			"front": {
+				"image": "021-HeatSide (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 2",
 			"set": "CrossFusion ProtoMan",
-			"image": "021-CP 2.jpg",
+			"front": {
+				"image": "021-CP 2.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

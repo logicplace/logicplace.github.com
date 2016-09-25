@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "100100100",
 	"effect": "",
+	"icon": null,
 	"pins": "00110111024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e2\u30b3\u30e9\u30c3\u30b7\u30e5\uff11",
 			"set": null,
-			"image": "130-\u30e2\u30b3\u30e9\u30c3\u30b7\u30e5\uff11 (bad).jpg",
+			"front": {
+				"image": "130-\u30e2\u30b3\u30e9\u30c3\u30b7\u30e5\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "MokoRush1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

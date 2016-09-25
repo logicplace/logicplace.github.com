@@ -5,27 +5,49 @@
 	"element": "Wood",
 	"field": "001001001",
 	"effect": "",
+	"icon": null,
 	"pins": "00101000124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30f3\u30d6\u30fc\u30e9\u30f3\u30b9",
 			"set": null,
-			"image": "081-\u30d0\u30f3\u30d6\u30fc\u30e9\u30f3\u30b9 (bad).jpg",
+			"front": {
+				"image": "081-\u30d0\u30f3\u30d6\u30fc\u30e9\u30f3\u30b9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Lance",
 			"set": null,
-			"image": "081-Lance.jpg",
+			"front": {
+				"image": "081-Lance.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 2",
 			"set": "SpoutSoul",
-			"image": "081-CP 2.jpg",
+			"front": {
+				"image": "081-CP 2.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

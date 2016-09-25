@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "111221111",
 	"effect": "",
+	"icon": null,
 	"pins": "01011011124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a6\u30a4\u30f3\u30c9\u30de\u30f3",
 			"set": null,
-			"image": "227-\u30a6\u30a4\u30f3\u30c9\u30de\u30f3.jpg",
+			"front": {
+				"image": "227-\u30a6\u30a4\u30f3\u30c9\u30de\u30f3.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "WindMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 3",
 			"set": null,
-			"image": "227-CP 3 (bad).jpg",
+			"front": {
+				"image": "227-CP 3 (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

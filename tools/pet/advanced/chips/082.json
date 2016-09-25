@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00101001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c0\u30fc\u30af\u30db\u30fc\u30eb",
 			"set": null,
-			"image": "082-\u30c0\u30fc\u30af\u30db\u30fc\u30eb.jpg",
+			"front": {
+				"image": "082-\u30c0\u30fc\u30af\u30db\u30fc\u30eb.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "DarkHole",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

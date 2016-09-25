@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000100000",
 	"effect": "",
+	"icon": null,
 	"pins": "01100100124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e1\u30bf\u30eb\u30de\u30f3",
 			"set": null,
-			"image": "245-\u30e1\u30bf\u30eb\u30de\u30f3 (bad).jpg",
+			"front": {
+				"image": "245-\u30e1\u30bf\u30eb\u30de\u30f3 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "MetalMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

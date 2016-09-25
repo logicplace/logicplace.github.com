@@ -5,27 +5,49 @@
 	"element": "Electric",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "00011100124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b5\u30f3\u30c0\u30fc\u30dc\u30fc\u30eb\uff11",
 			"set": null,
-			"image": "057-\u30b5\u30f3\u30c0\u30fc\u30dc\u30fc\u30eb\uff11 (bad).jpg",
+			"front": {
+				"image": "057-\u30b5\u30f3\u30c0\u30fc\u30dc\u30fc\u30eb\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "ThunderBall",
 			"set": "MetalSoul",
-			"image": "057-ThunderBall.jpg",
+			"front": {
+				"image": "057-ThunderBall.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 1",
 			"set": "MetalSoul",
-			"image": "057-CP 1.jpg",
+			"front": {
+				"image": "057-CP 1.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

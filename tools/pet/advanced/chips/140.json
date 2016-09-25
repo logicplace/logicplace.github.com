@@ -5,20 +5,35 @@
 	"element": "Fire",
 	"field": "111001111",
 	"effect": "",
+	"icon": null,
 	"pins": "00111001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30ad\u30b2\u30f3\u30ad\u30f3",
 			"set": null,
-			"image": "140-\u30ab\u30ad\u30b2\u30f3\u30ad\u30f3 (bad).jpg",
+			"front": {
+				"image": "140-\u30ab\u30ad\u30b2\u30f3\u30ad\u30f3 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "AntiFire",
 			"set": null,
-			"image": "140-AntiFire (bad).jpg",
+			"front": {
+				"image": "140-AntiFire (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

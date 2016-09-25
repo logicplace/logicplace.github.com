@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "01110110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30de\u30fc\u30ad\u30f3\u30b0",
 			"set": null,
-			"image": "281-\u30de\u30fc\u30ad\u30f3\u30b0 (bad).jpg",
+			"front": {
+				"image": "281-\u30de\u30fc\u30ad\u30f3\u30b0 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Marking",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

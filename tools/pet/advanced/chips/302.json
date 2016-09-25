@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "002112002",
 	"effect": "",
+	"icon": null,
 	"pins": "01111110124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c7\u30eb\u30bf\u30ec\u30a4\u30a8\u30c3\u30b8",
 			"set": null,
-			"image": "302-\u30c7\u30eb\u30bf\u30ec\u30a4\u30a8\u30c3\u30b8 (bad).jpg",
+			"front": {
+				"image": "302-\u30c7\u30eb\u30bf\u30ec\u30a4\u30a8\u30c3\u30b8 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "DeltaRayEdge",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 9",
 			"set": null,
-			"image": "302-CP 9.jpg",
+			"front": {
+				"image": "302-CP 9.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

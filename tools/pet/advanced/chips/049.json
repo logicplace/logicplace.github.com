@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "100100100",
 	"effect": "",
+	"icon": null,
 	"pins": "00011000124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ef\u30a4\u30c9\u30bd\u30fc\u30c9",
 			"set": null,
-			"image": "049-\u30ef\u30a4\u30c9\u30bd\u30fc\u30c9.jpg",
+			"front": {
+				"image": "049-\u30ef\u30a4\u30c9\u30bd\u30fc\u30c9.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "WideSword",
 			"set": null,
-			"image": "049-WideSword.jpg",
+			"front": {
+				"image": "049-WideSword.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

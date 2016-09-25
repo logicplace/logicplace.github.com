@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
+	"icon": null,
 	"pins": "00111011124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30ef\u30ea\u30df",
 			"set": null,
-			"image": "145-\u30ab\u30ef\u30ea\u30df (bad).jpg",
+			"front": {
+				"image": "145-\u30ab\u30ef\u30ea\u30df (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Dodge",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,27 +5,49 @@
 	"element": "Aqua",
 	"field": "100100100",
 	"effect": "",
+	"icon": null,
 	"pins": "00000101124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ef\u30a4\u30c9\u30b7\u30e7\u30c3\u30c83",
 			"set": null,
-			"image": "011-\u30ef\u30a4\u30c9\u30b7\u30e7\u30c3\u30c83 (bad).jpg",
+			"front": {
+				"image": "011-\u30ef\u30a4\u30c9\u30b7\u30e7\u30c3\u30c83 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "WideShot3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

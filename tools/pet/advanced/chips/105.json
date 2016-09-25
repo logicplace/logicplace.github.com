@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000100000",
 	"effect": "",
+	"icon": null,
 	"pins": "00110010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d3\u30c3\u30b0\u30cf\u30f3\u30de\u30fc\uff12",
 			"set": null,
-			"image": "105-\u30d3\u30c3\u30b0\u30cf\u30f3\u30de\u30fc\uff12 (bad).jpg",
+			"front": {
+				"image": "105-\u30d3\u30c3\u30b0\u30cf\u30f3\u30de\u30fc\uff12 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "BigHammer2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "212121212",
 	"effect": "",
+	"icon": null,
 	"pins": "00011111124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a8\u30a2\u30db\u30c3\u30b1\u30fc\uff11",
 			"set": null,
-			"image": "063-\u30a8\u30a2\u30db\u30c3\u30b1\u30fc\uff11 (bad).jpg",
+			"front": {
+				"image": "063-\u30a8\u30a2\u30db\u30c3\u30b1\u30fc\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "AirHockey1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

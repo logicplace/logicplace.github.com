@@ -5,20 +5,35 @@
 	"element": "Wood",
 	"field": "111001111",
 	"effect": "",
+	"icon": null,
 	"pins": "01001111024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b0\u30ea\u30fc\u30f3\u30a6\u30c3\u30c9\uff11",
 			"set": null,
-			"image": "184-\u30b0\u30ea\u30fc\u30f3\u30a6\u30c3\u30c9\uff11 (bad).jpg",
+			"front": {
+				"image": "184-\u30b0\u30ea\u30fc\u30f3\u30a6\u30c3\u30c9\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "GreenWood1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

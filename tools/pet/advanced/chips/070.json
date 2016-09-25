@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "111222111",
 	"effect": "",
+	"icon": null,
 	"pins": "00100011024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff12",
 			"set": null,
-			"image": "070-\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff12 (bad).jpg",
+			"front": {
+				"image": "070-\u30c4\u30a4\u30f3\u30d5\u30a1\u30f3\u30b0\uff12 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "TwinFang2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

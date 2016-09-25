@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "002112002",
 	"effect": "",
+	"icon": null,
 	"pins": "00011100024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a4\u30a2\u30a4\u30d5\u30a9\u30fc\u30e0",
 			"set": null,
-			"image": "056-\u30a4\u30a2\u30a4\u30d5\u30a9\u30fc\u30e0 (bad).jpg",
+			"front": {
+				"image": "056-\u30a4\u30a2\u30a4\u30d5\u30a9\u30fc\u30e0 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "IaiForm",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 3",
 			"set": null,
-			"image": "056-CP 3.jpg",
+			"front": {
+				"image": "056-CP 3.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

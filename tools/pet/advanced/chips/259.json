@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "101010101",
 	"effect": "",
+	"icon": null,
 	"pins": "01101011124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30bf\u30c3\u30d7\u30de\u30f3\uff24\uff33",
 			"set": null,
-			"image": "259-\u30bf\u30c3\u30d7\u30de\u30f3\uff24\uff33 (bad).jpg",
+			"front": {
+				"image": "259-\u30bf\u30c3\u30d7\u30de\u30f3\uff24\uff33 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "TopManDS",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

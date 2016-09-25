@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "10000001124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30b0\u30c1\u30e3\u30fc\u30b8",
 			"set": null,
-			"image": "310-\u30d0\u30b0\u30c1\u30e3\u30fc\u30b8 (bad).jpg",
+			"front": {
+				"image": "310-\u30d0\u30b0\u30c1\u30e3\u30fc\u30b8 (bad).jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "BugCharge",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

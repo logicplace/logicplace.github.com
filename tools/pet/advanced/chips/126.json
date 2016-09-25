@@ -5,20 +5,35 @@
 	"element": "Wood",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "00110101124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a8\u30ec\u30e1\u30f3\u30c8\u30ea\u30fc\u30d5",
 			"set": null,
-			"image": "126-\u30a8\u30ec\u30e1\u30f3\u30c8\u30ea\u30fc\u30d5.jpg",
+			"front": {
+				"image": "126-\u30a8\u30ec\u30e1\u30f3\u30c8\u30ea\u30fc\u30d5.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "ElementLeaf",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

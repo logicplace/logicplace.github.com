@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "01011001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ed\u30fc\u30eb\uff33\uff30",
 			"set": null,
-			"image": "222-\u30ed\u30fc\u30eb\uff33\uff30.jpg",
+			"front": {
+				"image": "222-\u30ed\u30fc\u30eb\uff33\uff30.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "RollSP",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

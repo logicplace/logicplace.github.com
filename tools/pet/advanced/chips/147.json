@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "111222111",
 	"effect": "",
+	"icon": null,
 	"pins": "00111100124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30c3\u30c9\u30e1\u30c7\u30a3\u30b9\u30f3",
 			"set": null,
-			"image": "147-\u30d0\u30c3\u30c9\u30e1\u30c7\u30a3\u30b9\u30f3 (bad).jpg",
+			"front": {
+				"image": "147-\u30d0\u30c3\u30c9\u30e1\u30c7\u30a3\u30b9\u30f3 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "BadMedicine",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 5",
 			"set": null,
-			"image": "147-CP 5 (bad).jpg",
+			"front": {
+				"image": "147-CP 5 (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

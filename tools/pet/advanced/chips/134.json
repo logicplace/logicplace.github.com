@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "INCREASE RIVAL MISS",
+	"icon": null,
 	"pins": "10001101024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30e6\u30ab\u30b7\u30bf",
 			"set": null,
-			"image": "134-\u30e6\u30ab\u30b7\u30bf (bad).jpg",
+			"front": {
+				"image": "134-\u30e6\u30ab\u30b7\u30bf (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "UnderFloor",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

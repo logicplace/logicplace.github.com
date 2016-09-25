@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00010011124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30a6\u30f3\u30c9\u30ce\u30fc\u30c8\uff12",
 			"set": null,
-			"image": "039-\u30d0\u30a6\u30f3\u30c9\u30ce\u30fc\u30c8\uff12.jpg",
+			"front": {
+				"image": "039-\u30d0\u30a6\u30f3\u30c9\u30ce\u30fc\u30c8\uff12.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "BoundNote2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

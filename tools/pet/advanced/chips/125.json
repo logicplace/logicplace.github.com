@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111101111",
 	"effect": "",
+	"icon": null,
 	"pins": "00110101024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c7\u30b9\u30de\u30c3\u30c1\uff13",
 			"set": null,
-			"image": "125-\u30c7\u30b9\u30de\u30c3\u30c1\uff13 (bad).jpg",
+			"front": {
+				"image": "125-\u30c7\u30b9\u30de\u30c3\u30c1\uff13 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Geddon3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "01001010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ca\u30f3\u30d0\u30fc\u30dc\u30fc\u30eb\uff13",
 			"set": null,
-			"image": "174-\u30ca\u30f3\u30d0\u30fc\u30dc\u30fc\u30eb\uff13 (bad).jpg",
+			"front": {
+				"image": "174-\u30ca\u30f3\u30d0\u30fc\u30dc\u30fc\u30eb\uff13 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "NumberBall3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

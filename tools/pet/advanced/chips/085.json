@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
+	"icon": null,
 	"pins": "00101001124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30dc\u30fc\u30a4\u30ba\u30dc\u30e0\uff11",
 			"set": null,
-			"image": "085-\u30dc\u30fc\u30a4\u30ba\u30dc\u30e0\uff11 (bad).jpg",
+			"front": {
+				"image": "085-\u30dc\u30fc\u30a4\u30ba\u30dc\u30e0\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "BoysBomb1",
 			"set": "TorchSoul",
-			"image": "085-BoysBomb1.jpg",
+			"front": {
+				"image": "085-BoysBomb1.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": "On the poster, it says this chip is number 86 and has AT 3"
 		},
 		"cp": {
 			"name": "CP 6",
 			"set": "TorchSoul",
-			"image": "085-CP 6.jpg",
+			"front": {
+				"image": "085-CP 6.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

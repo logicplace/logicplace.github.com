@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000100000",
 	"effect": "",
+	"icon": null,
 	"pins": "01010010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a2\u30bf\u30c3\u30af\uff0b\uff13\uff10",
 			"set": null,
-			"image": "205-\u30a2\u30bf\u30c3\u30af\uff0b\uff13\uff10.jpg",
+			"front": {
+				"image": "205-\u30a2\u30bf\u30c3\u30af\uff0b\uff13\uff10.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Attack+30",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

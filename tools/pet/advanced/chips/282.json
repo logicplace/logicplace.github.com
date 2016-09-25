@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "01110111024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ad\u30e3\u30ce\u30f3\u30e2\u30fc\u30c9",
 			"set": null,
-			"image": "282-\u30ad\u30e3\u30ce\u30f3\u30e2\u30fc\u30c9 (bad).jpg",
+			"front": {
+				"image": "282-\u30ad\u30e3\u30ce\u30f3\u30e2\u30fc\u30c9 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "CannonMode",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
+	"icon": null,
 	"pins": "00101101124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ab\u30e2\u30f3\u30b9\u30cd\u30fc\u30af",
 			"set": null,
-			"image": "096-\u30ab\u30e2\u30f3\u30b9\u30cd\u30fc\u30af (bad).jpg",
+			"front": {
+				"image": "096-\u30ab\u30e2\u30f3\u30b9\u30cd\u30fc\u30af (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "GateSnake",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

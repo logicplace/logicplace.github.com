@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "",
+	"icon": null,
 	"pins": "10001010124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30a8\u30ea\u30a2\u30b9\u30c1\u30fc\u30eb",
 			"set": null,
-			"image": "117-\u30a8\u30ea\u30a2\u30b9\u30c1\u30fc\u30eb.jpg",
+			"front": {
+				"image": "117-\u30a8\u30ea\u30a2\u30b9\u30c1\u30fc\u30eb.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "AreaSteal",
 			"set": null,
-			"image": "117-AreaSteal (bad).jpg",
+			"front": {
+				"image": "117-AreaSteal (bad).jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": "Breaks the three left tiles."
 		},
 		"cp": {
 			"name": "CP 3",
 			"set": "169 < EXCLUSIVE",
-			"image": "117-CP 3.jpg",
+			"front": {
+				"image": "117-CP 3.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": "Breaks the three left tiles."
 		}

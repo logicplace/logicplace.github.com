@@ -5,27 +5,49 @@
 	"element": "Electric",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "00010010024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30de\u30b0\u30dc\u30eb\u30c8\uff12",
 			"set": null,
-			"image": "036-\u30de\u30b0\u30dc\u30eb\u30c8\uff12 (bad).jpg",
+			"front": {
+				"image": "036-\u30de\u30b0\u30dc\u30eb\u30c8\uff12 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Magbolt2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

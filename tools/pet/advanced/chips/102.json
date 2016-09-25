@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
+	"icon": null,
 	"pins": "00110000124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c6\u30a3\u30f3\u30d1\u30cb\u30fc",
 			"set": null,
-			"image": "102-\u30c6\u30a3\u30f3\u30d1\u30cb\u30fc.jpg",
+			"front": {
+				"image": "102-\u30c6\u30a3\u30f3\u30d1\u30cb\u30fc.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "Timpani",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "022122022",
 	"effect": "",
+	"icon": null,
 	"pins": "01000000024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ac\u30c3\u30c4\u30d1\u30f3\u30c1\uff11",
 			"set": null,
-			"image": "154-\u30ac\u30c3\u30c4\u30d1\u30f3\u30c1\uff11.jpg",
+			"front": {
+				"image": "154-\u30ac\u30c3\u30c4\u30d1\u30f3\u30c1\uff11.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "GutsPunch1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 2",
 			"set": null,
-			"image": "154-CP 2.jpg",
+			"front": {
+				"image": "154-CP 2.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

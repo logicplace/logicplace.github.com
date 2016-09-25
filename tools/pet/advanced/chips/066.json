@@ -5,27 +5,49 @@
 	"element": "Neutral",
 	"field": "111101111",
 	"effect": "",
+	"icon": null,
 	"pins": "00100001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff11",
 			"set": null,
-			"image": "066-\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff11 (bad).jpg",
+			"front": {
+				"image": "066-\u30b5\u30fc\u30af\u30eb\u30ac\u30f3\uff11 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "CircleGun1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		},
 		"cp": {
 			"name": "CP 4",
 			"set": null,
-			"image": "066-CP 4.jpg",
+			"front": {
+				"image": "066-CP 4.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

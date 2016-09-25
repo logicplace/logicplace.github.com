@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000111000",
 	"effect": "",
+	"icon": null,
 	"pins": "01001001024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ca\u30f3\u30d0\u30fc\u30dc\u30fc\u30eb\uff11",
 			"set": null,
-			"image": "172-\u30ca\u30f3\u30d0\u30fc\u30dc\u30fc\u30eb\uff11.jpg",
+			"front": {
+				"image": "172-\u30ca\u30f3\u30d0\u30fc\u30dc\u30fc\u30eb\uff11.jpg",
+				"credits": "Image courtesy of suruga-ya.jp"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		},
 		"en": {
 			"name": "NumberBall1",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

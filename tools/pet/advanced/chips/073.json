@@ -5,20 +5,35 @@
 	"element": "Wood",
 	"field": "001001001",
 	"effect": "",
+	"icon": null,
 	"pins": "00100100124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30db\u30ef\u30a4\u30c8\u30a6\u30a7\u30d6\uff12",
 			"set": null,
-			"image": "073-\u30db\u30ef\u30a4\u30c8\u30a6\u30a7\u30d6\uff12 (bad).jpg",
+			"front": {
+				"image": "073-\u30db\u30ef\u30a4\u30c8\u30a6\u30a7\u30d6\uff12 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "WhiteWeb2",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

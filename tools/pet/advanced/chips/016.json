@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "000110000",
 	"effect": "",
+	"icon": null,
 	"pins": "00001000024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30eb\u30ab\u30f3\uff12",
 			"set": null,
-			"image": "016-\u30d0\u30eb\u30ab\u30f3\uff12.jpg",
+			"front": {
+				"image": "016-\u30d0\u30eb\u30ab\u30f3\uff12.jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Vulcan2",
 			"set": null,
-			"image": "016-Vulcan2.jpg",
+			"front": {
+				"image": "016-Vulcan2.jpg",
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		}

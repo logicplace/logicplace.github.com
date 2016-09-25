@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "001110001",
 	"effect": "",
+	"icon": null,
 	"pins": "01010100024",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b8\u30a7\u30e9\u30b7\u30fc",
 			"set": null,
-			"image": "212-\u30b8\u30a7\u30e9\u30b7\u30fc (bad).jpg",
+			"front": {
+				"image": "212-\u30b8\u30a7\u30e9\u30b7\u30fc (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "Jealousy",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

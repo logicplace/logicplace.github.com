@@ -5,20 +5,35 @@
 	"element": "Neutral",
 	"field": "?",
 	"effect": "",
+	"icon": null,
 	"pins": "10010100124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ac\u30c3\u30c4\u30de\u30f3",
 			"set": null,
-			"image": "315-\u30ac\u30c3\u30c4\u30de\u30f3 (bad).jpg",
+			"front": {
+				"image": "315-\u30ac\u30c3\u30c4\u30de\u30f3 (bad).jpg",
+				"credits": "Image courtesy of FlashManEXE"
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
-			"notes": "Image courtesy of FlashManEXE"
+			"notes": ""
 		},
 		"en": {
 			"name": "GutsMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}

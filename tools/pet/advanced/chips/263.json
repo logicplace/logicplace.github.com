@@ -5,20 +5,35 @@
 	"element": "Fire",
 	"field": "010111010",
 	"effect": "",
+	"icon": null,
 	"pins": "01101101124",
 	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30fc\u30ca\u30fc\u30de\u30f3",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": true,
 			"notes": ""
 		},
 		"en": {
 			"name": "BurnerMan",
 			"set": null,
-			"image": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
 			"official": false,
 			"notes": ""
 		}
