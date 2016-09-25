@@ -1,0 +1,13 @@
+.local-adv-element-flame           { content: "Flame" ; }
+.local-adv-element-water           { content: "Water" ; }
+.local-adv-element-electric        { content: "Electricity" ; }
+.local-adv-element-wood            { content: "Wood" ; }
+.local-plg-element-neutral         { content: "No affinity" ; }
+.local-plg-element-almighty        { content: "Almighty" ; }
+
+.ui-zn .local-adv-element-flame    { content: "火" ; }
+.ui-zn .local-adv-element-water    { content: "水" ; }
+.ui-zn .local-adv-element-electric { content: "電" ; }
+.ui-zn .local-adv-element-wood     { content: "木" ; }
+.ui-zn .local-plg-element-neutral  { content: "無屬性" ; }
+.ui-zn .local-plg-element-almighty { content: "全能" ; }
