@@ -1,0 +1,413 @@
+/* Localizations */
+.local-adv-element-unknown:before         { content: "?" ; }
+.local-adv-element-neutral:before         { content: "Neutral" ; }
+.local-adv-element-aqua:before            { content: "Aqua" ; }
+.local-adv-element-fire:before            { content: "Fire" ; }
+.local-adv-element-wood:before            { content: "Wood" ; }
+.local-adv-element-electric:before        { content: "Elec" ; }
+
+.ui-jp .local-adv-element-neutral:before  { content: "無属性" ; } /* Can't find neutral specifically but conjugated from the term used for elements. */
+.ui-jp .local-adv-element-aqua:before     { content: "水" ; }
+.ui-jp .local-adv-element-fire:before     { content: "火" ; }
+.ui-jp .local-adv-element-wood:before     { content: "木" ; }
+.ui-jp .local-adv-element-electric:before { content: "電気" ; }
+
+.ui-kr .local-adv-element-neutral:before  { content: "무속성" ; }
+.ui-kr .local-adv-element-aqua:before     { content: "아쿠아" ; }
+.ui-kr .local-adv-element-fire:before     { content: "파이어" ; }
+.ui-kr .local-adv-element-wood:before     { content: "우드" ; }
+.ui-kr .local-adv-element-electric:before { content: "일렉" ; }
+
+/* Styles */
+.pet-chip-view, .chip-image-top {
+	border-spacing: 1px;
+	border-collapse: collapse;
+}
+
+.pet-chip-view {
+	border: 2px dashed black;
+	margin: 0px auto;
+}
+
+.adv-chip-base, .chip-image-front, .chip-image-back {
+	display: inline-block;
+	width: 30mm;
+	height: 48mm;
+}
+
+.chip-image-front, .chip-image-back {
+	background-size: 30mm 48mm;
+	background-repeat: no-repeat;
+}
+
+.adv-chip-base {
+	border-corner-shape: bevel;
+
+	background: #5e7ba5;
+	background: radial-gradient(ellipse at center, #5e7ba5 14%,#4169a0 37%,#5e7ba5 100%);
+}
+
+.chip-standard-image-front .adv-chip-base {
+	border-top-left-radius: 4.5mm 2mm;
+}
+
+.chip-standard-image-back .adv-chip-base {
+	border-top-right-radius: 4.5mm 2mm;
+}
+
+.adv-chip-base * {
+	vertical-align: top;
+}
+
+/* Decals */
+.adv-chip-decals {
+	display: inline-block;
+	width: 5mm;
+}
+
+.adv-chip-hole {
+	display: inline-block;
+	width: 2.8mm;
+	height: 2.8mm;
+
+	margin-top: 6mm;
+	margin-left: 1mm;
+
+	border-radius: 1.5mm;
+	border: 0.1mm inset #2d3f63;
+
+	background-color: #1a253a; /* bg color of page */
+}
+
+.adv-chip-box {
+	display: inline-block;
+	width: 1.5mm;
+	height: 11mm;
+
+	margin-top: 2.5mm;
+
+	border: 0.5mm groove #5e7ba5;
+}
+
+.chip-standard-image-front .adv-chip-box {
+	margin-left: 0mm;
+	border-left: none;
+}
+
+.chip-standard-image-back .adv-chip-box {
+	margin-left: 3.2mm;
+	border-right: none;
+}
+
+/* Sticker portion */
+.adv-chip-sticker {
+	display: inline-block;
+	width: 21.3mm;
+	height: 29mm;
+
+	border: 0.6mm inset #5e7ba5;
+	border-top: 0.5mm solid white; /* bg color of page */
+}
+
+.chip-standard-image-back .adv-chip-sticker {
+	margin-left: 2.5mm;
+}
+
+.adv-chip-class-border, .adv-chip-class-border.standard {
+	background: #dceaea;
+	background: linear-gradient(to right, #dceaea 0%,#c5d3d3 7%,#bfcdcd 14%,#cfdddd 29%,#c3d1d1 43%,#ccdcdb 64%,#ddedec 71%,#ccdada 79%,#d3dfdf 86%,#cdd7d8 93%,#c0cbcf 100%);
+}
+
+.adv-chip-class-border.mega {
+	background: #9abddb;
+	background: linear-gradient(to right, #9abddb 0%,#8fb4d1 8%,#81a6c3 15%,#779cb7 23%,#7499b4 31%,#7a9fba 38%,#84a9c4 46%,#8bb0cb 54%,#8fb3d3 62%,#91b5d5 69%,#8cafcd 85%,#90b4ce 100%);
+}
+
+.adv-chip-class-border.giga {
+	background: #de9292;
+	background: linear-gradient(to right, #de9292 0%,#c08b95 25%,#bf818c 50%,#e0a2af 75%,#d09aa7 100%);
+}
+
+.adv-chip-class-border.navi {
+
+}
+
+.adv-chip-sticker-inner {
+	display: inline-block;
+	width: 17mm;
+	height: 22.5mm;
+
+	margin-top: 2mm;
+	margin-left: 1mm;
+	padding: 1mm 1mm 1.5mm 1mm;
+
+	border-radius: 1mm;
+	border-corner-shape: bevel;
+
+	background: black;
+}
+
+.navi .adv-chip-sticker-inner {
+	height: 27.5mm;
+}
+
+.adv-chip-type-name {
+	display: inline-block;
+	width: 16mm;
+	height: 2mm;
+
+	margin-left: 0.5mm;
+
+	font-style: italic;
+	font-size: 2.5mm;
+	font-weight: bold;
+	color: yellow;
+
+	overflow: hidden;
+}
+
+.adv-chip-type-name:before, .adv-chip-type-name.attack:before {
+	content: "BATTLECHIP";
+}
+
+.adv-chip-type-name.ability:before {
+	color: blue;
+}
+
+.adv-chip-type-name.navi:before {
+	content: "NAVI CHIP";
+}
+
+.adv-chip-image {
+	display: inline-block;
+	width: 17mm;
+	height: 14.5mm;
+
+	margin-top: -1mm; /* wtf?? */
+
+	background: green;
+}
+
+.adv-chip-element-name {
+	display: inline-block;
+	width: 18mm;
+
+	margin-top: 1mm;
+}
+
+.adv-chip-element {
+	display: inline-block;
+	width: 3mm;
+	height: 3mm;
+
+	margin-left: 0.1mm;
+	border: 0.1mm solid white;
+	border-radius: 0.5mm;
+}
+
+.adv-chip-element.neutral {
+	background-size: 3mm 3mm;
+	background-image: url(/tools/pet/advanced/images/element-neutral.jpg);
+	background-repeat: no-repeat;
+}
+
+.adv-chip-name {
+	display: inline-block;
+	width: 13mm;
+	height: 3.5mm;
+
+	margin-left: 0.5mm;
+
+	color: white;
+	font-size: 3mm;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+/* Board exposures */
+.adv-chip-number-section {
+	width: 100%;
+	height: 6mm;
+}
+
+@font-face {
+    font-family: digital7;
+    src: url(/libs/digital-7-mono.woff);
+}
+
+.adv-chip-number {
+	display: inline-block;
+	width: 4mm;
+	height: 3mm;
+
+	float: right;
+	margin: 1mm 2mm 1mm auto;
+
+	border: 0.5mm inset #5e7ba5;
+	background: #8d6041;
+
+	color: #eab92d;
+	color: linear-gradient(to bottom, #eab92d 0%,#eab92d 26%,#eab92d 26%,#c79810 58%,#eab92d 79%,#c79810 100%);
+	font-family: digital7;
+	font-size: 3mm;
+	overflow: hidden;
+}
+
+.adv-chip-pins, .adv-chip-non-pins {
+	width: 27mm;
+
+	margin-left: 1.3mm;
+}
+
+.adv-chip-pins {
+	height: 11mm;
+
+	border: 0.5mm inset #5e7ba5;
+	background: #8d6041;
+}
+
+.adv-chip-non-pins {
+	height: 11.5mm;
+
+	border: 0.5mm groove #5e7ba5;
+	border-bottom: none;
+}
+
+.adv-chip-pin {
+	display: inline-block;
+	width: 1.5mm;
+	height: 11mm;
+
+	margin-left: 1.05mm;
+
+	background: #eab92d;
+	background: linear-gradient(to bottom, #eab92d 0%,#eab92d 26%,#eab92d 26%,#c79810 58%,#eab92d 79%,#c79810 100%);
+}
+
+.adv-chip-pin:first-child {
+	margin-left: 0mm;
+}
+
+.adv-chip-pin:last-child {
+	margin-left: 0mm;
+	float: right;
+}
+
+/* Field styles */
+.adv-field {
+	display: inline-block;
+	width: 31px;
+	height: 25px;
+
+	line-height: 8px;
+}
+
+.adv-field span {
+	display: inline-block;
+	width: 10px;
+	height: 8px;
+
+	background-repeat: no-repeat;
+}
+
+.adv-field .field-0 { background-image: url(/tools/pet/advanced/images/field-empty.gif); }
+.adv-field .field-1 { background-image: url(/tools/pet/advanced/images/field-target.gif); }
+.adv-field .field-2 { background-image: url(/tools/pet/advanced/images/field-cracked.gif); }
+.adv-field .field-3 { background-image: url(/tools/pet/advanced/images/field-cracking.gif); }
+.adv-field .field-4 { background-image: url(/tools/pet/advanced/images/field-unknown.gif); }
+
+/* Pin styles */
+.adv-pins {
+	display: inline-block;
+	width: 111px;
+	height: 11px;
+}
+
+.adv-pins span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+
+	background-repeat: no-repeat;
+}
+
+.adv-pins .pin-0 { background-image: url(/tools/pet/images/pin0.gif); }
+.adv-pins .pin-1 { background-image: url(/tools/pet/images/pin1.gif); }
+.adv-pins .pin-2 { background-image: url(/tools/pet/images/pin2.gif); }
+.adv-pins .pin-3 { background-image: url(/tools/pet/images/pin3.gif); }
+.adv-pins .pin-4 { background-image: url(/tools/pet/images/pin4.gif); }
+.adv-pins .pin-5 { background-image: url(/tools/pet/images/pin5.gif); }
+.adv-pins .pin-6 { background-image: url(/tools/pet/images/pin6.gif); }
+.adv-pins .pin-7 { background-image: url(/tools/pet/images/pin7.gif); }
+
+/* Other chip frame style */
+.chip-standard-image-back, .chip-image-front, .chip-image-back {
+	display: inline-block;
+}
+
+.unsure-back {
+	position: relative;
+}
+
+.unsure-back:before {
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+
+	content: "?";
+	color: red;
+	font-size: 18pt;
+	font-weight: bolder;
+}
+
+.previous-chip-image, .next-chip-image {
+	height: 100%;
+
+	box-sizing: content-box;
+}
+
+.flip-chip-image {
+	width: 100%;
+}
+
+th, .header {
+	text-align: left;
+	font-weight: bold;
+}
+
+th:not(.adv-name):after, .header:after {
+	content: ": ";
+}
+
+.form-row > td {
+	text-align: left;
+}
+
+.adv-name {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 16pt;
+}
+
+.local-pet-other-regions {
+	position: absolute;
+}
+
+.adv-other-regions {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+.adv-other-regions span {
+	color: darkblue;
+	cursor: pointer;
+	text-decoration: underline;
+
+	margin-left: 15px;
+}
+
+.adv-other-regions span:first {
+	margin-left: 0px;
+}
