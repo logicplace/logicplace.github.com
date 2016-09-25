@@ -8,6 +8,7 @@ import os, sys, argparse, configparser
 import re
 import JSLON
 import readline
+import traceback
 from collections import OrderedDict as odict
 
 def error(error, code=None):
@@ -52,34 +53,83 @@ transformationFormat = re.compile(
 	r'/(\\.|[^/]*)/'                           # Match a regex
 )
 
-def lookupIndexing(obj, key, data, elm):
-	splits = elm.split(":")
-	idx = splits.pop() if len(splits) > 1 else None
-	y = None
+def refAndLastIndex(obj, key, data, elm, reraise=False):
+	splits = elm.strip().split(":")
+	ref, idx = None, None
+
 	try:
-		for x in splits[::-1]:
-			try: idx = int(idx)
-			except (ValueError, TypeError): pass
-			dots = x.split(".")
+		for sub in splits[::-1]:
+			if ref is not None: ref, idx = None, ref[idx]
 
-			if dots[0] == "data":
-				sub = data
-				dots.pop(0)
-			else: sub = obj
+			dots = sub.split(".")
 
-			for y in dots:
-				if y[0] == "$": y = key.group(int(y[1:]))
+			if len(dots) == 1 and idx is None:
+				# Take it as a string.
+				idx = dots[0]
+				if idx[0] == "$": idx = key.group(int(idx[1:]))
+			else:
+				subRef, subIdx = None, None
+				if dots[0] == "data":
+					subRef = data
+					dots.pop(0)
+				else: subRef = obj
 
-				sub = sub[y]
-			#endfor
-			y = None
-			if idx is None: idx = sub
-			else: idx = sub[idx]
+				for dot in dots:
+					if subIdx is not None: subRef = subRef[subIdx]
+					if dot[0] == "$": dot = key.group(int(dot[1:]))
+					subIdx = dot
+				#endfor
+
+				if idx is None: ref, idx = subRef, subIdx
+				else: ref = subRef[subIdx]
+			#endif
 		#endfor
 	except KeyError:
-		error("Failed indexing %s at %s" % (elm, idx if y is None else y))
+		if reraise: raise
+		error("Failed indexing %s at %s" % (elm, idx if subIdx is None else subIdx))
+		return None, None
+	#endtry
+
+	if ref is None:
+		if idx is None: return None
+		elif idx == "data": return data, None
+		else: return obj, idx
+	else: return ref, idx
+#enddef		
+
+def lookupIndexing(obj, key, data, elm):
+	ref, idx = refAndLastIndex(obj, key, data, elm)
+	try:
+		if idx is None: return ref
+		else: return ref[idx]
+	except KeyError:
+		error("Failed indexing %s at %s" % (elm, idx))
 		return None
-	return idx
+	#endtry
+#enddef
+
+def updateIndexing(obj, key, data, elm, val):
+	ref, idx = refAndLastIndex(obj, key, data, elm)
+	if idx is None:
+		error("Cannot update " + elm + ": Invalid assignment")
+	else: ref[idx] = val
+#enddef
+
+def deleteIndexing(obj, key, data, elm):
+	ref, idx = refAndLastIndex(obj, key, data, elm)
+	if idx is None:
+		error("Cannot update " + elm + ": Invalid assignment")
+	else: del ref[idx]
+#enddef
+
+def hasIndexing(obj, key, data, elm):
+	try:
+		ref, idx = refAndLastIndex(obj, key, data, elm, True)
+		if idx is not None: ref[idx]
+		return True
+	except KeyError:
+		return False
+	#endtry
 #enddef
 
 def parseTransformation(trans, obj, key, data, makeIter=True):
@@ -297,6 +347,10 @@ def main(args):
 	if args.generate_adv:
 		en = re.compile("^[a-zA-Z0-9 \-+]+$")
 		cp = re.compile("^CP [0-9]+$")
+		blank = re.compile("^\(blank\)$")
+		isIcon = re.compile("^icon$")
+		isBack = re.compile("^(.*) \(back\)$")
+
 		createable = {}
 		for fn in os.listdir("."):
 			# Make sure this isn't a JSON file.
@@ -324,18 +378,28 @@ def main(args):
 				("at",       None),
 				("element",  None),
 				("field",    None),
+				("effect",   None),
+				("icon",     None),
 				("pins",     None),
 				("notes",    ""),
 				("releases", {}),
 			]))
 
 			for name, fn in names:
-				# What language is this name? Can assume "CP", EN, or JP.
+				# What language is this name? Can assume "CP", blank, EN, or JP.
+				back = isBack.match(name)
+				if back: name = back.group(1)
+
 				if cp.match(name):
 					language = "cp"
 					json["cp"] = int(name[3:])
 				elif en.match(name):
 					language = "en"
+				elif blank.match(name):
+					language = "blank"
+				elif isIcon.match(name):
+					json.icon = fn
+					continue
 				else:
 					language = "jp"
 				#endif
@@ -344,11 +408,19 @@ def main(args):
 					json["releases"][language] = odict([
 						("name", name),
 						("set", None),
-						("image", fn),
+						("front", {
+							"image": None,
+							"credits": None,
+						}),
+						("back", {
+							"image": None,
+							"credits": None,
+						}),
 						("official", True),
 						("notes", ""),
 					])
 				#endif
+				json["releases"][language]["back" if back else "front"]["image"] = fn
 			#endfor
 
 			writeJSON(newfile, json)
@@ -446,112 +518,314 @@ def main(args):
 			f.close()
 		#endfor
 
-		wSet, wData = None, None
+		wSet, wData, trace = None, None, None
 
 		while True:
 			try:
-				cmd = input("cmd: ")
-				if cmd in ["help", "h", "?"]:
-					print(
-						"Query system help\n"
-						"Commands:\n"
-						" * exit - Quit querying\n"
-						" * find - Enter an expression that returns a boolean, finds all entries (returns filename)\n"
-						" * info - Enter a filename, displays all info. When linked, no argument is given\n"
-						" * summ - Enter an expression, returns result for all entires\n"
-						"If you follow the command name with a * you may link the result with the next command."
-					)
-				elif cmd in ["exit", "quit"]:
-					return 0
-				elif cmd in ["clear", "clr"]:
-					wSet, wData = None, None
-				elif cmd:
-					(cmd, arg), cont = (cmd.split(maxsplit=1) + ["", ""])[0:2], False
-					if cmd[-1] == "*": cmd, cont = cmd[:-1], True
+				cmds = input("cmd: ").split("then")
+				for cmdIdx, cmd in enumerate(cmds):
+					if not cmd: continue
+					cmd, *arg = cmd.split(maxsplit=1)
+					cmd = cmd.lower()
+					if arg: arg = arg[0].strip()
 
-					if cmd == "find":
-						nSet = []
-						if wData:
-							for fn, data in wData.items():
-								res = parseTransformation(arg, full[fn][0], full[fn][1], data)
-								if type(res) is not bool:
-									error("Result of %s was not bool.")
-								elif res: nSet.append(fn)
-							#endfor
-							wData = None
-						elif wSet:
-							for fn in wSet:
-								res = parseTransformation(arg, full[fn][0], full[fn][1], None)
-								if type(res) is not bool:
-									error("Result of %s was not bool.")
-								elif res: nSet.append(fn)
-							#endfor
-							wSet = None
-						else:
-							for fn, (json, key) in full.items():
-								res = parseTransformation(arg, json, key, None)
-								if type(res) is not bool:
-									error("Result of %s was not bool.")
-								elif res: nSet.append(fn)
-							#endfor
-						#endif
+					if cmd in ["help", "h", "?"]:
+						print(
+							"Query system help\n"
+							"Commands:\n"
+							" * exit - Quit querying\n"
+							" * grab - Add list of space-separated filenames to the set."
+							" * find - Enter an expression that returns a boolean, finds all entries (returns filename)\n"
+							" * summ - Enter an expression, returns result for all entires\n"
+							" * info - Enter a filename, displays all info. When linked, no argument is given\n"
+							" * stat - Show current counts: files, matched set, summed data\n"
+							" * clr  - Unset current links: all (default), set, or data\n"
+							" * has  - Enter an index, finds all files that have this index.\n"
+							" * cmpl - Inverts matched set.\n"
+							" * set  - Enter an index and an expression, updates all matched or all files.\n"
+							" * del  - Enter an index, deletes from all matched or all files.\n"
+							" * save - Commit all matched or all files to disk.\n"
+							" * load - Reload all matched or all files from disk.\n"
+							"Command Suffixes:\n"
+							" * nothing - Print the result and clear any links.\n"
+							" * * - Links the result with the next command.\n"
+							" * ! - Print the result but don't clear the previous link.\n"
+							" * *! - Don't print or clear anything.\n"
+							"One-line Joiners:\n"
+							" * then - Acts as * on one line."
+						)
+					elif cmd in ["exit", "quit"]:
+						return 0
+					elif cmd in ["clear", "clr"]:
+						wSet, wData = None, None
+					elif cmd:
+						cont, carry = False, False
+						if cmd[-1] == "*": cmd, cont = cmd[:-1], True
+						if cmd[-1] == "!": cmd, carry = cmd[:-1], True
+						if cmdIdx < len(cmds) - 1: cont = True
+						doprint = not cont
 
-						if cont: wSet = nSet
-						else:
-							for fn in nSet: print("%s" % fn)
-						#endif
-					elif cmd == "info":
-						if wSet:
-							for fn in wSet:
-								print("=============== %s ===============" % fn)
-								print(JSLON.stringify(full[fn], jslonFormat) + "\n")
-							#endfor
-							if not cont: wSet = None
-						else:
-							if arg not in full:
-								error("Filename does not exist (did you add .json??)")
-								continue
-							print(JSLON.stringify(full[arg], jslonFormat) + "\n\n")
-						#endif
-					elif cmd == "summ":
-						nData = odict()
-						if wData:
-							for fn, data in wData.items():
-								res = parseTransformation(arg, full[fn][0], full[fn][1], data)
-								if res is not None: nData[fn] = res
-							#endfor
-							wData = None
-						elif wSet:
-							for fn in wSet:
-								res = parseTransformation(arg, full[fn][0], full[fn][1], None)
-								if res is not None: nData[fn] = res
-							#endfor
-							wSet = None
-						else:
-							for fn, (json, key) in full.items():
-								res = parseTransformation(arg, json, key, None)
-								if res is not None: nData[fn] = res
-							#endfor
-						#endif
+						if cmd == "find":
+							nSet = []
+							if wData is not None:
+								for fn, data in wData.items():
+									res = parseTransformation(arg, full[fn][0], full[fn][1], data)
+									if type(res) is not bool:
+										error("Result of %s was not bool.")
+									elif res: nSet.append(fn)
+								#endfor
+								if not carry: wData = None
+							elif wSet is not None:
+								for fn in wSet:
+									res = parseTransformation(arg, full[fn][0], full[fn][1], None)
+									if type(res) is not bool:
+										error("Result of %s was not bool.")
+									elif res: nSet.append(fn)
+								#endfor
+								if not carry: wSet = None
+							else:
+								for fn, (json, key) in full.items():
+									res = parseTransformation(arg, json, key, None)
+									if type(res) is not bool:
+										error("Result of %s was not bool.")
+									elif res: nSet.append(fn)
+								#endfor
+							#endif
 
-						if cont: wData = nData
+							if cont and not carry: wSet = nSet
+							elif doprint:
+								for fn in nSet: print("%s" % fn)
+							#endif
+
+						elif cmd == "info":
+							if wSet is not None:
+								for fn in wSet:
+									print("=============== %s ===============" % fn)
+									print(JSLON.stringify(full[fn][0], jslonFormat) + "\n")
+								#endfor
+								if not cont or carry: wSet = None
+							else:
+								if arg not in full:
+									error("Filename does not exist (did you add .json??)")
+									continue
+								print(JSLON.stringify(full[arg][0], jslonFormat) + "\n\n")
+							#endif
+
+						elif cmd == "summ":
+							nData = odict()
+							if wData is not None:
+								for fn, data in wData.items():
+									res = parseTransformation(arg, full[fn][0], full[fn][1], data)
+									if res is not None: nData[fn] = res
+								#endfor
+								if not carry: wData = None
+							elif wSet is not None:
+								for fn in wSet:
+									res = parseTransformation(arg, full[fn][0], full[fn][1], None)
+									if res is not None: nData[fn] = res
+								#endfor
+								if not carry: wSet = None
+							else:
+								for fn, (json, key) in full.items():
+									res = parseTransformation(arg, json, key, None)
+									if res is not None: nData[fn] = res
+								#endfor
+							#endif
+
+							if cont and not carry: wData = nData
+							elif doprint:
+								for item in nData.items(): print("%s: %s" % item)
+							#endif
+
+						elif cmd in ["clr", "clear"]:
+							arg = arg.lower()
+							if arg == "data": wData = None
+							elif arg == "set": wSet = None
+							elif arg == "all": wData, wSet = None, None
+
+						elif cmd == "test":
+							fn, trans = arg.split(maxsplit=1)
+							json, key = full[fn]
+							print(parseTransformation(trans, wSet or json, key, wData))
+
+						elif cmd == "stat":
+							print("file count: %i; set count: %s; data count: %s" % (
+								len(full),
+								"null" if wSet is None else len(wSet),
+								"null" if wData is None else len(wData),
+							))
+
+						elif cmd == "has":
+							nSet = []
+							if wData is not None:
+								for fn, data in wData.items():
+									if hasIndexing(full[fn][0], full[fn][1], data, arg):
+										nSet.append(fn)
+									#endif
+								#endfor
+								if not carry: wData = None
+							elif wSet is not None:
+								for fn in wSet:
+									if hasIndexing(full[fn][0], full[fn][1], None, arg):
+										nSet.append(fn)
+									#endif
+								#endfor
+								if not carry: wSet = None
+							else:
+								for fn, (json, key) in full.items():
+									if hasIndexing(json, key, None, arg):
+										nSet.append(fn)
+									#endif
+								#endfor
+							#endif
+
+							if cont and not carry: wSet = nSet
+							elif doprint:
+								for fn in nSet: print("%s" % fn)
+							#endif
+
+						elif cmd in ["not", "neg", "cmpl"]:
+							nSet = []
+							if wSet:
+								for fn in full.keys():
+									if fn not in wSet: nSet.append(fn)
+								#endfor
+								if not carry: wSet = None
+							else:
+								error("No matched set.")
+							#endif
+
+							if cont and not carry: wSet = nSet
+							elif doprint:
+								for fn in nSet: print("%s" % fn)
+							#endif
+
+						elif cmd == "del":
+							if wData is not None:
+								for fn, data in wData.items():
+									deleteIndexing(full[fn][0], full[fn][1], data, arg)
+								#endfor
+								if not carry: wData = None
+							elif wSet is not None:
+								for fn in wSet:
+									deleteIndexing(full[fn][0], full[fn][1], None, arg)
+								#endfor
+								if not carry: wSet = None
+							else:
+								for fn, (json, key) in full.items():
+									deleteIndexing(json, key, None, arg)
+								#endfor
+							#endif
+
+						elif cmd == "set":
+							index, trans = arg.split(maxsplit=1)
+							updata = index == "data"
+
+							if wData is not None:
+								for fn, data in wData.items():
+									res = parseTransformation(trans, full[fn][0], full[fn][1], data)
+									if updata: wData[fn] = res
+									else: updateIndexing(full[fn][0], full[fn][1], data, index, res)
+									if doprint: print("%s: %s = %s" % (fn, index, repr(res)))
+								#endfor
+								if not carry and not updata: wData = None
+							elif wSet is not None:
+								if updata: wData = odict()
+								for fn in wSet:
+									res = parseTransformation(trans, full[fn][0], full[fn][1], None)
+									if updata: wData[fn] = res
+									else: updateIndexing(full[fn][0], full[fn][1], None, index, res)
+									if doprint: print("%s: %s = %s" % (fn, index, repr(res)))
+								#endforindex
+								if not carry: wSet = None
+							else:
+								if updata: wData = odict()
+								for fn, (json, key) in full.items():
+									res = parseTransformation(trans, json, key, None)
+									if updata: wData[fn] = res
+									else: updateIndexing(json, key, None, index, res)
+									if doprint: print("%s: %s = %s" % (fn, index, repr(res)))
+								#endfor
+							#endif
+
+						elif cmd in ["obj", "+obj"]:
+							updata = arg == "data"
+
+							if wData:
+								for fn, data in wData.items():
+									if updata: wData[fn] = {}
+									else: updateIndexing(full[fn][0], full[fn][1], data, arg, {})
+									if doprint: print("%s: %s = {}" % (fn, arg))
+								#endfor
+								if not carry and not updata: wData = None
+							elif wSet:
+								if updata: wData = odict()
+								for fn in wSet:
+									if updata: wData[fn] = res
+									else: updateIndexing(full[fn][0], full[fn][1], None, arg, {})
+									if doprint: print("%s: %s = {}" % (fn, arg))
+								#endforindex
+								if not carry: wSet = None
+							else:
+								if updata: wData = odict()
+								for fn, (json, key) in full.items():
+									if updata: wData[fn] = res
+									else: updateIndexing(json, key, None, arg, {})
+									if doprint: print("%s: %s = {}" % (fn, arg))
+								#endfor
+							#endif
+
+						elif cmd == "save":
+							if wData: it = wData.keys()
+							elif wSet: it = wSet
+							else: it = full.keys()
+
+							for fn in it:
+								filename = full[fn][1].group(0)
+								writeJSON(open(filename, "w"), full[fn][0])
+								if doprint: print("%s: Saved to %s" % (fn, filename))
+							#endfor
+							
+							if not carry:
+								wData = None
+								wSet = None
+							#endif
+
+						elif cmd == "load":
+							# TODO: load new files
+							if wData: it = wData.keys()
+							elif wSet: it = wSet
+							else: it = full.keys()
+
+							for fn in it:
+								filename = full[fn][1].group(0)
+								f = open(filename, "r")
+								full[fn] = (JSLON.parse(f.read(), {"dict": odict}), full[fn][1])
+								f.close()
+								if doprint: print("%s: Loaded from %s" % (fn, filename))
+							#endfor
+
+						elif cmd == "grab":
+							if wSet is None: wSet = []
+							for fn in arg.split():
+								if fn in full: wSet.append(fn)
+								else: error("No file %s." % fn)
+							#endfor
+							wSet = list(sorted(set(wSet)))
+
+						elif cmd == "tb":
+							traceback.print_tb(trace)
+
 						else:
-							for item in nData.items(): print("%s: %s" % item)
+							error("Unknown command %s" % cmd)
+							if cmdIdx < len(cmds) - 1: print("Canceling execution.")
+							break
 						#endif
-					elif cmd == "test":
-						fn, trans = arg.split(maxsplit=1)
-						json, key = full[fn]
-						print(parseTransformation(trans, wSet or json, key, wData))
-					elif cmd == "stat":
-						print("file count: %i; wSet count: %s; wData count: %s" % (
-							len(full),
-							"null" if wSet is None else len(wSet),
-							"null" if wData is None else len(wData),
-						))
 					#endif
-				#endif
+				#endfor
 			except Exception as err:
-				error("Command raised exception: " + str(err))
+				error("Command raised exception %s: %s" % (err.__class__.__name__, ' '.join(map(str, err.args))))
+				trace = sys.exc_info()[2]
 			#endtry
 		#endwhile
 	elif args.sort_objects:
