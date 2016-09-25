@@ -6,7 +6,7 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
-	"icon": null,
+	"icon": "003-icon.png",
 	"pins": "00000001124",
 	"notes": "",
 	"releases": {
@@ -28,7 +28,7 @@
 			"name": "M-Cannon",
 			"set": null,
 			"front": {
-				"image": null,
+				"image": "003-icon.png",
 				"credits": null
 			},
 			"back": {
