@@ -146,6 +146,7 @@ function chipURL(pet, img) {
 function loadChipForm(pet, filename_region) {
 	if (pet in FORMS) {
 		if ($(".form-pane").find(FORMS[pet].chip.attr("class").replace(/(^| +)/g, "$1.")).length == 0) {
+			$(".home-pane").hide();
 			$(".form-pane").empty().append(FORMS[pet].chip);
 		}
 		
@@ -171,4 +172,9 @@ function viewLoader(func) {
 	return function () {
 		func.apply(null, args);
 	}
+}
+
+function showHome() {
+	$(".form-pane").hide();
+	$(".home-pane").show();
 }

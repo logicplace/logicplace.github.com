@@ -50,14 +50,15 @@
 .ui-kr .local-region-kr:before         {}
 .ui-kr .local-region-blank:before      { content: "██" }
 
-.form-pane {
+.view-container {
 	width: 100%;
+	text-align: center;
+}
+
+.view-container > * {
+	display: inline-block;
 }
 
 .hidden {
 	display: none;
-}
-
-.centered {
-	margin: 0px auto;
 }
