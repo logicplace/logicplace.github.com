@@ -4,8 +4,9 @@
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
+	"effect": "INCREASE RIVAL MISS",
 	"pins": "10010001124",
-	"notes": "INCREASE RIVAL MISS",
+	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30c0\u30d6\u30eb\u30dd\u30a4\u30f3\u30c8",

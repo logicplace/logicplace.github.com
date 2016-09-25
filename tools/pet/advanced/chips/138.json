@@ -4,8 +4,9 @@
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
+	"effect": "RIVAL AT (DOWN)",
 	"pins": "10001111124",
-	"notes": "RIVAL AT (DOWN)",
+	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30b9\u30fc\u30d1\u30fc\u30ad\u30bf\u30ab\u30bc",

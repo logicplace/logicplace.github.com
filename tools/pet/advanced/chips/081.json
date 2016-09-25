@@ -4,16 +4,10 @@
 	"at": 2,
 	"element": "Wood",
 	"field": "001001001",
+	"effect": "",
 	"pins": "00101000124",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 2",
-			"set": "SpoutSoul",
-			"image": "081-CP 2.jpg",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30d0\u30f3\u30d6\u30fc\u30e9\u30f3\u30b9",
 			"set": null,
@@ -25,6 +19,13 @@
 			"name": "Lance",
 			"set": null,
 			"image": "081-Lance.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 2",
+			"set": "SpoutSoul",
+			"image": "081-CP 2.jpg",
 			"official": true,
 			"notes": ""
 		}

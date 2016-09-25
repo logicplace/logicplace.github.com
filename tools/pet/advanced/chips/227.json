@@ -4,16 +4,10 @@
 	"at": 3,
 	"element": "Neutral",
 	"field": "111221111",
+	"effect": "",
 	"pins": "01011011124",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 3",
-			"set": null,
-			"image": "227-CP 3 (bad).jpg",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30a6\u30a4\u30f3\u30c9\u30de\u30f3",
 			"set": null,
@@ -26,6 +20,13 @@
 			"set": null,
 			"image": null,
 			"official": false,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 3",
+			"set": null,
+			"image": "227-CP 3 (bad).jpg",
+			"official": true,
 			"notes": ""
 		}
 	}

@@ -4,16 +4,10 @@
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
+	"effect": "",
 	"pins": "10001010124",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 3",
-			"set": "169 < EXCLUSIVE",
-			"image": "117-CP 3.jpg",
-			"official": true,
-			"notes": "Breaks the three left tiles."
-		},
 		"jp": {
 			"name": "\u30a8\u30ea\u30a2\u30b9\u30c1\u30fc\u30eb",
 			"set": null,
@@ -25,6 +19,13 @@
 			"name": "AreaSteal",
 			"set": null,
 			"image": "117-AreaSteal (bad).jpg",
+			"official": true,
+			"notes": "Breaks the three left tiles."
+		},
+		"cp": {
+			"name": "CP 3",
+			"set": "169 < EXCLUSIVE",
+			"image": "117-CP 3.jpg",
 			"official": true,
 			"notes": "Breaks the three left tiles."
 		}

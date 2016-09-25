@@ -4,8 +4,9 @@
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
+	"effect": "RECOVERY CP",
 	"pins": "10010010124",
-	"notes": "RECOVERY CP",
+	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30db\u30fc\u30ea\u30fc\u30c9\u30ea\u30fc\u30e0",

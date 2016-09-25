@@ -4,16 +4,10 @@
 	"at": 4,
 	"element": "Fire",
 	"field": "001001001",
+	"effect": "",
 	"pins": "00001010124",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 2",
-			"set": "CrossFusion ProtoMan",
-			"image": "021-CP 2.jpg",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30d2\u30fc\u30c8\u30b5\u30a4\u30c9",
 			"set": null,
@@ -25,6 +19,13 @@
 			"name": "HeatSide",
 			"set": "CrossFusion ProtoMan",
 			"image": "021-HeatSide (bad).jpg",
+			"official": true,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 2",
+			"set": "CrossFusion ProtoMan",
+			"image": "021-CP 2.jpg",
 			"official": true,
 			"notes": ""
 		}

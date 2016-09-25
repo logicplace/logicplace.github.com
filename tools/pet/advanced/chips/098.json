@@ -4,16 +4,10 @@
 	"at": 4,
 	"element": "Neutral",
 	"field": "000010000",
+	"effect": "",
 	"pins": "00101110124",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 2",
-			"set": "215 < EXCLUSIVE",
-			"image": "098-CP 2.jpg",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30b9\u30c6\u30eb\u30b9\u30de\u30a4\u30f3",
 			"set": null,
@@ -25,6 +19,13 @@
 			"name": "StealthMine",
 			"set": "GutsMan vs. TorchMan",
 			"image": "098-StealthMine.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 2",
+			"set": "215 < EXCLUSIVE",
+			"image": "098-CP 2.jpg",
 			"official": true,
 			"notes": ""
 		}

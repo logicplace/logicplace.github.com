@@ -4,16 +4,10 @@
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
+	"effect": "",
 	"pins": "10000110124",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 3",
-			"set": null,
-			"image": "109-CP 3.jpg",
-			"official": true,
-			"notes": "RECOVERY HP (+50)"
-		},
 		"jp": {
 			"name": "\u30ea\u30ab\u30d0\u30ea\u30fc\uff15\uff10",
 			"set": null,
@@ -25,6 +19,13 @@
 			"name": "Recovery50",
 			"set": null,
 			"image": "109-Recovery50 (bad).jpg",
+			"official": true,
+			"notes": "RECOVERY HP (+50)"
+		},
+		"cp": {
+			"name": "CP 3",
+			"set": null,
+			"image": "109-CP 3.jpg",
 			"official": true,
 			"notes": "RECOVERY HP (+50)"
 		}

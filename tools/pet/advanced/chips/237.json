@@ -4,6 +4,7 @@
 	"at": 5,
 	"element": "Electric",
 	"field": "010010010",
+	"effect": "",
 	"pins": "01100000124",
 	"notes": "",
 	"releases": {

@@ -4,16 +4,10 @@
 	"at": 4,
 	"element": "Neutral",
 	"field": "100100100",
+	"effect": "",
 	"pins": "00011010124",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 3",
-			"set": "BattleChip Collector Case",
-			"image": "053-CP 3.jpg",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30d5\u30a6\u30b8\u30f3\u30e9\u30b1\u30c3\u30c8",
 			"set": null,
@@ -26,6 +20,13 @@
 			"set": "BattleChip Collector Case",
 			"image": null,
 			"official": false,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 3",
+			"set": "BattleChip Collector Case",
+			"image": "053-CP 3.jpg",
+			"official": true,
 			"notes": ""
 		}
 	}

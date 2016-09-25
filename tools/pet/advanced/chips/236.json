@@ -4,16 +4,10 @@
 	"at": 3,
 	"element": "Electric",
 	"field": "010010010",
+	"effect": "",
 	"pins": "01100000024",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 2",
-			"set": null,
-			"image": "236-CP 2 (bad).jpg",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30b5\u30f3\u30c0\u30fc\u30de\u30f3",
 			"set": null,
@@ -26,6 +20,13 @@
 			"set": null,
 			"image": null,
 			"official": false,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 2",
+			"set": null,
+			"image": "236-CP 2 (bad).jpg",
+			"official": true,
 			"notes": ""
 		}
 	}

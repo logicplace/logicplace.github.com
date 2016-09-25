@@ -4,8 +4,9 @@
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
+	"effect": "INCREASE AT",
 	"pins": "10010001024",
-	"notes": "INCREASE AT",
+	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30d0\u30b0\u30b7\u30e5\u30a6\u30bb\u30a4",

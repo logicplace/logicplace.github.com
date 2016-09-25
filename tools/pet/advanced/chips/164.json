@@ -4,6 +4,7 @@
 	"at": 5,
 	"element": "Fire",
 	"field": "101010101",
+	"effect": "",
 	"pins": "01000101024",
 	"notes": "",
 	"releases": {

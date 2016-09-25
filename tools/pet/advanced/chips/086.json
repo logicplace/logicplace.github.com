@@ -4,16 +4,10 @@
 	"at": 3,
 	"element": "Neutral",
 	"field": "111111111",
+	"effect": "",
 	"pins": "00101010024",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 6",
-			"set": null,
-			"image": "086-CP 6.png",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30dc\u30fc\u30a4\u30ba\u30dc\u30e0\uff12",
 			"set": null,
@@ -26,6 +20,13 @@
 			"set": null,
 			"image": null,
 			"official": false,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 6",
+			"set": null,
+			"image": "086-CP 6.png",
+			"official": true,
 			"notes": ""
 		}
 	}

@@ -4,16 +4,10 @@
 	"at": 10,
 	"element": "Neutral",
 	"field": "022122022",
+	"effect": "",
 	"pins": "01100010024",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 8",
-			"set": null,
-			"image": null,
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30d6\u30eb\u30fc\u30b9\uff33\uff30",
 			"set": null,
@@ -26,6 +20,13 @@
 			"set": null,
 			"image": null,
 			"official": false,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 8",
+			"set": null,
+			"image": null,
+			"official": true,
 			"notes": ""
 		}
 	}

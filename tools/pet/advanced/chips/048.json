@@ -4,13 +4,14 @@
 	"at": 3,
 	"element": "Neutral",
 	"field": "022122022",
+	"effect": "",
 	"pins": "00011000024",
 	"notes": "",
 	"releases": {
 		"jp": {
-			"name": "ソード",
+			"name": "\u30bd\u30fc\u30c9",
 			"set": null,
-			"image": "048-ソード.png",
+			"image": "048-\u30bd\u30fc\u30c9.png",
 			"official": true,
 			"notes": "Image courtesy of dawnfounditforsale"
 		},
@@ -21,7 +22,7 @@
 			"official": true,
 			"notes": ""
 		},
-		"?b": {
+		"blank": {
 			"name": "(blank)",
 			"set": null,
 			"image": "048-(blank).jpg",

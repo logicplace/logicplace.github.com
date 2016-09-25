@@ -4,8 +4,9 @@
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
+	"effect": "RECOVERY HP",
 	"pins": "10001000024",
-	"notes": "RECOVERY HP",
+	"notes": "",
 	"releases": {
 		"jp": {
 			"name": "\u30ea\u30ab\u30d0\u30ea\u30fc\uff11\uff15\uff10",

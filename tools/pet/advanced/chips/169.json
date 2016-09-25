@@ -4,16 +4,10 @@
 	"at": 5,
 	"element": "Neutral",
 	"field": "002112002",
+	"effect": "",
 	"pins": "01000111124",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 3",
-			"set": "169 < EXCLUSIVE",
-			"image": "169-CP 3.jpg",
-			"official": true,
-			"notes": "Featured Chip"
-		},
 		"jp": {
 			"name": "\u30cf\u30e4\u30d6\u30b5\u30ae\u30ea\uff11",
 			"set": null,
@@ -27,6 +21,13 @@
 			"image": null,
 			"official": false,
 			"notes": ""
+		},
+		"cp": {
+			"name": "CP 3",
+			"set": "169 < EXCLUSIVE",
+			"image": "169-CP 3.jpg",
+			"official": true,
+			"notes": "Featured Chip"
 		}
 	}
 }

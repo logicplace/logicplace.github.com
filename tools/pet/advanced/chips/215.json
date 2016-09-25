@@ -4,16 +4,10 @@
 	"at": 8,
 	"element": "Neutral",
 	"field": "111111111",
+	"effect": "",
 	"pins": "01010101124",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 10",
-			"set": "215 < EXCLUSIVE",
-			"image": "215-CP 10.jpg",
-			"official": true,
-			"notes": "Featured Chip"
-		},
 		"jp": {
 			"name": "\u30b4\u30c3\u30c9\u30cf\u30f3\u30de\u30fc",
 			"set": null,
@@ -27,6 +21,13 @@
 			"image": null,
 			"official": false,
 			"notes": ""
+		},
+		"cp": {
+			"name": "CP 10",
+			"set": "215 < EXCLUSIVE",
+			"image": "215-CP 10.jpg",
+			"official": true,
+			"notes": "Featured Chip"
 		}
 	}
 }

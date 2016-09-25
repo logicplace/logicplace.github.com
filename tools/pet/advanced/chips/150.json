@@ -4,16 +4,10 @@
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
+	"effect": "",
 	"pins": "00111110024",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 4",
-			"set": null,
-			"image": "150-CP 4.jpg",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30ca\u30d3\uff0b\uff12\uff10",
 			"set": null,
@@ -25,6 +19,13 @@
 			"name": "Navi+20",
 			"set": "MagnetMan vs. MegaMan",
 			"image": "150-Navi+20 (bad).jpg",
+			"official": true,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 4",
+			"set": null,
+			"image": "150-CP 4.jpg",
 			"official": true,
 			"notes": ""
 		}

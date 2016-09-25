@@ -4,16 +4,10 @@
 	"at": 3,
 	"element": "Wood",
 	"field": "010010010",
+	"effect": "",
 	"pins": "00100111024",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 2",
-			"set": "215 < EXCLUSIVE",
-			"image": "078-CP 2.jpg",
-			"official": true,
-			"notes": "Stuck this in at the last second and it glitched.<BR>Chip data became CP6 AT4 EL0 F111101111"
-		},
 		"jp": {
 			"name": "\u30b5\u30a4\u30c9\u30d0\u30f3\u30d6\u30fc\uff11",
 			"set": null,
@@ -27,6 +21,13 @@
 			"image": null,
 			"official": false,
 			"notes": ""
+		},
+		"cp": {
+			"name": "CP 2",
+			"set": "215 < EXCLUSIVE",
+			"image": "078-CP 2.jpg",
+			"official": true,
+			"notes": "Stuck this in at the last second and it glitched.<BR>Chip data became CP6 AT4 EL0 F111101111"
 		}
 	}
 }

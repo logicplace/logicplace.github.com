@@ -4,15 +4,16 @@
 	"at": 2,
 	"element": "Neutral",
 	"field": "110110110",
+	"effect": "",
 	"pins": "00001001024",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 4",
-			"set": "217 < EXCLUSIVE",
-			"image": "018-CP 4.jpg",
+		"jp": {
+			"name": "\u30b9\u30d7\u30ec\u30c3\u30c9\u30ac\u30f3",
+			"set": null,
+			"image": "018-\u30b9\u30d7\u30ec\u30c3\u30c9\u30ac\u30f3.jpg",
 			"official": true,
-			"notes": ""
+			"notes": "Image courtesy of suruga-ya.jp"
 		},
 		"en": {
 			"name": "Spreader",
@@ -21,12 +22,12 @@
 			"official": true,
 			"notes": ""
 		},
-		"jp": {
-			"name": "\u30b9\u30d7\u30ec\u30c3\u30c9\u30ac\u30f3",
-			"set": null,
-			"image": "018-\u30b9\u30d7\u30ec\u30c3\u30c9\u30ac\u30f3.jpg",
+		"cp": {
+			"name": "CP 4",
+			"set": "217 < EXCLUSIVE",
+			"image": "018-CP 4.jpg",
 			"official": true,
-			"notes": "Image courtesy of suruga-ya.jp"
+			"notes": ""
 		}
 	}
 }

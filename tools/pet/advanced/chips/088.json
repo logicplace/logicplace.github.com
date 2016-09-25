@@ -4,16 +4,10 @@
 	"at": 1,
 	"element": "Neutral",
 	"field": "000111000",
+	"effect": "",
 	"pins": "00101011024",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 1",
-			"set": "217 < EXCLUSIVE",
-			"image": "088-CP 1.jpg",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30e1\u30c3\u30c8\u30ac\u30fc\u30c9\uff11",
 			"set": null,
@@ -27,6 +21,13 @@
 			"image": "088-Guard1.jpg",
 			"official": true,
 			"notes": "Image courtesy of catsrformeow of eBay"
+		},
+		"cp": {
+			"name": "CP 1",
+			"set": "217 < EXCLUSIVE",
+			"image": "088-CP 1.jpg",
+			"official": true,
+			"notes": ""
 		}
 	}
 }

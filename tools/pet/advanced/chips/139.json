@@ -4,6 +4,7 @@
 	"at": 3,
 	"element": "Neutral",
 	"field": "000010000",
+	"effect": "",
 	"pins": "00111000124",
 	"notes": "",
 	"releases": {

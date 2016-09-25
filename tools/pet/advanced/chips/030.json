@@ -4,16 +4,10 @@
 	"at": 3,
 	"element": "Neutral",
 	"field": "200211200",
+	"effect": "",
 	"pins": "00001111024",
 	"notes": "",
 	"releases": {
-		"cp": {
-			"name": "CP 2",
-			"set": "ProtoSoul",
-			"image": "030-CP 2.jpg",
-			"official": true,
-			"notes": ""
-		},
 		"jp": {
 			"name": "\u30a8\u30ca\u30b8\u30fc\u30dc\u30e0",
 			"set": null,
@@ -25,6 +19,13 @@
 			"name": "EnergyBomb",
 			"set": "ProtoSoul",
 			"image": "030-EnergyBomb.jpg",
+			"official": true,
+			"notes": ""
+		},
+		"cp": {
+			"name": "CP 2",
+			"set": "ProtoSoul",
+			"image": "030-CP 2.jpg",
 			"official": true,
 			"notes": ""
 		}
