@@ -1,54 +1,54 @@
 /* Localizations */
-.local-pet-number:before { content: "Number"; }
-.local-pet-type:before { content: "Type" }
-.local-pet-class:before { content: "Class" }
-.local-pet-element:before { content: "Element" }
-.local-pet-cp:before { content: "CP" }
-.local-pet-at:before { content: "AT" }
-.local-pet-pins:before { content: "Pins" }
-.local-pet-field:before { content: "Field" }
-.local-pet-origin:before { content: "Origin" }
-.local-pet-notes:before { content: "Notes" }
-.local-pet-other-regions:before { content: "Releases" }
-.local-region-en:before { content: "EN" }
-.local-region-cp:before { content: "CP" }
-.local-region-jp:before { content: "JP" }
-.local-region-kr:before { content: "KR" }
-.local-region-blank:before { content: "██" }
+.local-pet-number:before               { content: "Number"; }
+.local-pet-type:before                 { content: "Type" }
+.local-pet-class:before                { content: "Class" }
+.local-pet-element:before              { content: "Element" }
+.local-pet-cp:before                   { content: "CP" }
+.local-pet-at:before                   { content: "AT" }
+.local-pet-pins:before                 { content: "Pins" }
+.local-pet-field:before                { content: "Field" }
+.local-pet-origin:before               { content: "Origin" }
+.local-pet-notes:before                { content: "Notes" }
+.local-pet-other-regions:before        { content: "Releases" }
+.local-region-en:before                { content: "EN" }
+.local-region-cp:before                { content: "CP" }
+.local-region-jp:before                { content: "JP" }
+.local-region-kr:before                { content: "KR" }
+.local-region-blank:before             { content: "██" }
 
-.ui-jp .local-pet-number:before { content: "ID 番号"; }
-.ui-jp .local-pet-type:before {}
-.ui-jp .local-pet-class:before { content: "クラス" }
-.ui-jp .local-pet-element:before { content: "属性" }
-.ui-jp .local-pet-cp:before { content: "CP" }
-.ui-jp .local-pet-at:before { content: "AT" }
-.ui-jp .local-pet-pins:before { content: "コネクタ端子" }
-.ui-jp .local-pet-field:before {}
-.ui-jp .local-pet-origin:before { content: "入手" }
-.ui-jp .local-pet-notes:before { content: "コメント" }
+.ui-jp .local-pet-number:before        { content: "ID 番号"; }
+.ui-jp .local-pet-type:before          {}
+.ui-jp .local-pet-class:before         { content: "クラス" }
+.ui-jp .local-pet-element:before       { content: "属性" }
+.ui-jp .local-pet-cp:before            { content: "CP" }
+.ui-jp .local-pet-at:before            { content: "AT" }
+.ui-jp .local-pet-pins:before          { content: "コネクタ端子" }
+.ui-jp .local-pet-field:before         {}
+.ui-jp .local-pet-origin:before        { content: "入手" }
+.ui-jp .local-pet-notes:before         { content: "コメント" }
 .ui-jp .local-pet-other-regions:before { content: "他の発売" }
-.ui-jp .local-region-en:before { content: "米" }
-.ui-jp .local-region-cp:before { content: "CP" }
-.ui-jp .local-region-jp:before { content: "日" }
-.ui-jp .local-region-kr:before { content: "韓" }
-.ui-jp .local-region-blank:before { content: "██" }
+.ui-jp .local-region-en:before         { content: "米" }
+.ui-jp .local-region-cp:before         { content: "CP" }
+.ui-jp .local-region-jp:before         { content: "日" }
+.ui-jp .local-region-kr:before         { content: "韓" }
+.ui-jp .local-region-blank:before      { content: "██" }
 
-.ui-kr .local-pet-number:before {}
-.ui-kr .local-pet-type:before {}
-.ui-kr .local-pet-class:before {}
-.ui-kr .local-pet-element:before { content: "속성"; }
-.ui-kr .local-pet-cp:before {}
-.ui-kr .local-pet-at:before {}
-.ui-kr .local-pet-pins:before {}
-.ui-kr .local-pet-field:before {}
-.ui-kr .local-pet-origin:before {}
-.ui-kr .local-pet-notes:before {}
+.ui-kr .local-pet-number:before        {}
+.ui-kr .local-pet-type:before          {}
+.ui-kr .local-pet-class:before         {}
+.ui-kr .local-pet-element:before       { content: "속성"; }
+.ui-kr .local-pet-cp:before            {}
+.ui-kr .local-pet-at:before            {}
+.ui-kr .local-pet-pins:before          {}
+.ui-kr .local-pet-field:before         {}
+.ui-kr .local-pet-origin:before        {}
+.ui-kr .local-pet-notes:before         {}
 .ui-kr .local-pet-other-regions:before {}
-.ui-kr .local-region-en:before {}
-.ui-kr .local-region-cp:before {}
-.ui-kr .local-region-jp:before {}
-.ui-kr .local-region-kr:before {}
-.ui-kr .local-region-blank:before { content: "██" }
+.ui-kr .local-region-en:before         {}
+.ui-kr .local-region-cp:before         {}
+.ui-kr .local-region-jp:before         {}
+.ui-kr .local-region-kr:before         {}
+.ui-kr .local-region-blank:before      { content: "██" }
 
 .form-pane {
 	width: 100%;
@@ -56,4 +56,8 @@
 
 .hidden {
 	display: none;
+}
+
+.centered {
+	margin: 0px auto;
 }
