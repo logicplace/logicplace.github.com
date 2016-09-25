@@ -1,5 +1,6 @@
 {
 	"type": "Ability",
+	"class": null,
 	"cp": 10,
 	"at": 0,
 	"element": "Neutral",

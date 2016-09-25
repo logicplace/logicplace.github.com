@@ -374,6 +374,7 @@ def main(args):
 			# Okay! Create/update the JSON file.
 			newfile, json = openJSON("%s.json" % num, odict([
 				("type",     None),
+				("class",    None),
 				("cp",       None),
 				("at",       None),
 				("element",  None),

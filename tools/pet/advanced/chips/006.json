@@ -1,5 +1,6 @@
 {
 	"type": "Attack",
+	"class": null,
 	"cp": 3,
 	"at": 4,
 	"element": "Fire",
