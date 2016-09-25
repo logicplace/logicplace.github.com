@@ -14,14 +14,14 @@
 			"set": null,
 			"front": {
 				"image": "048-\u30bd\u30fc\u30c9.png",
-				"credits": null
+				"credits": "Image courtesy of dawnfounditforsale"
 			},
 			"back": {
 				"image": null,
 				"credits": null
 			},
 			"official": true,
-			"notes": "Image courtesy of dawnfounditforsale"
+			"notes": ""
 		},
 		"en": {
 			"name": "CyberSword",
