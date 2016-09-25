@@ -1,6 +1,6 @@
 {
 	"type": "Ability",
-	"class": null,
+	"class": "Giga",
 	"cp": 10,
 	"at": 0,
 	"element": "Neutral",

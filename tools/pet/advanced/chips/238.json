@@ -1,6 +1,6 @@
 {
 	"type": "Attack",
-	"class": null,
+	"class": "Mega",
 	"cp": 4,
 	"at": 6,
 	"element": "Electric",

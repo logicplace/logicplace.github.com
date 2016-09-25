@@ -1,6 +1,6 @@
 {
 	"type": "Attack",
-	"class": null,
+	"class": "Standard",
 	"cp": 1,
 	"at": 2,
 	"element": "Aqua",

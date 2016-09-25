@@ -1,6 +1,6 @@
 {
 	"type": "Attack",
-	"class": null,
+	"class": "Giga",
 	"cp": 10,
 	"at": 11,
 	"element": "Neutral",

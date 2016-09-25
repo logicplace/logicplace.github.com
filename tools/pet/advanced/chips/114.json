@@ -1,6 +1,6 @@
 {
 	"type": "Ability",
-	"class": null,
+	"class": "Standard",
 	"cp": 9,
 	"at": 0,
 	"element": "Neutral",

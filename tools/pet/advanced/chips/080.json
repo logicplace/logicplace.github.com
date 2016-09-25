@@ -1,6 +1,6 @@
 {
 	"type": "Attack",
-	"class": null,
+	"class": "Standard",
 	"cp": 3,
 	"at": 5,
 	"element": "Wood",

@@ -1,6 +1,6 @@
 {
 	"type": "Navi",
-	"class": null,
+	"class": "Navi",
 	"cp": -1,
 	"at": -1,
 	"element": "Neutral",
