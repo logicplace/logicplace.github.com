@@ -18,18 +18,15 @@ def error(error, code=None):
 	return code
 #enddef
 
-def openJSON(filename, default):
+def readJSON(filename, default):
 	try:
-		newfile = open(filename, "x")
-	except FileExistsError:
 		newfile = open(filename, "r")
 		json = JSLON.parse(newfile.read(), {"dict": odict})
 		newfile.close()
-		newfile = open(filename, "w")
-	else:
-		json = default
+		return json
+	except OSError:
+		return default
 	#endtry
-	return newfile, json
 #enddef
 
 jslonFormat = {
@@ -38,7 +35,8 @@ jslonFormat = {
 	"endOwnLine": True,
 	"spaceAfterKey": True,
 }
-def writeJSON(newfile, json):
+def writeJSON(filename, json):
+	newfile = open(filename, "w")
 	newfile.write(JSLON.stringify(json, jslonFormat))
 	newfile.close()
 #enddef
@@ -367,12 +365,12 @@ def main(args):
 
 			if num not in createable: createable[num] = []
 			createable[num].append((name, fn))
-			print(num, name, ext)
 		#endfor
 
 		for num, names in createable.items():
 			# Okay! Create/update the JSON file.
-			newfile, json = openJSON("%s.json" % num, odict([
+			filename, updated = "%s.json" % num, False
+			json = readJSON(filename, odict([
 				("type",     None),
 				("class",    None),
 				("cp",       None),
@@ -384,7 +382,13 @@ def main(args):
 				("pins",     None),
 				("notes",    ""),
 				("releases", {}),
+				("new",      True)
 			]))
+
+			if "new" in json:
+				updated = True
+				del json["new"]
+			#endif
 
 			for name, fn in names:
 				# What language is this name? Can assume "CP", blank, EN, or JP.
@@ -394,13 +398,14 @@ def main(args):
 				if cp.match(name):
 					language = "cp"
 					json["cp"] = int(name[3:])
-				elif en.match(name):
-					language = "en"
 				elif blank.match(name):
 					language = "blank"
 				elif isIcon.match(name):
-					json.icon = fn
+					if json["icon"] != fn: updated = True
+					json["icon"] = fn
 					continue
+				elif en.match(name):
+					language = "en"
 				else:
 					language = "jp"
 				#endif
@@ -420,103 +425,107 @@ def main(args):
 						("official", True),
 						("notes", ""),
 					])
+					updated = True
 				#endif
-				json["releases"][language]["back" if back else "front"]["image"] = fn
+				ref = json["releases"][language]["back" if back else "front"]
+				if ref["image"] != fn:
+					updated = True
+					ref["image"] = fn
+				#endif
 			#endfor
 
-			writeJSON(newfile, json)
+			if updated:
+				print("Updated: " + filename)
+				writeJSON(filename, json)
+			#endif
 		#endfor
 	elif args.translate_json:
-		with open(args.translate_json, "r") as f:
-			json = JSLON.parse(f.read(), {"dict": odict})
-			form = []
+		json = readJSON(f.read())
+		form = []
 
-			for x, t in json["_format"].items():
-				try: "_filename" in t
-				except TypeError:
-					if len(t) != 2: return error("Filename not provided for key: " + x, 2)
-				else:
-					t = [t["_filename"], t]
-					del t[1]["_filename"]
-				#endtry
-				t = (list(transformationFormat.finditer(t[0])), t[1])
-				form.append((re.compile("^" + x + "$"), t))
-			#endfor
-			del json["_format"]
+		for x, t in json["_format"].items():
+			try: "_filename" in t
+			except TypeError:
+				if len(t) != 2: return error("Filename not provided for key: " + x, 2)
+			else:
+				t = [t["_filename"], t]
+				del t[1]["_filename"]
+			#endtry
+			t = (list(transformationFormat.finditer(t[0])), t[1])
+			form.append((re.compile("^" + x + "$"), t))
+		#endfor
+		del json["_format"]
 
-			for key, data in json.items():
-				doBreak = False
-				for r, (fn, t) in form:
-					mo = r.match(key)
-					if mo:
-						try:
-							# Get the filename
-							fn = parseTransformation(fn, json, mo, data, False)
-						except SyntaxError as err:
-							return error("Error processing filename for %s: %s" % (r.pattern[1:-1], err.args[0]), 3)
-						#endtry
+		for key, data in json.items():
+			doBreak = False
+			for r, (fn, t) in form:
+				mo = r.match(key)
+				if mo:
+					try:
+						# Get the filename
+						fn = parseTransformation(fn, json, mo, data, False)
+					except SyntaxError as err:
+						return error("Error processing filename for %s: %s" % (r.pattern[1:-1], err.args[0]), 3)
+					#endtry
 
-						newfile, result = openJSON(fn, odict())
-						try:
-							# Perform this translation
-							obj = recurseObject(t, json, mo, data)
-						except SyntaxError as err:
-							return error("Error processing data for %s: %s" % (r.pattern[1:-1], err.args[0]), 4)
-						#endtry
+					result = readJSON(fn, odict())
+					try:
+						# Perform this translation
+						obj = recurseObject(t, json, mo, data)
+					except SyntaxError as err:
+						return error("Error processing data for %s: %s" % (r.pattern[1:-1], err.args[0]), 4)
+					#endtry
 
-						def recursiveMergeOverwrite(json, obj, path=""):
-							for k, v in obj.items():
-								if k in json and json[k]:
-									newPath = (path + "." if path else "") + k
-									try: json[k].items
-									except AttributeError:
-										error("Overwriting %s: %s" % (newPath, json[k]))
-										json[k] = v
-									else: recursiveMergeOverwrite(json[k], v, newPath)
-								else:
+					def recursiveMergeOverwrite(json, obj, path=""):
+						for k, v in obj.items():
+							if k in json and json[k]:
+								newPath = (path + "." if path else "") + k
+								try: json[k].items
+								except AttributeError:
+									error("Overwriting %s: %s" % (newPath, json[k]))
 									json[k] = v
-								#endif
-							#endfor
-						#enddef
+								else: recursiveMergeOverwrite(json[k], v, newPath)
+							else:
+								json[k] = v
+							#endif
+						#endfor
+					#enddef
 
-						def recursiveMergeNew(json, obj):
-							for k, v in obj.items():
-								if k not in json or json[k] is None: json[k] = v
-								elif json[k] == "" and type(v) is str: json[k] = v
-								else:
-									try: json[k].items
-									except AttributeError: pass
-									else: recursiveMergeNew(json[k], v)
-								#endif
-							#endfor
-						#enddef
+					def recursiveMergeNew(json, obj):
+						for k, v in obj.items():
+							if k not in json or json[k] is None: json[k] = v
+							elif json[k] == "" and type(v) is str: json[k] = v
+							else:
+								try: json[k].items
+								except AttributeError: pass
+								else: recursiveMergeNew(json[k], v)
+							#endif
+						#endfor
+					#enddef
 
-						recursiveMerge = {
-							"new": recursiveMergeNew,
-							"over": recursiveMergeOverwrite,
-							"overwrite": recursiveMergeOverwrite,
-						}
+					recursiveMerge = {
+						"new": recursiveMergeNew,
+						"over": recursiveMergeOverwrite,
+						"overwrite": recursiveMergeOverwrite,
+					}
 
-						try: recursiveMerge[args.merge_mode]
-						except KeyError:
-							return error("Merge mode not found.", 17)
-						else: recursiveMerge[args.merge_mode](result, obj)
-						writeJSON(newfile, result)
-						print("Wrote file " + fn)
-						break
-					#endif
-				#endfor
+					try: recursiveMerge[args.merge_mode]
+					except KeyError:
+						return error("Merge mode not found.", 17)
+					else: recursiveMerge[args.merge_mode](result, obj)
+					writeJSON(fn, result)
+					print("Wrote file " + fn)
+					break
+				#endif
 			#endfor
-		#endwith
+		#endfor
 	elif args.query_files:
 		if not files: return error("No files found or selected.", 6)
 
 		full = odict()
 		for x, mo in files:
 			root, ext = os.path.splitext(x)
-			f = open(x, "r")
-			full[root] = (JSLON.parse(f.read(), {"dict": odict}), mo)
-			f.close()
+			full[root] = (readJSON(x), mo)
 		#endfor
 
 		wSet, wData, trace = None, None, None
@@ -783,7 +792,7 @@ def main(args):
 
 							for fn in it:
 								filename = full[fn][1].group(0)
-								writeJSON(open(filename, "w"), full[fn][0])
+								writeJSON(filename, "w", full[fn][0])
 								if doprint: print("%s: Saved to %s" % (fn, filename))
 							#endfor
 							
@@ -800,9 +809,7 @@ def main(args):
 
 							for fn in it:
 								filename = full[fn][1].group(0)
-								f = open(filename, "r")
-								full[fn] = (JSLON.parse(f.read(), {"dict": odict}), full[fn][1])
-								f.close()
+								full[fn] = (readJSON(filename), full[fn][1])
 								if doprint: print("%s: Loaded from %s" % (fn, filename))
 							#endfor
 
@@ -858,19 +865,18 @@ def main(args):
 		#enddef
 
 		for fn, key in files:
-			newfile, json = openJSON(fn, odict())
-			writeJSON(newfile, recurse(json))
+			json = openJSON(fn, odict())
+			writeJSON(fn, recurse(json))
 		#endfor
 	elif args.updated:
 		if not files: return error("No files found or selected.", 6)
 
-		f = open(args.updated, "w")
 		json = odict()
 		for fn, key in files:
 			stat = os.stat(fn)
 			json[(key.group(1, None) if key and len(key.groups()) > 1 else None) or fn] = int(stat.st_mtime)
 		#endfor
-		writeJSON(f, json)
+		writeJSON(args.updated, json)
 	#endif
 
 	return 0
