@@ -6,7 +6,7 @@
 	"element": "Wood",
 	"field": "010110010",
 	"effect": "",
-	"icon": null,
+	"icon": "275-icon.png",
 	"pins": "01110011124",
 	"notes": "Chip shows Neutral??",
 	"releases": {

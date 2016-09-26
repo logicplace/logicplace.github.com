@@ -6,7 +6,7 @@
 	"element": "Electric",
 	"field": "111111111",
 	"effect": "",
-	"icon": null,
+	"icon": "270-icon.png",
 	"pins": "01110001024",
 	"notes": "",
 	"releases": {

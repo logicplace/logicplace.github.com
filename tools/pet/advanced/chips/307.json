@@ -6,7 +6,7 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RECOVERY CP",
-	"icon": null,
+	"icon": "307-icon.png",
 	"pins": "10010010124",
 	"notes": "",
 	"releases": {

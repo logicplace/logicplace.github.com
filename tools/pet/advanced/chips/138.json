@@ -6,9 +6,9 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RIVAL AT (DOWN)",
-	"icon": null,
+	"icon": "138-icon.png",
 	"pins": "10001111124",
-	"notes": "",
+	"notes": "Icon adapted from MMBN3's NrthWind",
 	"releases": {
 		"jp": {
 			"name": "\u30b9\u30fc\u30d1\u30fc\u30ad\u30bf\u30ab\u30bc",

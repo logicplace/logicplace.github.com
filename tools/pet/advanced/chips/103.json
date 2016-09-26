@@ -6,9 +6,9 @@
 	"element": "Neutral",
 	"field": "000010000",
 	"effect": "",
-	"icon": null,
+	"icon": "103-icon.png",
 	"pins": "00110001024",
-	"notes": "",
+	"notes": "Icon altered from VDoll in MMBN",
 	"releases": {
 		"jp": {
 			"name": "\u30ef\u30e9\u30cb\u30f3\u30ae\u30e7\u30a6",

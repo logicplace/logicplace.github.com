@@ -6,7 +6,7 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "INCREASE RIVAL MISS",
-	"icon": null,
+	"icon": "129-icon.png",
 	"pins": "10001100124",
 	"notes": "",
 	"releases": {

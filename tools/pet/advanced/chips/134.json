@@ -6,9 +6,9 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "INCREASE RIVAL MISS",
-	"icon": null,
+	"icon": "134-icon.png",
 	"pins": "10001101024",
-	"notes": "",
+	"notes": "Icon adapted from MMBN3's Mole1",
 	"releases": {
 		"jp": {
 			"name": "\u30e6\u30ab\u30b7\u30bf",

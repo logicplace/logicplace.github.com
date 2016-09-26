@@ -6,7 +6,7 @@
 	"element": "Fire",
 	"field": "001110001",
 	"effect": "",
-	"icon": null,
+	"icon": "020-icon.png",
 	"pins": "00001010024",
 	"notes": "",
 	"releases": {

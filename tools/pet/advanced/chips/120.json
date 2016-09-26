@@ -6,7 +6,7 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "INCREASE TIME",
-	"icon": null,
+	"icon": "120-icon.png",
 	"pins": "10001011024",
 	"notes": "",
 	"releases": {

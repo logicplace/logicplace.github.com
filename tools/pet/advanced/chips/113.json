@@ -6,7 +6,7 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RECOVERY HP",
-	"icon": null,
+	"icon": "113-icon.png",
 	"pins": "10001000124",
 	"notes": "",
 	"releases": {

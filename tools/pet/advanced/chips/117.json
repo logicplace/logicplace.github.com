@@ -6,9 +6,9 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "",
-	"icon": null,
+	"icon": "117-icon.png",
 	"pins": "10001010124",
-	"notes": "",
+	"notes": "Icon adapted from MMBN3 (partially complete)",
 	"releases": {
 		"jp": {
 			"name": "\u30a8\u30ea\u30a2\u30b9\u30c1\u30fc\u30eb",

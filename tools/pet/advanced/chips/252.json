@@ -6,7 +6,7 @@
 	"element": "Aqua",
 	"field": "000110000",
 	"effect": "",
-	"icon": null,
+	"icon": "252-icon.png",
 	"pins": "01101000024",
 	"notes": "",
 	"releases": {

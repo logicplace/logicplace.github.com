@@ -6,7 +6,7 @@
 	"element": "Wood",
 	"field": "001001001",
 	"effect": "",
-	"icon": null,
+	"icon": "073-icon.png",
 	"pins": "00100100124",
 	"notes": "",
 	"releases": {

@@ -6,7 +6,7 @@
 	"element": "Neutral",
 	"field": "111111111",
 	"effect": "",
-	"icon": null,
+	"icon": "203-icon.png",
 	"pins": "01010001024",
 	"notes": "",
 	"releases": {

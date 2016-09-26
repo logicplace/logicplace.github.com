@@ -6,7 +6,7 @@
 	"element": "Neutral",
 	"field": "",
 	"effect": "RIVAL AT (DOWN)",
-	"icon": null,
+	"icon": "208-icon.png",
 	"pins": "10010010024",
 	"notes": "",
 	"releases": {
