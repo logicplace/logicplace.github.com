@@ -1,54 +1,100 @@
 /* Localizations */
-.local-pet-number:before               { content: "Number"; }
-.local-pet-type:before                 { content: "Type" }
-.local-pet-class:before                { content: "Class" }
-.local-pet-element:before              { content: "Element" }
-.local-pet-cp:before                   { content: "CP" }
-.local-pet-at:before                   { content: "AT" }
-.local-pet-pins:before                 { content: "Pins" }
-.local-pet-field:before                { content: "Field" }
-.local-pet-origin:before               { content: "Origin" }
-.local-pet-notes:before                { content: "Notes" }
-.local-pet-other-regions:before        { content: "Releases" }
-.local-region-en:before                { content: "EN" }
-.local-region-cp:before                { content: "CP" }
-.local-region-jp:before                { content: "JP" }
-.local-region-kr:before                { content: "KR" }
-.local-region-blank:before             { content: "██" }
+.local-pet-number:before                            { content: "Number"; }
+.local-pet-number.short-name:before                 { content: "Num"; }
+.local-pet-type:before                              { content: "Type" }
+.local-pet-class:before                             { content: "Class" }
+.local-pet-element:before                           { content: "Element" }
+.local-pet-cp:before                                { content: "CP" }
+.local-pet-at:before                                { content: "AT" }
+.local-pet-pins:before                              { content: "Pins" }
+.local-pet-field:before                             { content: "Field" }
+.local-pet-field-cell:before                        { content: "Field" }
+.local-pet-effect:before                            { content: "Effect" }
+.local-pet-origin:before                            { content: "Origin" }
+.local-pet-notes:before                             { content: "Notes" }
+.local-pet-other-regions:before                     { content: "Releases" }
+.local-region-en:before                             { content: "EN" }
+.local-region-cp:before                             { content: "CP" }
+.local-region-jp:before                             { content: "JP" }
+.local-region-kr:before                             { content: "KR" }
+.local-region-blank:before                          { content: "██" }
+.local-pet-filename:before                          { content: "UID"; }
+.local-pet-region:before                            { content: "Release"; }
+.local-pet-region.short-name:before                 { content: "Rel"; }
+.local-pet-name:before                              { content: "Name"; }
+.local-pet-icon:before                              { content: "Icon"; }
+.local-pet-has-icon:before                          { content: "Has icon?"; }
+.local-pet-has-front-image:before                   { content: "Has image?"; }
+.local-pet-has-back-image:before                    { content: "Has back image?"; }
+.local-pet-has-icon.short-name:before               { content: "I?"; }
+.local-pet-has-front-image.short-name:before        { content: "F?"; }
+.local-pet-has-back-image.short-name:before         { content: "B?"; }
+.local-pet-front-credits:before                     { content: "Image credits"; }
+.local-pet-back-credits:before                      { content: "Back credits"; }
+.local-pet-region-notes:before                      { content: "Release-specific notes"; }
 
-.ui-jp .local-pet-number:before        { content: "ID 番号"; }
-.ui-jp .local-pet-type:before          {}
-.ui-jp .local-pet-class:before         { content: "クラス" }
-.ui-jp .local-pet-element:before       { content: "属性" }
-.ui-jp .local-pet-cp:before            { content: "CP" }
-.ui-jp .local-pet-at:before            { content: "AT" }
-.ui-jp .local-pet-pins:before          { content: "コネクタ端子" }
-.ui-jp .local-pet-field:before         {}
-.ui-jp .local-pet-origin:before        { content: "入手" }
-.ui-jp .local-pet-notes:before         { content: "コメント" }
-.ui-jp .local-pet-other-regions:before { content: "他の発売" }
-.ui-jp .local-region-en:before         { content: "米" }
-.ui-jp .local-region-cp:before         { content: "CP" }
-.ui-jp .local-region-jp:before         { content: "日" }
-.ui-jp .local-region-kr:before         { content: "韓" }
-.ui-jp .local-region-blank:before      { content: "██" }
+.ui-jp .local-pet-number:before                     { content: "ID 番号"; }
+.ui-jp .local-pet-number.short-name:before          { content: "ID"; }
+.ui-jp .local-pet-type:before                       {}
+.ui-jp .local-pet-class:before                      { content: "クラス" }
+.ui-jp .local-pet-element:before                    { content: "属性" }
+.ui-jp .local-pet-cp:before                         { content: "CP" }
+.ui-jp .local-pet-at:before                         { content: "AT" }
+.ui-jp .local-pet-pins:before                       { content: "コネクタ端子" }
+.ui-jp .local-pet-field:before                      {}
+.ui-jp .local-pet-field-cell:before                 {}
+.ui-jp .local-pet-origin:before                     { content: "入手" }
+.ui-jp .local-pet-notes:before                      { content: "コメント" }
+.ui-jp .local-pet-other-regions:before              { content: "他の発売" }
+.ui-jp .local-region-en:before                      { content: "米" }
+.ui-jp .local-region-cp:before                      { content: "CP" }
+.ui-jp .local-region-jp:before                      { content: "日" }
+.ui-jp .local-region-kr:before                      { content: "韓" }
+.ui-jp .local-region-blank:before                   { content: "██" }
+.ui-jp .local-pet-filename:before                   { content: "UID"; }
+.ui-jp .local-pet-region:before                     { content: "発売"; }
+.ui-jp .local-pet-name:before                       { content: "名前"; }
+.ui-jp .local-pet-icon:before                       { content: "絵"; }
+.ui-jp .local-pet-has-icon:before                   { content: "絵あり"; }
+.ui-jp .local-pet-has-front-image:before            { content: "写真あり"; }
+.ui-jp .local-pet-has-back-image:before             { content: "逆の写真あり"; }
+.ui-jp .local-pet-has-icon.short-name:before        { content: "絵?"; }
+.ui-jp .local-pet-has-front-image.short-name:before { content: "面?"; }
+.ui-jp .local-pet-has-back-image.short-name:before  { content: "逆?"; }
+.ui-jp .local-pet-front-credits:before              { content: "写真取る人"; }
+.ui-jp .local-pet-back-credits:before               { content: "逆の写真取る人"; }
+.ui-jp .local-pet-region-notes:before               { content: "発売のコメント"; }
 
-.ui-kr .local-pet-number:before        {}
-.ui-kr .local-pet-type:before          {}
-.ui-kr .local-pet-class:before         {}
-.ui-kr .local-pet-element:before       { content: "속성"; }
-.ui-kr .local-pet-cp:before            {}
-.ui-kr .local-pet-at:before            {}
-.ui-kr .local-pet-pins:before          {}
-.ui-kr .local-pet-field:before         {}
-.ui-kr .local-pet-origin:before        {}
-.ui-kr .local-pet-notes:before         {}
-.ui-kr .local-pet-other-regions:before {}
-.ui-kr .local-region-en:before         {}
-.ui-kr .local-region-cp:before         {}
-.ui-kr .local-region-jp:before         {}
-.ui-kr .local-region-kr:before         {}
-.ui-kr .local-region-blank:before      { content: "██" }
+.ui-kr .local-pet-number:before                     {}
+.ui-kr .local-pet-type:before                       {}
+.ui-kr .local-pet-class:before                      {}
+.ui-kr .local-pet-element:before                    { content: "속성"; }
+.ui-kr .local-pet-cp:before                         {}
+.ui-kr .local-pet-at:before                         {}
+.ui-kr .local-pet-pins:before                       {}
+.ui-kr .local-pet-field:before                      {}
+.ui-kr .local-pet-field-cell:before                 {}
+.ui-kr .local-pet-origin:before                     {}
+.ui-kr .local-pet-notes:before                      {}
+.ui-kr .local-pet-other-regions:before              {}
+.ui-kr .local-region-en:before                      {}
+.ui-kr .local-region-cp:before                      {}
+.ui-kr .local-region-jp:before                      {}
+.ui-kr .local-region-kr:before                      {}
+.ui-kr .local-region-blank:before                   { content: "██" }
+.ui-kr .local-pet-filename:before                   {}
+.ui-kr .local-pet-region:before                     {}
+.ui-kr .local-pet-name:before                       {}
+.ui-kr .local-pet-icon:before                       {}
+.ui-kr .local-pet-has-icon:before                   {}
+.ui-kr .local-pet-has-front-image:before            {}
+.ui-kr .local-pet-has-back-image:before             {}
+.ui-kr .local-pet-has-icon.short-name:before        {}
+.ui-kr .local-pet-has-front-image.short-name:before {}
+.ui-kr .local-pet-has-back-image.short-name:before  {}
+.ui-kr .local-pet-front-credits:before              {}
+.ui-kr .local-pet-back-credits:before               {}
+.ui-kr .local-pet-region-notes:before               {}
 
 .view-container {
 	width: 100%;
@@ -61,4 +107,78 @@
 
 .hidden {
 	display: none;
+}
+
+.template {
+	display: none;
+}
+
+.pet-has-image {
+	background-image: url(/tools/pet/images/has-image.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+
+	min-width: 10px;
+	min-height: 15px;
+}
+
+/* List styles */
+.pet-list-table-pane {
+	width: 100%;
+
+	text-align: left;
+
+	overflow: auto;
+}
+
+.pet-list-table-header {
+	display: flex;
+
+	background-color: white;
+
+	border: 1px solid black;
+	border-left: none;
+
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.pet-list-table-header span {
+	border-left: 1px solid black;
+
+	font-weight: bold;
+}
+
+.pet-list-table-rows {
+	width: 100%;
+	max-height: 400px;
+}
+
+.pet-list-table-row {
+	display: flex;
+
+	border-left: 1px solid black;
+}
+
+.pet-list-table-header span, .pet-list-table-row > span {
+	padding: 5px;
+	white-space: nowrap;
+}
+
+.pet-list-table-row > span {
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.pet-list-table-header .resizable, .pet-list-table-row > .resizable {
+	min-width: 0px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.pet-list-table-header .wrappable, .pet-list-table-row > .wrappable {
+	text-overflow: initial !important;
+	word-wrap: initial !important;
 }

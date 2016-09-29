@@ -293,13 +293,18 @@
 	float: right;
 }
 
+.adv-notes {
+	white-space: pre;
+}
+
 /* Field styles */
-.adv-field {
+.pet-chip-view .adv-field, .pet-list-table-rows .adv-field {
 	display: inline-block;
 	width: 31px;
-	height: 25px;
+	min-height: 25px;
 
 	line-height: 8px;
+	white-space: initial;
 }
 
 .adv-field span {
@@ -383,7 +388,7 @@ th:not(.adv-name):after, .header:after {
 	text-align: left;
 }
 
-.adv-name {
+.pet-chip-view .adv-name {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 16pt;
@@ -410,3 +415,5 @@ th:not(.adv-name):after, .header:after {
 .adv-other-regions span:first {
 	margin-left: 0px;
 }
+
+/* List styles */

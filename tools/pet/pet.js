@@ -89,7 +89,6 @@ function update(callback) {
 						.get(filename, processResult)
 						.catch(kickResult(filename));
 				}
-				callback();
 			},
 
 			"failure": function () {
@@ -100,6 +99,7 @@ function update(callback) {
 	}
 
 	forAllPets(_, callback);
+	loadListForm("adv");
 }
 
 var FORMS = {};
@@ -143,9 +143,21 @@ function chipURL(pet, img) {
 	}
 }
 
+function showHome() {
+	$(".form-pane").hide();
+	$(".home-pane").show();
+}
+
+function viewLoader(func) {
+	var args = Array.prototype.slice.call(arguments, 1);
+	return function () {
+		func.apply(null, args);
+	}
+}
+
 function loadChipForm(pet, filename_region) {
 	if (pet in FORMS) {
-		if ($(".form-pane").find(FORMS[pet].chip.attr("class").replace(/(^| +)/g, "$1.")).length == 0) {
+		if ($(".form-pane").show().find(FORMS[pet].chip.attr("class").replace(/(^| +)/g, "$1.")).length == 0) {
 			$(".home-pane").hide();
 			$(".form-pane").empty().append(FORMS[pet].chip);
 		}
@@ -167,14 +179,135 @@ function loadChipForm(pet, filename_region) {
 	}
 }
 
-function viewLoader(func) {
-	var args = Array.prototype.slice.call(arguments, 1);
-	return function () {
-		func.apply(null, args);
+var $LIST_ROW = null;
+function loadListForm(pet) {
+	if (pet in FORMS) {
+		$(".home-pane").hide();
+
+		// Add header and hide non-defaults
+		var $header = FORMS[pet].row.clone(), hideClass = [];
+		
+		$header.children().each(function () {
+			var $this = $(this),
+			cl = headerClassAndName(pet, $this);
+			$this.data({
+				"name": cl[1],
+				"class": cl[0]
+			})
+			.addClass("short-name local-pet-" + cl[1]);
+
+			if (!$this.is(".default")) {
+				hideClass.push(cl[0]);
+			}
+		});
+		hideClass = "." + hideClass.join(", .");
+
+		$header.find(":not(.default)").hide();
+		$header.find(".sortable").click(PET_HANDLERS[pet].sortColumn);
+				
+		// TODO: resizeable?
+		$(".pet-list-table-header").empty().append($header.children());
+
+		// Use header to create settings
+		var $visibility = $("<div>").addClass("pet-list-setting pet-list-visibility"),
+		$visEntry = $("<span>").append(
+			$('<input type="checkbox">').click(toggleColumn),
+			$('<label>')
+		);
+		$header.find(":not(.required)").each(function () {
+			var $this = $(this),
+			cl = headerClassAndName(pet, $this),
+			$copy = $visEntry.clone();
+			$copy.data({
+				"name": cl[1],
+				"class": cl[0]
+			});
+			if ($(this).is(".default")) {
+				$copy.find("input").prop("checked", true);
+			}
+			$copy.find("label").addClass("local-pet-" + cl[1]);
+			$visibility.append($copy);
+		});
+		$(".pet-list-settings-pane").empty().append($visibility);
+
+		// Create row template
+		$LIST_ROW = FORMS[pet].row.clone();
+		$LIST_ROW.children().each(function () {
+			$(this).removeClass("default required sortable");
+		});
+
+		$(".list-view").show();
+
+		var petDB = PET_DBS[pet], $table = $(".pet-list-table-rows").empty();
+		petDB.transaction("r", "chips", "releases", function () {
+			var sizes = {};
+			$(".pet-list-table-header span").each(function () {
+				var $this = $(this), width = $this.width() + 5;
+				sizes[$this.data("class")] = width;
+				$this.width(width);
+			});
+
+			return petDB.chips.limit(2).each(function (chip) {
+				return petDB.releases
+					.where("filename")
+					.equals(chip.filename)
+					.each(function (region) {
+						var $row = $LIST_ROW.clone().addClass("pet-list-table-row");
+						PET_HANDLERS[pet].createRow($row, region, chip);
+						$row.find(hideClass).hide();
+						$table.append($row);
+						$row.children().each(function () {
+							var $this = $(this),
+							newWidth = $this.width(),
+							cl = headerClassAndName(pet, $this)[0]
+							curWidth = sizes[cl];
+							if (newWidth > curWidth) {
+								$(".pet-list-table-pane ." + cl).width(newWidth);
+								sizes[cl] = newWidth;
+							} else {
+								$this.width(curWidth);
+							}
+						});
+					});
+			});
+		}).then(function () {
+			//resizeTable();
+		});
+	} else {
+		loadViews(pet, loadListForm);
 	}
 }
 
-function showHome() {
-	$(".form-pane").hide();
-	$(".home-pane").show();
+function headerClassAndName(pet, $e) {
+	var cl = $e.attr("class"),
+	mo = cl.match(new RegExp(pet + "-([^ ]+)"));
+	if (mo) return mo;
+	console.log("Error on:", $e, cl);
+	return [null, null];
+}
+
+function toggleColumn() {
+	var $this = $(this), $col = $(".pet-list-table-pane ." + $this.data("class"));
+	if ($col.is(":visible")) {
+		$col.hide();
+	} else {
+		$col.show();
+		resizeTable($col);
+	}
+}
+
+function resizeTable($col) {
+	if ($col) {
+		var maxWidth = 0;
+		$col.each(function () {
+			$(this).css("width", "auto");
+			maxWidth = Math.max(maxWidth, $(this).width());
+		})
+		.width(maxWidth);
+		console.log(maxWidth);
+	} else {
+		$(".pet-list-table-header span").each(function () {
+			resizeTable($("." + $(this).data("class")));
+		})
+	}
 }

@@ -5,8 +5,8 @@ BASE_PETS.adv = "advanced/";
 // Init the database
 var advancedDB = new Dexie("AdvancedPET");
 advancedDB.version(1).stores({
-	chips: 'filename, num, type, class, cp, at, element, field, pins, icon, notes, updated',
-	releases: '[filename+region], region, name, origin, front.image, front.credits, back.image, back.credits, notes'
+	chips: 'filename, number, type, class, cp, at, element, field, pins, icon, effect, notes, updated',
+	releases: '[filename+region], filename, region, name, origin, front.image, front.credits, back.image, back.credits, notes'
 	// TODO: enemies etc.
 });
 
@@ -85,28 +85,15 @@ PET_HANDLERS.adv = {
 			.addClass("local-adv-element-" + element.toLowerCase());
 		$(".adv-cp").text(chip.cp == null ? "?" : chip.cp);
 		$(".adv-at").text(chip.at == null ? "?" : chip.at);
-		$(".adv-effect").text(chip.notes || "");
+		$(".adv-effect").text(chip.effect || "");
 		$(".adv-origin").text(region.set || "?");
-		$(".adv-notes").text(region.notes || "");
+		$(".adv-notes").text((chip.notes ? chip.notes + "\n" : "") + (region.notes || ""));
 
 		var $field = $(".adv-field").empty();
-		if (chip.field) {
-			for (var i = 0; i < 9; ++i) {
-				$("<span>").addClass("field-" + chip.field[i]).appendTo($field)
-			}
-		} else {
-			if (chip.field === "") $field.text("N/A")
-			else $field.text("?")
-		}
+		makeField($field, chip.field);
 
 		var $pins = $(".adv-pins").empty();
-		if (chip.pins) {
-			for (var i = 0; i < 11; ++i) {
-				$("<span>").addClass("pin-" + chip.pins[i]).appendTo($pins)
-			}
-		} else {
-			$pins.text("?")
-		}
+		makePins($pins, chip.pins);
 
 		var $regions = $(".adv-other-regions").empty();
 		for (var i = chip.releases.length - 1; i >= 0; --i) {
@@ -130,6 +117,8 @@ PET_HANDLERS.adv = {
 			.removeClass("neutral aqua fire wood electric");
 		$(".adv-chip-name").text("?");
 		$(".adv-chip-number").text("000");
+		$(".chip-image-front").css("background-image", "").attr("title", "");
+		$(".chip-image-back").css("background-image", "").attr("title", "");
 
 		// Data sheet.
 		$(".adv-name").text("ERROR FINDING CHIP");
@@ -150,7 +139,45 @@ PET_HANDLERS.adv = {
 		$(".adv-notes").text(error);
 		$(".adv-other-regions").empty();
 	},
+
+	"createRow": function ($row, region, chip) {
+		$row.find(".adv-filename").text(chip.filename);
+		$row.find(".adv-number").text(chip.number || "???");
+		$row.find(".adv-region").addClass("local-region-" + region.region);
+		$row.find(".adv-name").text(region.name || "?");
+		$row.find(".adv-type").text(chip.type || "?");
+		$row.find(".adv-class").text(chip.class || "?");
+		$row.find(".adv-cp").text(or(chip.cp, "?"));
+		$row.find(".adv-at").text(or(chip.at, "?"));
+		$row.find(".adv-element").text(chip.element || "?");
+		var $field = $("<span>").addClass("adv-field").appendTo($row.find(".adv-field-cell")),
+		$pins = $row.find(".adv-pins");
+		makeField($field, chip.field);
+		$field.data("raw", chip.field);
+		makePins($pins, chip.pins);
+		$pins.data("raw", chip.pins);
+		var $icon = $row.find(".adv-icon");
+		if (chip.icon) {
+			$("<span>").addClass("adv-chip-image").css("background-image", chip.icon).appendTo($icon);
+			$row.find(".adv-has-icon").addClass("pet-has-image");
+		} else {
+			$icon.text("?");
+		}
+		if (region.front.image) $row.find(".adv-has-front-image").addClass("pet-has-image");
+		if (region.back.image) $row.find(".adv-has-back-image").addClass("pet-has-image");
+		$row.find(".adv-front-credits").text(region.front.credits || "");
+		$row.find(".adv-back-credits").text(region.back.credits || "");
+		$row.find(".adv-origin").text(region.set || "?");
+		$row.find(".adv-notes").text(chip.notes || "");
+		$row.find(".adv-region-notes").text(region.notes || "");
+	},
+
+	"rowFail": function (error) {
+		console.log("Failed to fetch info for row: " + error);
+	},
 }
+
+function or(x, y) { return x === null ? y : x; }
 
 function chipHooks() {
 	// Controls.
@@ -195,4 +222,26 @@ function chipHooks() {
 			$front.removeClass("hidden");
 		}
 	});
+}
+
+function makeField($field, field) {
+	if (field) {
+		for (var i = 0; i < 9; ++i) {
+			$("<span>").addClass("field-" + field[i]).appendTo($field)
+		}
+	} else {
+		if (field === "") $field.text("N/A")
+		else $field.text("?")
+	}
+
+}
+
+function makePins($pins, pins) {
+	if (pins) {
+		for (var i = 0; i < 11; ++i) {
+			$("<span>").addClass("pin-" + pins[i]).appendTo($pins)
+		}
+	} else {
+		$pins.text("?")
+	}
 }
