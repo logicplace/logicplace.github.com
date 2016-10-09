@@ -14,6 +14,12 @@ advancedDB.open().catch(function(error) {
 	alert("Failed to open AdvancedPET: " + error);
 });
 
+var advancedDB = new loki("AdvancedPET", {
+	"adapter": idiAdapter,
+});
+
+advancedDB.loadDatabase()
+
 PET_DBS.adv = advancedDB;
 
 var advGenericBacks = {

@@ -5,6 +5,8 @@ var BASE_PETS = {}
 var PET_DBS = {}
 var PET_HANDLERS = {}
 
+var idiAdapter = LokiIndexedAdapter("MegaMan");
+
 $(function () {
 	if (PETS.length) update();
 	else setTimeout(update, 100);
