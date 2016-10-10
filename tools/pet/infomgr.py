@@ -18,14 +18,14 @@ def error(error, code=None):
 	return code
 #enddef
 
-def readJSON(filename, default):
+def readJSON(filename, default=None):
 	try:
 		newfile = open(filename, "r")
 		json = JSLON.parse(newfile.read(), {"dict": odict})
 		newfile.close()
 		return json
 	except OSError:
-		return default
+		return default or odict()
 	#endtry
 #enddef
 
