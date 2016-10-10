@@ -3,22 +3,21 @@ PETS.push("adv");
 BASE_PETS.adv = "advanced/";
 
 // Init the database
-var advancedDB = new Dexie("AdvancedPET");
-advancedDB.version(1).stores({
-	chips: 'filename, number, type, class, cp, at, element, field, pins, icon, effect, notes, updated',
-	releases: '[filename+region], filename, region, name, origin, front.image, front.credits, back.image, back.credits, notes'
-	// TODO: enemies etc.
-});
-
-advancedDB.open().catch(function(error) {
-	alert("Failed to open AdvancedPET: " + error);
-});
-
-var advancedDB = new loki("AdvancedPET", {
+var advancedDB = new Loki("AdvancedPET", {
 	"adapter": idiAdapter,
+	//"verbose": true,
 });
 
-advancedDB.loadDatabase()
+advancedDB.loadDatabase();
+
+//filename, number, type, class, cp, at, element, field, effect, icon, pins, notes, updated, releases
+advancedDB.chips = db.addCollection("chips", {
+	"unique": ["filename"],
+});
+//filename, region, name, origin, front.image, front.credits, back.image, back.credits, notes
+advancedDB.releases = db.addCollection("releases", {
+	"indicies": ["filename", "region"],
+});
 
 PET_DBS.adv = advancedDB;
 

@@ -63,13 +63,13 @@ function update(callback) {
 									release.filename = item.filename
 									release.region = region
 
-									petDB.releases.put(release);
+									petDB.releases.insert(release);
 
 									json.releases.push(region);
 								}
 
 								// Update DB entry.
-								petDB.chips.put(json);
+								petDB.chips.insert(json);
 							},
 
 							"failure": function () {
@@ -80,16 +80,10 @@ function update(callback) {
 					}
 				}
 
-				function kickResult(filename) {
-					return function () {
-						processResult({"filename": filename});
-					} 
-				}
-
 				for(var filename in updated) {
-					PET_DBS[pet].chips
-						.get(filename, processResult)
-						.catch(kickResult(filename));
+					processResult(PET_DBS[pet].chips.find({
+						"filename": {"$eq": filename},
+					}));
 				}
 			},
 
@@ -157,7 +151,7 @@ function viewLoader(func) {
 	}
 }
 
-function loadChipForm(pet, filename_region) {
+function loadChipForm(pet, filename, region) {
 	if (pet in FORMS) {
 		if ($(".form-pane").show().find(FORMS[pet].chip.attr("class").replace(/(^| +)/g, "$1.")).length == 0) {
 			$(".home-pane").hide();
@@ -165,18 +159,23 @@ function loadChipForm(pet, filename_region) {
 		}
 		
 		var petDB = PET_DBS[pet];
-		petDB.releases
-			.get(filename_region, function (region) {
-				petDB.chips
-					.get(filename_region[0], function (chip) {
-						PET_HANDLERS[pet].chip(chip, region);
-					})
-					.catch(PET_HANDLERS[pet].chipFail);
-			})
-			.catch(PET_HANDLERS[pet].chipFail);
+		var chip = petDb.chips.by("filename", filename);
+		if (chip) {
+			var release = petDB.releases.findOne({
+				"filename": {"$eq": filename},
+				"region": {"$eq": region},
+			});
+			if(release) {
+				PET_HANDLERS[pet].chip(chip, region);
+			} else {
+				PET_HANDLERS[pet].chipFail();
+			}
+		} else {
+			PET_HANDLERS[pet].chipFail();
+		}
 	} else {
 		loadViews(pet, function () {
-			loadChipForm(pet, filename_region);
+			loadChipForm(pet, filename, region);
 		});
 	}
 }
@@ -241,39 +240,36 @@ function loadListForm(pet) {
 		$(".list-view").show();
 
 		var petDB = PET_DBS[pet], $table = $(".pet-list-table-rows").empty();
-		petDB.transaction("r", "chips", "releases", function () {
-			var sizes = {};
-			$(".pet-list-table-header span").each(function () {
-				var $this = $(this), width = $this.width() + 5;
-				sizes[$this.data("class")] = width;
-				$this.width(width);
+
+		var sizes = {};
+		$(".pet-list-table-header span").each(function () {
+			var $this = $(this), width = $this.width() + 5;
+			sizes[$this.data("class")] = width;
+			$this.width(width);
+		});
+		petDB.chips.where(function (chip) {
+			var releases = petDB.releases.find({
+				"filename": {"$eq": chip.filename},
 			});
 
-			return petDB.chips.limit(2).each(function (chip) {
-				return petDB.releases
-					.where("filename")
-					.equals(chip.filename)
-					.each(function (region) {
-						var $row = $LIST_ROW.clone().addClass("pet-list-table-row");
-						PET_HANDLERS[pet].createRow($row, region, chip);
-						$row.find(hideClass).hide();
-						$table.append($row);
-						$row.children().each(function () {
-							var $this = $(this),
-							newWidth = $this.width(),
-							cl = headerClassAndName(pet, $this)[0]
-							curWidth = sizes[cl];
-							if (newWidth > curWidth) {
-								$(".pet-list-table-pane ." + cl).width(newWidth);
-								sizes[cl] = newWidth;
-							} else {
-								$this.width(curWidth);
-							}
-						});
-					});
-			});
-		}).then(function () {
-			//resizeTable();
+			for (var i = 0; i < releases.length; ++i) {
+				var $row = $LIST_ROW.clone().addClass("pet-list-table-row");
+				PET_HANDLERS[pet].createRow($row, releases[i], chip);
+				$row.find(hideClass).hide();
+				$table.append($row);
+				$row.children().each(function () {
+					var $this = $(this),
+					newWidth = $this.width(),
+					cl = headerClassAndName(pet, $this)[0]
+					curWidth = sizes[cl];
+					if (newWidth > curWidth) {
+						$(".pet-list-table-pane ." + cl).width(newWidth);
+						sizes[cl] = newWidth;
+					} else {
+						$this.width(curWidth);
+					}
+				});
+			}
 		});
 	} else {
 		loadViews(pet, loadListForm);
@@ -306,7 +302,6 @@ function resizeTable($col) {
 			maxWidth = Math.max(maxWidth, $(this).width());
 		})
 		.width(maxWidth);
-		console.log(maxWidth);
 	} else {
 		$(".pet-list-table-header span").each(function () {
 			resizeTable($("." + $(this).data("class")));
