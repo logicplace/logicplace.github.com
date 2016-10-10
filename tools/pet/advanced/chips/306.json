@@ -1,14 +1,14 @@
 {
 	"type": "Attack",
 	"class": "Giga",
-	"cp": 12,
-	"at": 14,
+	"cp": 11,
+	"at": 13,
 	"element": "Neutral",
-	"field": "101010101",
+	"field": "110110110",
 	"effect": "",
 	"icon": "306-icon.png",
-	"pins": "10000000124",
-	"notes": "",
+	"pins": "10000000024",
+	"notes": "Best battle chip EVER!",
 	"releases": {
 		"jp": {
 			"name": "\u30d5\u30a9\u30eb\u30c6\u30a2\u30ca\u30b6\u30fc",

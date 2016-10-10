@@ -1,13 +1,13 @@
 {
 	"type": "Attack",
 	"class": "Mega",
-	"cp": 4,
-	"at": 0,
+	"cp": 2,
+	"at": 4,
 	"element": "Neutral",
-	"field": "",
-	"effect": "INCREASE RIVAL MISS",
+	"field": "000100000",
+	"effect": "",
 	"icon": "207-icon.png",
-	"pins": "10010001124",
+	"pins": "01010010024",
 	"notes": "",
 	"releases": {
 		"jp": {

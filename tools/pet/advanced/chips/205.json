@@ -1,13 +1,13 @@
 {
 	"type": "Ability",
 	"class": "Mega",
-	"cp": 2,
-	"at": 4,
+	"cp": 5,
+	"at": 0,
 	"element": "Neutral",
-	"field": "000100000",
-	"effect": "",
+	"field": "",
+	"effect": "INCREASE AT",
 	"icon": "205-icon.png",
-	"pins": "01010010024",
+	"pins": "10010001024",
 	"notes": "",
 	"releases": {
 		"jp": {

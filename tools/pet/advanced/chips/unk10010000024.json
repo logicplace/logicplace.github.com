@@ -1,10 +1,42 @@
 {
 	"type": "Ability",
+	"class": null,
 	"cp": 8,
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
+	"effect": "RECOVERY HP",
+	"icon": null,
 	"pins": "10010000024",
-	"notes": "RECOVERY HP",
-	"releases": {}
+	"notes": "",
+	"releases": {
+		"jp": {
+			"name": "\u30C0\u30FC\u30AF\u30EA\u30AB\u30D0\u30EA\u30FC",
+			"set": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
+			"official": false,
+			"notes": ""
+		},
+		"en": {
+			"name": "DarkRecovery",
+			"set": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
+			"official": false,
+			"notes": ""
+		}
+	}
 }

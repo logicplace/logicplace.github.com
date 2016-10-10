@@ -11,7 +11,7 @@
 	"notes": "",
 	"releases": {
 		"jp": {
-			"name": "",
+			"name": "ブラックバリア",
 			"set": null,
 			"front": {
 				"image": null,
@@ -21,11 +21,11 @@
 				"image": null,
 				"credits": null
 			},
-			"official": true,
+			"official": false,
 			"notes": ""
 		},
 		"en": {
-			"name": null,
+			"name": "Black Barrier",
 			"set": null,
 			"front": {
 				"image": null,

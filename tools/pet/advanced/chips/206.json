@@ -1,13 +1,13 @@
 {
 	"type": "Ability",
 	"class": "Mega",
-	"cp": 5,
+	"cp": 4,
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
-	"effect": "INCREASE AT",
+	"effect": "INCREASE RIVAL MISS",
 	"icon": "206-icon.png",
-	"pins": "10010001024",
+	"pins": "10010001124",
 	"notes": "",
 	"releases": {
 		"jp": {

@@ -1,13 +1,13 @@
 {
 	"type": "Attack",
 	"class": "Standard",
-	"cp": 7,
-	"at": 0,
+	"cp": 2,
+	"at": 3,
 	"element": "Neutral",
-	"field": "",
-	"effect": "RIVAL AT (DOWN)",
+	"field": "000010000",
+	"effect": "",
 	"icon": "138-icon.png",
-	"pins": "10001111124",
+	"pins": "00111000124",
 	"notes": "Icon adapted from MMBN3's NrthWind",
 	"releases": {
 		"jp": {

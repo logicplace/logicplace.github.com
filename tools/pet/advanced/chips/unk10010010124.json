@@ -1,31 +1,17 @@
 {
-	"type": "Attack",
-	"class": "Giga",
-	"cp": 11,
-	"at": 13,
+	"type": "Ability",
+	"class": null,
+	"cp": 7,
+	"at": 0,
 	"element": "Neutral",
-	"field": "110110110",
-	"effect": "",
+	"field": "",
+	"effect": "RECOVERY CP",
 	"icon": null,
-	"pins": "10000000024",
+	"pins": "10010010124",
 	"notes": "",
 	"releases": {
 		"jp": {
-			"name": "",
-			"set": null,
-			"front": {
-				"image": null,
-				"credits": null
-			},
-			"back": {
-				"image": null,
-				"credits": null
-			},
-			"official": true,
-			"notes": ""
-		},
-		"en": {
-			"name": null,
+			"name": "\u30B7\u30B0\u30CA\u30EB\u30EC\u30C3\u30C9",
 			"set": null,
 			"front": {
 				"image": null,
@@ -36,7 +22,21 @@
 				"credits": null
 			},
 			"official": false,
-			"notes": "Best battle chip EVER!"
+			"notes": ""
+		},
+		"en": {
+			"name": "SignalRed",
+			"set": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
+			"official": false,
+			"notes": ""
 		}
 	}
 }

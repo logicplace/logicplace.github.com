@@ -1,13 +1,13 @@
 {
 	"type": "Ability",
 	"class": "Standard",
-	"cp": 2,
-	"at": 3,
+	"cp": 7,
+	"at": 0,
 	"element": "Neutral",
-	"field": "000010000",
-	"effect": "",
+	"field": "",
+	"effect": "RIVAL AT (DOWN)",
 	"icon": "139-icon.png",
-	"pins": "00111000124",
+	"pins": "10001111124",
 	"notes": "",
 	"releases": {
 		"jp": {

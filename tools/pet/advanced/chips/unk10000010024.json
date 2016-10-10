@@ -1,10 +1,42 @@
 {
 	"type": "Attack",
+	"class": null,
 	"cp": 16,
 	"at": 15,
 	"element": "Neutral",
 	"field": "001110001",
+	"effect": "",
+	"icon": null,
 	"pins": "10000010024",
 	"notes": "",
-	"releases": {}
+	"releases": {
+		"jp": {
+			"name": "\u30C7\u30E5\u30FC\u30AA",
+			"set": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
+			"official": false,
+			"notes": ""
+		},
+		"en": {
+			"name": "Duo",
+			"set": null,
+			"front": {
+				"image": null,
+				"credits": null
+			},
+			"back": {
+				"image": null,
+				"credits": null
+			},
+			"official": true,
+			"notes": ""
+		}
+	}
 }

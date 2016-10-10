@@ -1,13 +1,13 @@
 {
 	"type": "Attack",
 	"class": "Giga",
-	"cp": 7,
-	"at": 0,
+	"cp": 12,
+	"at": 14,
 	"element": "Neutral",
-	"field": "",
-	"effect": "RECOVERY CP",
+	"field": "101010101",
+	"effect": "",
 	"icon": "307-icon.png",
-	"pins": "10010010124",
+	"pins": "10000000124",
 	"notes": "",
 	"releases": {
 		"jp": {
