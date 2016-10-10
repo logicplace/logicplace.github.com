@@ -1,7 +1,7 @@
 {
 	"type": "Ability",
 	"class": "Standard",
-	"cp": -1,
+	"cp": null,
 	"at": 0,
 	"element": "Neutral",
 	"field": "",
