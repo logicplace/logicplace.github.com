@@ -1,9 +1,12 @@
 {
 	"type": "Attack",
+	"class": null,
 	"cp": 5,
 	"at": 6,
 	"element": "Neutral",
 	"field": "000110000",
+	"effect": "",
+	"icon": null,
 	"pins": "01111011124",
 	"notes": "",
 	"releases": {}
