@@ -792,7 +792,7 @@ def main(args):
 
 							for fn in it:
 								filename = full[fn][1].group(0)
-								writeJSON(filename, "w", full[fn][0])
+								writeJSON(filename, full[fn][0])
 								if doprint: print("%s: Saved to %s" % (fn, filename))
 							#endfor
 							
