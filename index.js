@@ -27,3 +27,29 @@ function ModLinks(base) {
 		$elem.click(LoadMe);
 	});
 }
+
+function waitFor(wait, callback) {
+	var result;
+	switch (typeof(wait)) {
+		case "function":
+			result = wait();
+			break;
+		case "object":
+			result = true;
+			for (var i = 0; i < wait.length; i++) {
+				result = result && (wait[i] in window) && typeof(window[wait[i]]) !== "undefined";
+			}
+			break;
+		case "string":
+			result = eval(wait);
+			break;
+		default:
+			console.log("Unknown wait type", wait)
+	}
+	if (result) callback();
+	else {
+		setTimeout(function () {
+			waitFor(wait, callback);
+		}, 50);
+	}
+}
