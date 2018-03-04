@@ -1,25 +1,30 @@
 // Make the Megaman Advanced PET known
 PETS.push("adv");
 BASE_PETS.adv = "advanced/";
+ADV_BASE_IMG_URL = "/tools/pet/advanced/chips/";
 
-// Init the database
-var advancedDB = new Loki("AdvancedPET", {
-	"adapter": idiAdapter,
-	//"verbose": true,
+var advancedDB;
+waitFor(["loki", "idiAdapter"], function () {
+	// Init the database
+	advancedDB = new loki("AdvancedPET", {
+		"adapter": idiAdapter,
+		//"verbose": true,
+		"autosave": true,
+	});
+
+	advancedDB.loadDatabase();
+
+	//filename, number, type, class, cp, at, element, field, effect, icon, pins, notes, updated, releases
+	advancedDB.chips = advancedDB.addCollection("chips", {
+		"unique": ["filename"],
+	});
+	//filename, region, name, origin, front.image, front.credits, back.image, back.credits, notes
+	advancedDB.releases = advancedDB.addCollection("releases", {
+		"indicies": ["filename", "region"],
+	});
+
+	PET_DBS.adv = advancedDB;
 });
-
-advancedDB.loadDatabase();
-
-//filename, number, type, class, cp, at, element, field, effect, icon, pins, notes, updated, releases
-advancedDB.chips = db.addCollection("chips", {
-	"unique": ["filename"],
-});
-//filename, region, name, origin, front.image, front.credits, back.image, back.credits, notes
-advancedDB.releases = db.addCollection("releases", {
-	"indicies": ["filename", "region"],
-});
-
-PET_DBS.adv = advancedDB;
 
 var advGenericBacks = {
 	"Standard-jp": "Class スタンダード (back).png",
@@ -104,7 +109,7 @@ PET_HANDLERS.adv = {
 		for (var i = chip.releases.length - 1; i >= 0; --i) {
 			var rg = chip.releases[i];
 			$("<span>").addClass("local-region-" + rg)
-				.click(viewLoader(loadChipForm, "adv", [chip.filename, rg]))
+				.click(viewLoader(loadChipForm, "adv", chip.filename, rg))
 				.appendTo($regions);
 		}
 
@@ -163,7 +168,10 @@ PET_HANDLERS.adv = {
 		$pins.data("raw", chip.pins);
 		var $icon = $row.find(".adv-icon");
 		if (chip.icon) {
-			$("<span>").addClass("adv-chip-image").css("background-image", chip.icon).appendTo($icon);
+			$("<img>")
+				.addClass("adv-chip-image")
+				.attr("src", ADV_BASE_IMG_URL + chip.icon)
+				.appendTo($icon);
 			$row.find(".adv-has-icon").addClass("pet-has-image");
 		} else {
 			$icon.text("?");

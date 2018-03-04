@@ -30,7 +30,7 @@
 
 .adv-chip-base, .chip-image-front, .chip-image-back {
 	display: inline-block;
-	width: 30mm;
+	min-width: 30mm;
 	height: 48mm;
 }
 
@@ -179,12 +179,15 @@
 
 .adv-chip-image {
 	display: inline-block;
-	width: 17mm;
-	height: 14.5mm;
-
-	margin-top: -1mm; /* wtf?? */
 
 	background: green;
+	background-repeat: no-repeat;
+}
+
+.pet-chip-view .adv-chip-image {
+	width: 17mm;
+	height: 14.5mm;
+	margin-top: -1mm; /* wtf?? */
 }
 
 .adv-chip-element-name {
@@ -322,7 +325,7 @@
 .adv-field .field-4 { background-image: url(/tools/pet/advanced/images/field-unknown.gif); }
 
 /* Pin styles */
-.adv-pins {
+.pet-chip-view .adv-pins {
 	display: inline-block;
 	width: 111px;
 	height: 11px;
@@ -346,7 +349,7 @@
 .adv-pins .pin-7 { background-image: url(/tools/pet/images/pin7.gif); }
 
 /* Other chip frame style */
-.chip-standard-image-back, .chip-image-front, .chip-image-back {
+.chip-standard-image-front, .chip-standard-image-back, .chip-image-front, .chip-image-back {
 	display: inline-block;
 }
 
@@ -363,6 +366,10 @@
 	color: red;
 	font-size: 18pt;
 	font-weight: bolder;
+}
+
+.chip-image-top td {
+	height: 100%;
 }
 
 .previous-chip-image, .next-chip-image {

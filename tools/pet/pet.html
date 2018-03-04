@@ -1,8 +1,12 @@
 <link rel="stylesheet" type="text/css" href="/tools/pet/pet.css">
 
 <div class="view-container">
-	<div class="home-pane">
-		<div><a onclick="loadChipForm('adv', ['chips/001.json', 'en'])">Test Advanced chip view.</a></div>
+	<div class="loading-pane">
+		<div>Loading...</div>
+	</div>
+
+	<div class="home-pane hidden">
+		<div><a onclick="loadListForm('adv')">Advanced PET Chips</a></div>
 	</div>
 
 	<div class="form-pane"></div>
@@ -10,15 +14,17 @@
 	<div class="list-pane">
 		<div class="pet-list-query-pane"></div>
 		<div class="pet-list-table-pane">
-			<div class="pet-list-table-header"></div>
-			<div class="pet-list-table-rows"></div>
+			<table class="pet-list-table">
+				<thead class="pet-list-table-header"></thead>
+				<tbody class="pet-list-table-rows"></tbody>
+			</table>
 		</div>
 		<div class="pet-list-settings-pane"></div>
 	</div>
 </div>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lokijs/1.4.1/lokijs.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lokijs/1.4.1/loki-indexed-adapter.min.js"></script>
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lokijs/1.4.1/lokijs.min.js"></script> -->
 <!-- http://jqueryui.com/resizable/ -->
 <script src="/tools/pet/pet.js"></script>
 <script src="/tools/pet/adv.js"></script>

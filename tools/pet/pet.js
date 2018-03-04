@@ -5,11 +5,10 @@ var BASE_PETS = {}
 var PET_DBS = {}
 var PET_HANDLERS = {}
 
-var idiAdapter = LokiIndexedAdapter("MegaMan");
-
-$(function () {
-	if (PETS.length) update();
-	else setTimeout(update, 100);
+var idiAdapter;
+waitFor(["LokiIndexedAdapter"], function () {
+	idiAdapter = new LokiIndexedAdapter("MegaMan");
+	setTimeout(update, 100);
 });
 
 function forAllPets(func, callback) {
@@ -38,6 +37,9 @@ function update(callback) {
 			"success": function (updated) {
 				// Enumerate list and check with local database if any need to be updated.
 				// If it does, download that JSON file and update the entry.
+
+				var processing = 0;
+
 				console.log("Downloaded updated.json for " + pet)
 				function processResult(item) {
 					if (!("updated" in item) || item.updated < updated[item.filename]) {
@@ -70,20 +72,30 @@ function update(callback) {
 
 								// Update DB entry.
 								petDB.chips.insert(json);
+
+								--processing;
+								if (processing == 0) {
+									$(".loading-pane").addClass("hidden");
+									$(".home-pane").removeClass("hidden");
+								}
 							},
 
 							"failure": function () {
 								console.error("Failed to download update for " + fn_path);
 								// TODO: Reason
+								--processing;
 							},
 						});
 					}
 				}
 
 				for(var filename in updated) {
-					processResult(PET_DBS[pet].chips.find({
+					++processing;
+					processResult(PET_DBS[pet].chips.findOne({
 						"filename": {"$eq": filename},
-					}));
+					}) || {
+						"filename": filename,
+					});
 				}
 			},
 
@@ -95,17 +107,16 @@ function update(callback) {
 	}
 
 	forAllPets(_, callback);
-	loadListForm("adv");
 }
 
 var FORMS = {};
 function loadViews(pet, callback) {
-	console.log("Downloading views")
+	console.log("Downloading views for", pet);
 	$.ajax({
 		"url": BASE_URL + pet + ".html",
 
 		"success": function (html) {
-			console.log("Successfully downloaded")
+			console.log("Successfully downloaded views for", pet);
 			var html = $.parseHTML(html), views = {};
 			for (var i = html.length - 1; i >= 0; i--) {
 				var $node = $(html[i]),
@@ -115,6 +126,12 @@ function loadViews(pet, callback) {
 					$node.find("*").contents().filter(function() {
 						return this.nodeType == Node.TEXT_NODE && !/\S/.test(this.nodeValue);
 					}).remove();
+
+					var $target = $node.find("." + view[0]);
+					if ($target.length == 1) {
+						$node = $target;
+					}
+
 					views[view[1]] = $node;
 				} else if ($node.is("link")) {
 					$("head").append($node);
@@ -159,14 +176,16 @@ function loadChipForm(pet, filename, region) {
 		}
 		
 		var petDB = PET_DBS[pet];
-		var chip = petDb.chips.by("filename", filename);
+		var chip = petDB.chips.by("filename", filename);
 		if (chip) {
 			var release = petDB.releases.findOne({
-				"filename": {"$eq": filename},
-				"region": {"$eq": region},
+				"$and": [
+					{"filename": {"$eq": filename}},
+					{"region": {"$eq": region}},
+				],
 			});
 			if(release) {
-				PET_HANDLERS[pet].chip(chip, region);
+				PET_HANDLERS[pet].chip(chip, release);
 			} else {
 				PET_HANDLERS[pet].chipFail();
 			}
@@ -205,14 +224,11 @@ function loadListForm(pet) {
 
 		$header.find(":not(.default)").hide();
 		$header.find(".sortable").click(PET_HANDLERS[pet].sortColumn);
-				
-		// TODO: resizeable?
-		$(".pet-list-table-header").empty().append($header.children());
 
 		// Use header to create settings
 		var $visibility = $("<div>").addClass("pet-list-setting pet-list-visibility"),
 		$visEntry = $("<span>").append(
-			$('<input type="checkbox">').click(toggleColumn),
+			$('<input type="checkbox">'),
 			$('<label>')
 		);
 		$header.find(":not(.required)").each(function () {
@@ -223,16 +239,23 @@ function loadListForm(pet) {
 				"name": cl[1],
 				"class": cl[0]
 			});
-			if ($(this).is(".default")) {
-				$copy.find("input").prop("checked", true);
+
+			var $input = $copy.find("input");
+			if ($this.hasClass("default")) {
+				$input.prop("checked", true);
 			}
+			$input.click(toggleColumn);
+
 			$copy.find("label").addClass("local-pet-" + cl[1]);
 			$visibility.append($copy);
 		});
 		$(".pet-list-settings-pane").empty().append($visibility);
+				
+		// TODO: resizeable?
+		$(".pet-list-table-header").empty().append($header.children());
 
 		// Create row template
-		$LIST_ROW = FORMS[pet].row.clone();
+		$LIST_ROW = FORMS[pet].row.clone().addClass("pet-list-table-row");
 		$LIST_ROW.children().each(function () {
 			$(this).removeClass("default required sortable");
 		});
@@ -241,34 +264,16 @@ function loadListForm(pet) {
 
 		var petDB = PET_DBS[pet], $table = $(".pet-list-table-rows").empty();
 
-		var sizes = {};
-		$(".pet-list-table-header span").each(function () {
-			var $this = $(this), width = $this.width() + 5;
-			sizes[$this.data("class")] = width;
-			$this.width(width);
-		});
 		petDB.chips.where(function (chip) {
 			var releases = petDB.releases.find({
 				"filename": {"$eq": chip.filename},
 			});
 
 			for (var i = 0; i < releases.length; ++i) {
-				var $row = $LIST_ROW.clone().addClass("pet-list-table-row");
+				var $row = $LIST_ROW.clone();
 				PET_HANDLERS[pet].createRow($row, releases[i], chip);
 				$row.find(hideClass).hide();
 				$table.append($row);
-				$row.children().each(function () {
-					var $this = $(this),
-					newWidth = $this.width(),
-					cl = headerClassAndName(pet, $this)[0]
-					curWidth = sizes[cl];
-					if (newWidth > curWidth) {
-						$(".pet-list-table-pane ." + cl).width(newWidth);
-						sizes[cl] = newWidth;
-					} else {
-						$this.width(curWidth);
-					}
-				});
 			}
 		});
 	} else {
@@ -285,26 +290,10 @@ function headerClassAndName(pet, $e) {
 }
 
 function toggleColumn() {
-	var $this = $(this), $col = $(".pet-list-table-pane ." + $this.data("class"));
+	var $this = $(this), $col = $(".pet-list-table-pane ." + $this.parent().data("class"));
 	if ($col.is(":visible")) {
 		$col.hide();
 	} else {
 		$col.show();
-		resizeTable($col);
-	}
-}
-
-function resizeTable($col) {
-	if ($col) {
-		var maxWidth = 0;
-		$col.each(function () {
-			$(this).css("width", "auto");
-			maxWidth = Math.max(maxWidth, $(this).width());
-		})
-		.width(maxWidth);
-	} else {
-		$(".pet-list-table-header span").each(function () {
-			resizeTable($("." + $(this).data("class")));
-		})
 	}
 }
