@@ -3,27 +3,14 @@ PETS.push("adv");
 BASE_PETS.adv = "advanced/";
 ADV_BASE_IMG_URL = "/tools/pet/advanced/chips/";
 
-var advancedDB;
-waitFor(["loki", "idiAdapter"], function () {
+var ADVANCED_DB;
+waitFor(["BASE_DB"], function () {
 	// Init the database
-	advancedDB = new loki("AdvancedPET", {
-		"adapter": idiAdapter,
-		//"verbose": true,
-		"autosave": true,
-	});
+	ADVANCED_DB = BASE_DB.sub("AdvancedPET");
+	ADVANCED_DB.chips = ADVANCED_DB.sub("chips").primary("filename");
+	ADVANCED_DB.releases = ADVANCED_DB.sub("releases").primary(["filename", "region"]);
 
-	advancedDB.loadDatabase();
-
-	//filename, number, type, class, cp, at, element, field, effect, icon, pins, notes, updated, releases
-	advancedDB.chips = advancedDB.addCollection("chips", {
-		"unique": ["filename"],
-	});
-	//filename, region, name, origin, front.image, front.credits, back.image, back.credits, notes
-	advancedDB.releases = advancedDB.addCollection("releases", {
-		"indicies": ["filename", "region"],
-	});
-
-	PET_DBS.adv = advancedDB;
+	PET_DBS.adv = ADVANCED_DB;
 });
 
 var advGenericBacks = {

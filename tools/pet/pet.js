@@ -5,9 +5,9 @@ var BASE_PETS = {}
 var PET_DBS = {}
 var PET_HANDLERS = {}
 
-var idiAdapter;
-waitFor(["LokiIndexedAdapter"], function () {
-	idiAdapter = new LokiIndexedAdapter("MegaMan");
+var BASE_DB;
+waitFor(["DataBase"], function () {
+	BASE_DB = new DataBase("MegaMan");
 	setTimeout(update, 100);
 });
 
@@ -39,6 +39,14 @@ function update(callback) {
 				// If it does, download that JSON file and update the entry.
 
 				var processing = 0;
+
+				function subProcessing() {
+					--processing;
+					if (processing == 0) {
+						$(".loading-pane").addClass("hidden");
+						$(".home-pane").removeClass("hidden");
+					}
+				}
 
 				console.log("Downloaded updated.json for " + pet)
 				function processResult(item) {
@@ -73,29 +81,26 @@ function update(callback) {
 								// Update DB entry.
 								petDB.chips.insert(json);
 
-								--processing;
-								if (processing == 0) {
-									$(".loading-pane").addClass("hidden");
-									$(".home-pane").removeClass("hidden");
-								}
+								subProcessing();
 							},
 
 							"failure": function () {
 								console.error("Failed to download update for " + fn_path);
 								// TODO: Reason
-								--processing;
+								subProcessing();
 							},
 						});
+					}
+					else {
+						subProcessing();
 					}
 				}
 
 				for(var filename in updated) {
 					++processing;
-					processResult(PET_DBS[pet].chips.findOne({
-						"filename": {"$eq": filename},
-					}) || {
+					processResult(PET_DBS[pet].chips.get(filename, {
 						"filename": filename,
-					});
+					}));
 				}
 			},
 
@@ -176,14 +181,9 @@ function loadChipForm(pet, filename, region) {
 		}
 		
 		var petDB = PET_DBS[pet];
-		var chip = petDB.chips.by("filename", filename);
+		var chip = petDB.chips.get(filename);
 		if (chip) {
-			var release = petDB.releases.findOne({
-				"$and": [
-					{"filename": {"$eq": filename}},
-					{"region": {"$eq": region}},
-				],
-			});
+			var release = petDB.releases.get([filename, region]);
 			if(release) {
 				PET_HANDLERS[pet].chip(chip, release);
 			} else {
@@ -264,14 +264,14 @@ function loadListForm(pet) {
 
 		var petDB = PET_DBS[pet], $table = $(".pet-list-table-rows").empty();
 
-		petDB.chips.where(function (chip) {
-			var releases = petDB.releases.find({
-				"filename": {"$eq": chip.filename},
-			});
+		petDB.chips.each(function (chip) {
+			var releases = chip.releases
 
-			for (var i = 0; i < releases.length; ++i) {
+			for (var i = releases.length; i--;) {
+				var release = petDB.releases.get([chip.filename, releases[i]]);
+
 				var $row = $LIST_ROW.clone();
-				PET_HANDLERS[pet].createRow($row, releases[i], chip);
+				PET_HANDLERS[pet].createRow($row, release, chip);
 				$row.find(hideClass).hide();
 				$table.append($row);
 			}
