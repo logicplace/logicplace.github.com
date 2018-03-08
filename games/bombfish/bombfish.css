@@ -125,7 +125,7 @@
 	border: 3px double darkgray;
 }
 
-.bf-piece, .bf-tool, .bf-dialog span {
+.bf-piece, .bf-tool, .bf-dialog .bf-icon {
 	width: 16px;
 	height: 16px;
 	padding: 1px;
