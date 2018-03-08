@@ -352,7 +352,7 @@ var beatLevel = false, winningAnimationTimer = null;
 function playerWins() {
 	beatLevel = true;
 	// Winning animations. TODO: Cat's animations.
-	$fish = $(".bf-fish").removeClass("bf-fish");
+	$fish = $(".bf-field .bf-fish").removeClass("bf-fish");
 
 	function nextAnim(id) {
 		// Set next frame.
