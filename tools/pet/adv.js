@@ -44,21 +44,18 @@ PET_HANDLERS.adv = {
 			"transform": "",
 			"transform-origin": "",
 			"overflow": "",
-			"margin-left": "",
 		});
 
-		var target = $view.find(".adv-chip-element-name").width() - $elem.outerWidth() - 2;
+		var target = $view.find(".adv-chip-element-name").width() - $elem.outerWidth() - 2 - parseInt($name.css("margin-left"));
 		var width = $name.css("width", "initial").width();
 		$name.css("width", "");
 
 		if (width > target) {
 			var scale = target / width;
-			var offset = Math.min(0.5, (width - width * scale) / 2);
 			$name.css({
 				"transform": "scaleX(" + scale.toString() + ")",
 				"transform-origin": "left",
 				"overflow": "visible",
-				"margin-left": (parseInt($name.css("margin-left")) - offset).toString() + "px",
 			});
 		}
 
