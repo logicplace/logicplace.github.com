@@ -1,7 +1,8 @@
 // Make the Megaman Advanced PET known
 PETS.push("adv");
 BASE_PETS.adv = "advanced/";
-ADV_BASE_IMG_URL = "/tools/pet/advanced/chips/";
+ADV_BASE_CHIP_IMG_URL = "/tools/pet/advanced/chips/";
+ADV_BASE_NO_IMG_URL = "/tools/pet/advanced/images/noimg.jpg";
 
 var ADVANCED_DB;
 waitFor(["BASE_DB"], function () {
@@ -19,30 +20,52 @@ var advGenericBacks = {
 }
 
 PET_HANDLERS.adv = {
-	"chip": function (chip, region) {
+	"chip": function ($view, chip, region) {
 		var element = chip.element || "Unknown",
 		name = region.name == null ? "?" : region.name
 
 		// Chip face.
-		$(".adv-chip-class-border")
+		$view.find(".adv-chip-class-border")
 			.removeClass("standard mega giga navi")
 			.addClass((chip.class || "").toLowerCase());
-		$(".adv-chip-type-name")
+		$view.find(".adv-chip-type-name")
 			.removeClass("attack ability navi")
 			.addClass((chip.type || "").toLowerCase());
-		$(".adv-chip-image").css(
+		$view.find(".adv-chip-image").css(
 			"background-image",
 			chip.icon ? 'url("' + chipURL("adv", chip.icon) + '")' : "");
-		$(".adv-chip-element")
+		var $elem = $view.find(".adv-chip-element")
 			.removeClass("neutral aqua fire wood electric")
 			.addClass(element.toLowerCase());
-		$(".adv-chip-name").text(name);
-		$(".adv-chip-number").text(chip.number || "000");
+		var $name = $view.find(".adv-chip-name").text(name);
+		$view.find(".adv-chip-number").text(chip.number || "000");
+
+		$name.css({
+			"transform": "",
+			"transform-origin": "",
+			"overflow": "",
+			"margin-left": "",
+		});
+
+		var target = $view.find(".adv-chip-element-name").width() - $elem.outerWidth() - 2;
+		var width = $name.css("width", "initial").width();
+		$name.css("width", "");
+
+		if (width > target) {
+			var scale = target / width;
+			var offset = Math.min(0.5, (width - width * scale) / 2);
+			$name.css({
+				"transform": "scaleX(" + scale.toString() + ")",
+				"transform-origin": "left",
+				"overflow": "visible",
+				"margin-left": (parseInt($name.css("margin-left")) - offset).toString() + "px",
+			});
+		}
 
 		// Chip photos/scans.
-		$(".chip-image-front").css(
+		$view.find(".chip-image-front").css(
 			"background-image",
-			'url("' + chipURL("adv", region.front.image || "/tools/pet/images/noimg") + '")')
+			'url("' + chipURL("adv", region.front.image || ADV_BASE_NO_IMG_URL) + '")')
 			.attr("title", region.front.credits);
 
 		var back = region.front.back, backGen = "";
@@ -57,42 +80,42 @@ PET_HANDLERS.adv = {
 					back = advGenericBacks[b];
 				}
 			}
-			if (!back) back = "/tools/pet/images/noimg";
-			$(".chip-image-back").addClass("unsure-back");
+			if (!back) back = ADV_BASE_NO_IMG_URL;
+			$view.find(".chip-image-back").addClass("unsure-back");
 			backGen = "\nGeneric back image."
 		} else {
-			$(".chip-image-back").removeClass("unsure-back");
+			$view.find(".chip-image-back").removeClass("unsure-back");
 		}
 
-		$(".chip-image-back").css(
+		$view.find(".chip-image-back").css(
 			"background-image",
 			'url("' + chipURL("adv", back) + '")')
 			.attr("title", (region.back.credits || "") + backGen);
 
 		// Data sheet.
-		$(".adv-name").text(name)
-		$(".adv-number").text(chip.number || "?");
-		$(".adv-type").text(chip.type || "?");
-		$(".adv-class").text(chip.class || "?");
-		$(".adv-element")
+		$view.find(".adv-name").text(name)
+		$view.find(".adv-number").text(chip.number || "?");
+		$view.find(".adv-type").text(chip.type || "?");
+		$view.find(".adv-class").text(chip.class || "?");
+		$view.find(".adv-element")
 			.attr({
-				"class": "",
+				"class": "adv-element",
 				"title": element
 			})
 			.addClass("local-adv-element-" + element.toLowerCase());
-		$(".adv-cp").text(chip.cp == null ? "?" : chip.cp);
-		$(".adv-at").text(chip.at == null ? "?" : chip.at);
-		$(".adv-effect").text(chip.effect || "");
-		$(".adv-origin").text(region.set || "?");
-		$(".adv-notes").text((chip.notes ? chip.notes + "\n" : "") + (region.notes || ""));
+		$view.find(".adv-cp").text(chip.cp == null ? "?" : chip.cp);
+		$view.find(".adv-at").text(chip.at == null ? "?" : chip.at);
+		$view.find(".adv-effect").text(chip.effect || "");
+		$view.find(".adv-origin").text(region.set || "?");
+		$view.find(".adv-notes").text((chip.notes ? chip.notes + "\n" : "") + (region.notes || ""));
 
-		var $field = $(".adv-field").empty();
+		var $field = $view.find(".adv-field").empty();
 		makeField($field, chip.field);
 
-		var $pins = $(".adv-pins").empty();
+		var $pins = $view.find(".adv-pins").empty();
 		makePins($pins, chip.pins);
 
-		var $regions = $(".adv-other-regions").empty();
+		var $regions = $view.find(".adv-other-regions").empty();
 		for (var i = chip.releases.length - 1; i >= 0; --i) {
 			var rg = chip.releases[i];
 			$("<span>").addClass("local-region-" + rg)
@@ -100,41 +123,41 @@ PET_HANDLERS.adv = {
 				.appendTo($regions);
 		}
 
-		chipHooks();
+		chipHooks($view);
 	},
 
-	"chipFail": function (error) {
+	"chipFail": function ($view, error) {
 		// Chip face.
-		$(".adv-chip-class-border")
+		$view.find(".adv-chip-class-border")
 			.removeClass("standard mega giga navi");
-		$(".adv-chip-type-name")
+		$view.find(".adv-chip-type-name")
 			.removeClass("attack ability navi");
-		$(".adv-chip-image").css("background-image", "");
-		$(".adv-chip-element")
+		$view.find(".adv-chip-image").css("background-image", "");
+		$view.find(".adv-chip-element")
 			.removeClass("neutral aqua fire wood electric");
-		$(".adv-chip-name").text("?");
-		$(".adv-chip-number").text("000");
-		$(".chip-image-front").css("background-image", "").attr("title", "");
-		$(".chip-image-back").css("background-image", "").attr("title", "");
+		$view.find(".adv-chip-name").text("?");
+		$view.find(".adv-chip-number").text("000");
+		$view.find(".chip-image-front").css("background-image", "").attr("title", "");
+		$view.find(".chip-image-back").css("background-image", "").attr("title", "");
 
 		// Data sheet.
-		$(".adv-name").text("ERROR FINDING CHIP");
-		$(".adv-number").text("?");
-		$(".adv-type").text("?");
-		$(".adv-class").text("?");
-		$(".adv-element")
+		$view.find(".adv-name").text("ERROR FINDING CHIP");
+		$view.find(".adv-number").text("?");
+		$view.find(".adv-type").text("?");
+		$view.find(".adv-class").text("?");
+		$view.find(".adv-element")
 			.attr({
 				"class": "",
 				"title": ""
 			});
-		$(".adv-cp").text("?");
-		$(".adv-at").text("?");
-		$(".adv-pins").empty();
-		$(".adv-field").empty();
-		$(".adv-effect").text("");
-		$(".adv-origin").text("?");
-		$(".adv-notes").text(error);
-		$(".adv-other-regions").empty();
+		$view.find(".adv-cp").text("?");
+		$view.find(".adv-at").text("?");
+		$view.find(".adv-pins").empty();
+		$view.find(".adv-field").empty();
+		$view.find(".adv-effect").text("");
+		$view.find(".adv-origin").text("?");
+		$view.find(".adv-notes").text(error);
+		$view.find(".adv-other-regions").empty();
 	},
 
 	"createRow": function ($row, region, chip) {
@@ -157,7 +180,7 @@ PET_HANDLERS.adv = {
 		if (chip.icon) {
 			$("<img>")
 				.addClass("adv-chip-image")
-				.attr("src", ADV_BASE_IMG_URL + chip.icon)
+				.attr("src", chipURL("adv", chip.icon))
 				.appendTo($icon);
 			$row.find(".adv-has-icon").addClass("pet-has-image");
 		} else {
@@ -179,13 +202,13 @@ PET_HANDLERS.adv = {
 
 function or(x, y) { return x === null ? y : x; }
 
-function chipHooks() {
+function chipHooks($view) {
 	// Controls.
-	$(".previous-chip-image, .next-chip-image").off("click").click(function () {
-		var $stdFront = $(".chip-standard-image-front"),
-		$stdBack = $(".chip-standard-image-back"),
-		$front = $(".chip-image-front"),
-		$back = $(".chip-image-back");
+	$view.find(".previous-chip-image, .next-chip-image").off("click").click(function () {
+		var $stdFront = $view.find(".chip-standard-image-front"),
+		$stdBack = $view.find(".chip-standard-image-back"),
+		$front = $view.find(".chip-image-front"),
+		$back = $view.find(".chip-image-back");
 
 		if ($stdFront.is(":visible")) {
 			$stdFront.addClass("hidden");
@@ -202,11 +225,11 @@ function chipHooks() {
 		}
 	});
 
-	$(".flip-chip-image").off("click").click(function () {
-		var $stdFront = $(".chip-standard-image-front"),
-		$stdBack = $(".chip-standard-image-back"),
-		$front = $(".chip-image-front"),
-		$back = $(".chip-image-back");
+	$view.find(".flip-chip-image").off("click").click(function () {
+		var $stdFront = $view.find(".chip-standard-image-front"),
+		$stdBack = $view.find(".chip-standard-image-back"),
+		$front = $view.find(".chip-image-front"),
+		$back = $view.find(".chip-image-back");
 
 		if ($stdFront.is(":visible")) {
 			$stdFront.addClass("hidden");

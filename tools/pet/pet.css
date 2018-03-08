@@ -167,6 +167,11 @@
 	white-space: nowrap;
 }
 
+.pet-list-table-row.selected {
+	color: white;
+	background-color: blue;
+}
+
 .pet-list-table-row td {
 	border-right: 1px solid black;
 	border-bottom: 1px solid black;

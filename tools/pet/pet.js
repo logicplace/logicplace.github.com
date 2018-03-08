@@ -185,7 +185,7 @@ function loadChipForm(pet, filename, region) {
 		if (chip) {
 			var release = petDB.releases.get([filename, region]);
 			if(release) {
-				PET_HANDLERS[pet].chip(chip, release);
+				PET_HANDLERS[pet].chip($(".pet-chip-view"), chip, release);
 			} else {
 				PET_HANDLERS[pet].chipFail();
 			}
@@ -264,18 +264,27 @@ function loadListForm(pet) {
 
 		var petDB = PET_DBS[pet], $table = $(".pet-list-table-rows").empty();
 
+		var selector = selectChipRow(pet);
+
 		petDB.chips.each(function (chip) {
 			var releases = chip.releases
 
 			for (var i = releases.length; i--;) {
 				var release = petDB.releases.get([chip.filename, releases[i]]);
 
-				var $row = $LIST_ROW.clone();
+				var $row = $LIST_ROW.clone()
+					.click(selector)
+					.data({
+						"filename": chip.filename,
+						"region": releases[i],
+					});
 				PET_HANDLERS[pet].createRow($row, release, chip);
 				$row.find(hideClass).hide();
 				$table.append($row);
 			}
 		});
+
+		sortByColumn.call($(".pet-list-table-header .local-pet-number"));
 	} else {
 		loadViews(pet, loadListForm);
 	}
@@ -289,6 +298,17 @@ function headerClassAndName(pet, $e) {
 	return [null, null];
 }
 
+function selectChipRow(pet) {
+	return function () {
+		var $this = $(this);
+
+		$(".pet-list-table-row.selected").removeClass("selected");
+		$this.addClass("selected");
+
+		loadChipForm(pet, $this.data("filename"), $this.data("region"));
+	}
+}
+
 function toggleColumn() {
 	var $this = $(this), $col = $(".pet-list-table-pane ." + $this.parent().data("class"));
 	if ($col.is(":visible")) {
@@ -296,4 +316,49 @@ function toggleColumn() {
 	} else {
 		$col.show();
 	}
+}
+
+function sortByColumn() {
+	var $colHead = $(this);
+
+	var descending = !!$colHead.data("descending");
+	var cls = $colHead.attr("class").split(" ", 1)[0];
+
+	var $rows = $(".pet-list-table-row");
+
+	$rows.sort(function (a, b) {
+		var aMember = a.getElementsByClassName(cls)[0];
+		var bMember = b.getElementsByClassName(cls)[0];
+
+		if (aMember && bMember) {
+			var aText = aMember.innerText, bText = bMember.innerText;
+			var aNum = parseInt(aText), bNum = parseInt(bText);
+
+			var aNaN = isNaN(aNum), bNaN = isNaN(bNum);
+
+			var res;
+			if (aNaN || bNaN) {
+				// ASCII-betical sort.
+				res = aText.localeCompare(bText);
+			}
+			else {
+				// Numerical sort.
+				res = aNum - bNum;
+			}
+
+			return descending ? -res : res;
+		}
+		// Force non-existent entries to the bottom.
+		else if (aMember) {
+			return -1;
+		}
+		else if (bMember) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	});
+
+	$rows.detach().appendTo(".pet-list-table-rows");
 }

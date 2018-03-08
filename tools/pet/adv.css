@@ -146,9 +146,9 @@
 	background: black;
 }
 
-.navi .adv-chip-sticker-inner {
+/*.navi .adv-chip-sticker-inner {
 	height: 27.5mm;
-}
+}*/
 
 .adv-chip-type-name {
 	display: inline-block;
@@ -188,6 +188,8 @@
 	width: 17mm;
 	height: 14.5mm;
 	margin-top: -1mm; /* wtf?? */
+
+	background-size: 18mm 14.5mm;
 }
 
 .adv-chip-element-name {
@@ -205,13 +207,16 @@
 	margin-left: 0.1mm;
 	border: 0.1mm solid white;
 	border-radius: 0.5mm;
-}
 
-.adv-chip-element.neutral {
 	background-size: 3mm 3mm;
-	background-image: url(/tools/pet/advanced/images/element-neutral.jpg);
 	background-repeat: no-repeat;
 }
+
+.adv-chip-element.neutral { background-image: url(/tools/pet/advanced/images/element-neutral.jpg); }
+.adv-chip-element.aqua { background-image: url(/tools/pet/advanced/images/element-aqua.jpg); }
+.adv-chip-element.fire { background-image: url(/tools/pet/advanced/images/element-fire.jpg); }
+.adv-chip-element.wood { background-image: url(/tools/pet/advanced/images/element-wood.jpg); }
+.adv-chip-element.electric { background-image: url(/tools/pet/advanced/images/element-elec.jpg); }
 
 .adv-chip-name {
 	display: inline-block;
